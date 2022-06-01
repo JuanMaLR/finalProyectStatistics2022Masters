@@ -1,0 +1,43 @@
+---
+title: |
+  ![](logo.png){width=4in}  
+  Projects protafolio
+subtitle: |
+  Instituto Tecnológico y de Estudios Superiores de Monterrey  
+  Campus Monterrey
+author: |
+  Ing. Karen Joselyne Avilez Cuahquentzi - A00835413  
+  Ing. Juan Manuel Ledesma Rangel - A01206568  
+  Ing. Luis Alberto Otero Herrera - A00835185  
+  Ing. Luis Antonio Pulido Victoria - A00835394  
+  Ing. Bryan Daniel Sandoval Gaytán - A00835418  
+    
+    
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+output:
+  bookdown::pdf_book:
+    keep_tex: yes
+  bookdown::gitbook:
+    lib_dir: "book_assets"
+    css: "style.css"
+    includes:
+        in_header: header.html
+bibliography: ["references.bib", "packages.bib"]
+biblio-style: "apalike"
+link-citations: true
+description: |
+  Final project for the data science class regarding february - june 2022 semester
+---
+
+# Abstract
+
+The following document presents...
+
+```{r include=FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```
