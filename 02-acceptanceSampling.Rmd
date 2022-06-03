@@ -171,7 +171,8 @@ tabla_recommended_distributions <- data.frame(data_type, type_a_curve, type_b_cu
 colnames(tabla_recommended_distributions) <- c("$\\textbf{Data type}$", "$\\textbf{Type A curve}$", "$\\textbf{Type B curve}$")
 
 knitr::kable(tabla_recommended_distributions, align = "c", caption = "Recommended distribution for each type of data measured in the sample and the type of OC curve to be constructed")%>%
-  kable_styling(full_width = F)
+  kable_styling(full_width = F)%>%
+  scroll_box(width = "100%", height = "100%", fixed_thead = T)
 ```
 
 ```{R operating-cc, fig.cap="Example of an Operating Characteristic Curve for a sampling plan with $n=205$ and $c=2$. AQL and LQL values (described later) and their relationship with the producer’s and consumer’s risk are shown. Taken from @gutirrez_pulido_control_2013", fig.align = 'center'}
@@ -334,7 +335,8 @@ tabla_AQL_LQL_values <- data.frame(variable, plan_a, plan_b, plan_c)
 colnames(tabla_AQL_LQL_values) <- c("$\\textbf{Variable}$", "$\\textbf{Plan A}$", "$\\textbf{Plan B}$", "$\\textbf{Plan C}$")
 
 knitr::kable(tabla_AQL_LQL_values, align = "c", caption = "AQL and LQL values")%>%
-  kable_styling(full_width = F)
+  kable_styling(full_width = F)%>%
+  scroll_box(width = "100%", height = "100%", fixed_thead = T)
 ```
 
 Next, the following steps should be performed for each plan:
@@ -398,7 +400,8 @@ cameron_table_plans <- data.frame(variable, plan_a, plan_b, plan_c)
 colnames(cameron_table_plans) <- c("$\\textbf{Variable}$", "$\\textbf{Plan A}$", "$\\textbf{Plan B}$", "$\\textbf{Plan C}$")
 
 knitr::kable(cameron_table_plans, align = "c", caption = "Information extracted from the Cameron's Table for each sampling plan design")%>%
-  kable_styling(full_width = F)
+  kable_styling(full_width = F)%>%
+  scroll_box(width = "100%", height = "100%", fixed_thead = T)
 ```
 
 Therefore, the three sampling plans can be summarized as follows:
@@ -413,7 +416,8 @@ tabla_sampling_plans_summary <- data.frame(plan, acceptance_number, sample_size)
 colnames(tabla_sampling_plans_summary) <- c("$\\textbf{Plan}$", "$\\textbf{Acceptance number (c)}$", "$\\textbf{Sample size (n)}$")
 
 knitr::kable(tabla_sampling_plans_summary, align = "c", caption = "Sampling plans designed using the Cameron's Method")%>%
-  kable_styling(full_width = F)
+  kable_styling(full_width = F)%>%
+  scroll_box(width = "100%", height = "100%", fixed_thead = T)
 ```
 
 So, for example, plan A requires that a sample of size `r ceiling(planA_n)` is drawn from the lot and if less than or equal to `r planA_c` defectives are found the lot is accepted, otherwise the lot is rejected.
@@ -447,7 +451,7 @@ colnames(acceptance_probability_table) <- c("$\\boldsymbol{p}$", "$\\boldsymbol{
 
 knitr::kable(acceptance_probability_table, align = "c", caption = "Probability of acceptance for several proportions of defective for each sampling plan")%>%
   kable_styling(position = "center", full_width = F)%>%
-  scroll_box(width = "410px", height = "800px", fixed_thead = T, extra_css = "margin-left: auto; margin-right: auto; margin-bottom: 25px;")
+  scroll_box(width = "100%", height = "800px", fixed_thead = T, extra_css = "margin-left: auto; margin-right: auto; margin-bottom: 25px;")
 ```
 
 Next, the OC curve is built using data in Table \@ref(tab:acceptance-probability).
@@ -495,7 +499,8 @@ producer_consumer_risk_table <- data.frame(risk, planA, planB, planC)
 colnames(producer_consumer_risk_table) <- c("$\\textbf{Risk}$", "$\\textbf{Plan A}$", "$\\textbf{Plan B}$", "$\\textbf{Plan C}$")
 
 knitr::kable(producer_consumer_risk_table, align = "c", caption = "Producer's and consumer's risk")%>%
-  kable_styling(full_width = F)
+  kable_styling(full_width = F)%>%
+  scroll_box(width = "100%", height = "100%", fixed_thead = T)
 ```
 
 It is observed that for plan A the producer’s risk is below the limit; however, the consumer’s risk is greater than what was established in the plan design. For plans B and C, both the producer’s and consumer’s risk are within the defined limits.

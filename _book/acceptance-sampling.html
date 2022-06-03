@@ -22,7 +22,7 @@
 
 
 
-<meta name="date" content="2022-05-31" />
+<meta name="date" content="2022-06-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -846,20 +846,22 @@ Projects protafolio</p></a>
 <span id="cb2-7"><a href="acceptance-sampling.html#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(tabla_recommended_distributions) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Data type}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Type A curve}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Type B curve}$&quot;</span>)</span>
 <span id="cb2-8"><a href="acceptance-sampling.html#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-9"><a href="acceptance-sampling.html#cb2-9" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(tabla_recommended_distributions, <span class="at">align =</span> <span class="st">&quot;c&quot;</span>, <span class="at">caption =</span> <span class="st">&quot;Recommended distribution for each type of data measured in the sample and the type of OC curve to be constructed&quot;</span>)<span class="sc">%&gt;%</span></span>
-<span id="cb2-10"><a href="acceptance-sampling.html#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">full_width =</span> F)</span></code></pre></div>
+<span id="cb2-10"><a href="acceptance-sampling.html#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">full_width =</span> F)<span class="sc">%&gt;%</span></span>
+<span id="cb2-11"><a href="acceptance-sampling.html#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scroll_box</span>(<span class="at">width =</span> <span class="st">&quot;100%&quot;</span>, <span class="at">height =</span> <span class="st">&quot;100%&quot;</span>, <span class="at">fixed_thead =</span> T)</span></code></pre></div>
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:100%; overflow-x: scroll; width:100%; ">
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
 <span id="tab:recommended-distributions">Table 3.1: </span>Recommended distribution for each type of data measured in the sample and the type of OC curve to be constructed
 </caption>
 <thead>
 <tr>
-<th style="text-align:center;">
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;">
 <span class="math inline">\(\textbf{Data type}\)</span>
 </th>
-<th style="text-align:center;">
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;">
 <span class="math inline">\(\textbf{Type A curve}\)</span>
 </th>
-<th style="text-align:center;">
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;">
 <span class="math inline">\(\textbf{Type B curve}\)</span>
 </th>
 </tr>
@@ -900,9 +902,10 @@ Applicable continuous distribution
 </tr>
 </tbody>
 </table>
+</div>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="acceptance-sampling.html#cb3-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;images/operating_cc.png&quot;</span>)</span></code></pre></div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:operating-cc"></span>
-<img src="images/operating_cc.png" alt="Example of an Operating Characteristic Curve for a sampling plan with $n=205$ and $c=2$. AQL and LQL values (described later) and their relationship with the producer’s and consumer’s risk are shown. Taken from @gutirrez_pulido_control_2013" width="950" />
+<img src="images/operating_cc.png" alt="Example of an Operating Characteristic Curve for a sampling plan with $n=205$ and $c=2$. AQL and LQL values (described later) and their relationship with the producer’s and consumer’s risk are shown. Taken from @gutirrez_pulido_control_2013"  />
 <p class="caption">
 Figure 3.1: Example of an Operating Characteristic Curve for a sampling plan with <span class="math inline">\(n=205\)</span> and <span class="math inline">\(c=2\)</span>. AQL and LQL values (described later) and their relationship with the producer’s and consumer’s risk are shown. Taken from <span class="citation">Gutierrez Pulido and Vara Salazar (<a href="#ref-gutirrez_pulido_control_2013" role="doc-biblioref">2013</a>)</span>
 </p>
@@ -956,14 +959,14 @@ Figure 3.1: Example of an Operating Characteristic Curve for a sampling plan wit
 <p>Broadly speaking, in the painting process in the automotive industry, the car body is provided with different layers, each of which corresponds to one or more unit operations, which are shown below:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="acceptance-sampling.html#cb4-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;images/layers_painted.png&quot;</span>)</span></code></pre></div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:layers-painted"></span>
-<img src="images/layers_painted.png" alt="Layers during the painting process in a car body" width="763" />
+<img src="images/layers_painted.png" alt="Layers during the painting process in a car body"  />
 <p class="caption">
 Figure 3.2: Layers during the painting process in a car body
 </p>
 </div>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="acceptance-sampling.html#cb5-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;images/painting_stages.png&quot;</span>)</span></code></pre></div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:painting-stages"></span>
-<img src="images/painting_stages.png" alt="Stages through which the car body passes during the painting process" width="767" />
+<img src="images/painting_stages.png" alt="Stages through which the car body passes during the painting process"  />
 <p class="caption">
 Figure 3.3: Stages through which the car body passes during the painting process
 </p>
@@ -981,7 +984,7 @@ Figure 3.3: Stages through which the car body passes during the painting process
 <p>As there is a corrective process for every car body after an impurity is detected, it is stated that a <strong>defective unit is that with more than 13 impurities</strong>. Thus, those car bodies which have 13 or less impurities are considered as non-defective.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="acceptance-sampling.html#cb6-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;images/impurity_fiber.png&quot;</span>)</span></code></pre></div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:impurity-fiber"></span>
-<img src="images/impurity_fiber.png" alt="Examples of the impurity “fiber” seen in the car body" width="564" />
+<img src="images/impurity_fiber.png" alt="Examples of the impurity “fiber” seen in the car body"  />
 <p class="caption">
 Figure 3.4: Examples of the impurity “fiber” seen in the car body
 </p>
@@ -1035,23 +1038,25 @@ Figure 3.4: Examples of the impurity “fiber” seen in the car body
 <span id="cb9-8"><a href="acceptance-sampling.html#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(tabla_AQL_LQL_values) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Variable}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Plan A}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Plan B}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Plan C}$&quot;</span>)</span>
 <span id="cb9-9"><a href="acceptance-sampling.html#cb9-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-10"><a href="acceptance-sampling.html#cb9-10" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(tabla_AQL_LQL_values, <span class="at">align =</span> <span class="st">&quot;c&quot;</span>, <span class="at">caption =</span> <span class="st">&quot;AQL and LQL values&quot;</span>)<span class="sc">%&gt;%</span></span>
-<span id="cb9-11"><a href="acceptance-sampling.html#cb9-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">full_width =</span> F)</span></code></pre></div>
+<span id="cb9-11"><a href="acceptance-sampling.html#cb9-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">full_width =</span> F)<span class="sc">%&gt;%</span></span>
+<span id="cb9-12"><a href="acceptance-sampling.html#cb9-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scroll_box</span>(<span class="at">width =</span> <span class="st">&quot;100%&quot;</span>, <span class="at">height =</span> <span class="st">&quot;100%&quot;</span>, <span class="at">fixed_thead =</span> T)</span></code></pre></div>
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:100%; overflow-x: scroll; width:100%; ">
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
 <span id="tab:AQL-LQL-values">Table 3.2: </span>AQL and LQL values
 </caption>
 <thead>
 <tr>
-<th style="text-align:center;">
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;">
 <span class="math inline">\(\textbf{Variable}\)</span>
 </th>
-<th style="text-align:center;">
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;">
 <span class="math inline">\(\textbf{Plan A}\)</span>
 </th>
-<th style="text-align:center;">
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;">
 <span class="math inline">\(\textbf{Plan B}\)</span>
 </th>
-<th style="text-align:center;">
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;">
 <span class="math inline">\(\textbf{Plan C}\)</span>
 </th>
 </tr>
@@ -1115,6 +1120,7 @@ Figure 3.4: Examples of the impurity “fiber” seen in the car body
 </tr>
 </tbody>
 </table>
+</div>
 <p>Next, the following steps should be performed for each plan:
 1. We convert the percentages into proportions using the following expressions:</p>
 <p><span class="math display">\[
@@ -1128,7 +1134,7 @@ Then, we compute the following ratio:</p>
 <p>With the Cameron’s Tables, using the established values of <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span>, and the obtained value for <span class="math inline">\(R_c\)</span>, one can determine a value <span class="math inline">\(R\)</span>, which is the closest possible value of <span class="math inline">\(R_c\)</span> available in the Cameron’s Table. Then, the acceptance number <span class="math inline">\(c\)</span> and the value <span class="math inline">\(np_1\)</span> can be determined; the latter quantity can be used to find the sample size <span class="math inline">\((n=\frac{np_1}{p_1})\)</span>.</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="acceptance-sampling.html#cb10-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;images/cameron_table.png&quot;</span>)</span></code></pre></div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:cameron-table"></span>
-<img src="images/cameron_table.png" alt="Cameron's table used to obtain $R$, $c$, and $np_1$" width="885" />
+<img src="images/cameron_table.png" alt="Cameron's table used to obtain $R$, $c$, and $np_1$"  />
 <p class="caption">
 Figure 3.5: Cameron’s table used to obtain <span class="math inline">\(R\)</span>, <span class="math inline">\(c\)</span>, and <span class="math inline">\(np_1\)</span>
 </p>
@@ -1170,23 +1176,25 @@ Figure 3.5: Cameron’s table used to obtain <span class="math inline">\(R\)</sp
 <span id="cb12-8"><a href="acceptance-sampling.html#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(cameron_table_plans) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Variable}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Plan A}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Plan B}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Plan C}$&quot;</span>)</span>
 <span id="cb12-9"><a href="acceptance-sampling.html#cb12-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-10"><a href="acceptance-sampling.html#cb12-10" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(cameron_table_plans, <span class="at">align =</span> <span class="st">&quot;c&quot;</span>, <span class="at">caption =</span> <span class="st">&quot;Information extracted from the Cameron&#39;s Table for each sampling plan design&quot;</span>)<span class="sc">%&gt;%</span></span>
-<span id="cb12-11"><a href="acceptance-sampling.html#cb12-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">full_width =</span> F)</span></code></pre></div>
+<span id="cb12-11"><a href="acceptance-sampling.html#cb12-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">full_width =</span> F)<span class="sc">%&gt;%</span></span>
+<span id="cb12-12"><a href="acceptance-sampling.html#cb12-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scroll_box</span>(<span class="at">width =</span> <span class="st">&quot;100%&quot;</span>, <span class="at">height =</span> <span class="st">&quot;100%&quot;</span>, <span class="at">fixed_thead =</span> T)</span></code></pre></div>
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:100%; overflow-x: scroll; width:100%; ">
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
 <span id="tab:cameron-table-sampling-plan">Table 3.3: </span>Information extracted from the Cameron’s Table for each sampling plan design
 </caption>
 <thead>
 <tr>
-<th style="text-align:center;">
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;">
 <span class="math inline">\(\textbf{Variable}\)</span>
 </th>
-<th style="text-align:center;">
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;">
 <span class="math inline">\(\textbf{Plan A}\)</span>
 </th>
-<th style="text-align:center;">
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;">
 <span class="math inline">\(\textbf{Plan B}\)</span>
 </th>
-<th style="text-align:center;">
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;">
 <span class="math inline">\(\textbf{Plan C}\)</span>
 </th>
 </tr>
@@ -1292,6 +1300,7 @@ Figure 3.5: Cameron’s table used to obtain <span class="math inline">\(R\)</sp
 </tr>
 </tbody>
 </table>
+</div>
 <p>Therefore, the three sampling plans can be summarized as follows:</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="acceptance-sampling.html#cb13-1" aria-hidden="true" tabindex="-1"></a>plan <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{A}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{B}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{C}$&quot;</span>)</span>
 <span id="cb13-2"><a href="acceptance-sampling.html#cb13-2" aria-hidden="true" tabindex="-1"></a>acceptance_number <span class="ot">&lt;-</span> <span class="fu">c</span>(planA_c, planB_c, planC_c)</span>
@@ -1302,20 +1311,22 @@ Figure 3.5: Cameron’s table used to obtain <span class="math inline">\(R\)</sp
 <span id="cb13-7"><a href="acceptance-sampling.html#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(tabla_sampling_plans_summary) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Plan}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Acceptance number (c)}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Sample size (n)}$&quot;</span>)</span>
 <span id="cb13-8"><a href="acceptance-sampling.html#cb13-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-9"><a href="acceptance-sampling.html#cb13-9" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(tabla_sampling_plans_summary, <span class="at">align =</span> <span class="st">&quot;c&quot;</span>, <span class="at">caption =</span> <span class="st">&quot;Sampling plans designed using the Cameron&#39;s Method&quot;</span>)<span class="sc">%&gt;%</span></span>
-<span id="cb13-10"><a href="acceptance-sampling.html#cb13-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">full_width =</span> F)</span></code></pre></div>
+<span id="cb13-10"><a href="acceptance-sampling.html#cb13-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">full_width =</span> F)<span class="sc">%&gt;%</span></span>
+<span id="cb13-11"><a href="acceptance-sampling.html#cb13-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scroll_box</span>(<span class="at">width =</span> <span class="st">&quot;100%&quot;</span>, <span class="at">height =</span> <span class="st">&quot;100%&quot;</span>, <span class="at">fixed_thead =</span> T)</span></code></pre></div>
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:100%; overflow-x: scroll; width:100%; ">
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
 <span id="tab:sampling-plans-summary">Table 3.4: </span>Sampling plans designed using the Cameron’s Method
 </caption>
 <thead>
 <tr>
-<th style="text-align:center;">
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;">
 <span class="math inline">\(\textbf{Plan}\)</span>
 </th>
-<th style="text-align:center;">
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;">
 <span class="math inline">\(\textbf{Acceptance number (c)}\)</span>
 </th>
-<th style="text-align:center;">
+<th style="text-align:center;position: sticky; top:0; background-color: #FFFFFF;">
 <span class="math inline">\(\textbf{Sample size (n)}\)</span>
 </th>
 </tr>
@@ -1356,6 +1367,7 @@ Figure 3.5: Cameron’s table used to obtain <span class="math inline">\(R\)</sp
 </tr>
 </tbody>
 </table>
+</div>
 <p>So, for example, plan A requires that a sample of size 304 is drawn from the lot and if less than or equal to 25 defectives are found the lot is accepted, otherwise the lot is rejected.</p>
 <p>The next step should be to analyze these designs and to determine which one of them complies with the established values. As it was previously stated, the appropriate tool for this task is the OC curve.</p>
 </div>
@@ -1383,8 +1395,8 @@ Figure 3.5: Cameron’s table used to obtain <span class="math inline">\(R\)</sp
 <span id="cb14-18"><a href="acceptance-sampling.html#cb14-18" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-19"><a href="acceptance-sampling.html#cb14-19" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(acceptance_probability_table, <span class="at">align =</span> <span class="st">&quot;c&quot;</span>, <span class="at">caption =</span> <span class="st">&quot;Probability of acceptance for several proportions of defective for each sampling plan&quot;</span>)<span class="sc">%&gt;%</span></span>
 <span id="cb14-20"><a href="acceptance-sampling.html#cb14-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">position =</span> <span class="st">&quot;center&quot;</span>, <span class="at">full_width =</span> F)<span class="sc">%&gt;%</span></span>
-<span id="cb14-21"><a href="acceptance-sampling.html#cb14-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scroll_box</span>(<span class="at">width =</span> <span class="st">&quot;410px&quot;</span>, <span class="at">height =</span> <span class="st">&quot;800px&quot;</span>, <span class="at">fixed_thead =</span> T, <span class="at">extra_css =</span> <span class="st">&quot;margin-left: auto; margin-right: auto; margin-bottom: 25px;&quot;</span>)</span></code></pre></div>
-<div style="border: 1px solid #ddd; padding: 0px; margin-left: auto; margin-right: auto; margin-bottom: 25px;overflow-y: scroll; height:800px; overflow-x: scroll; width:410px; ">
+<span id="cb14-21"><a href="acceptance-sampling.html#cb14-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scroll_box</span>(<span class="at">width =</span> <span class="st">&quot;100%&quot;</span>, <span class="at">height =</span> <span class="st">&quot;800px&quot;</span>, <span class="at">fixed_thead =</span> T, <span class="at">extra_css =</span> <span class="st">&quot;margin-left: auto; margin-right: auto; margin-bottom: 25px;&quot;</span>)</span></code></pre></div>
+<div style="border: 1px solid #ddd; padding: 0px; margin-left: auto; margin-right: auto; margin-bottom: 25px;overflow-y: scroll; height:800px; overflow-x: scroll; width:100%; ">
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
 <span id="tab:acceptance-probability">Table 3.5: </span>Probability of acceptance for several proportions of defective for each sampling plan

@@ -134,7 +134,8 @@ floor_2%>%
   column_spec(1, bold = T, background = "#9CC2E5")%>%
   column_spec(2, background = "#DEEAF6")%>%
   column_spec(8, background = "#DEEAF6")%>%
-  collapse_rows()
+  collapse_rows()%>%
+  scroll_box(width = "100%", height = "800px", fixed_thead = T)
 
 floor_4_days <- c(rep("Day 1 (23/05/2022)", 3), rep("Day 2 (24/05/2022)", 3), rep("Day 3 (25/05/2022)", 3), rep("Day 4 (26/05/2022)", 3), rep("Day 5 (27/05/2022)", 3))
 floor_4_indices <- rep(c("Min", "Max", "$\\textbf{Average}$"), 5)
@@ -157,7 +158,8 @@ floor_4%>%
   column_spec(1, bold = T, background = "#F4B083")%>%
   column_spec(2, background = "#FBE4D5")%>%
   column_spec(8, background = "#FBE4D5")%>%
-  collapse_rows()
+  collapse_rows()%>%
+  scroll_box(width = "100%", height = "800px", fixed_thead = T)
 
 ```
 
@@ -171,7 +173,8 @@ colnames(mean_floors) = c("#", "2nd floor", "4th floor", "Difference")
 mean_floors%>%
   kbl(align = "c")%>%
   kable_material(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = F)%>%
-  add_header_above(c("Measurements" = 4), background = "#548135", color = "#FFFFFF")
+  add_header_above(c("Measurements" = 4), background = "#548135", color = "#FFFFFF")%>%
+  scroll_box(width = "100%")
 
 #Point 1
 mean_point_1_floor_2 <- floor_2$pos_1[seq(3, 15, by = 3)]
@@ -182,7 +185,8 @@ colnames(mean_floors_point_1) = c("#", "2nd floor", "4th floor", "Difference")
 mean_floors_point_1%>%
   kbl(align = "c")%>%
   kable_material(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = F)%>%
-  add_header_above(c("Measurements (Point 1)" = 4), background = "#548135", color = "#FFFFFF")
+  add_header_above(c("Measurements (Point 1)" = 4), background = "#548135", color = "#FFFFFF")%>%
+  scroll_box(width = "100%")
 
 #Point 2
 mean_point_2_floor_2 <- floor_2$pos_2[seq(3, 15, by = 3)]
@@ -193,7 +197,8 @@ colnames(mean_floors_point_2) = c("#", "2nd floor", "4th floor", "Difference")
 mean_floors_point_2%>%
   kbl(align = "c")%>%
   kable_material(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = F)%>%
-  add_header_above(c("Measurements (Point 2)" = 4), background = "#548135", color = "#FFFFFF")
+  add_header_above(c("Measurements (Point 2)" = 4), background = "#548135", color = "#FFFFFF")%>%
+  scroll_box(width = "100%")
 
 #Point 3
 mean_point_3_floor_2 <- floor_2$pos_3[seq(3, 15, by = 3)]
@@ -204,7 +209,8 @@ colnames(mean_floors_point_3) = c("#", "2nd floor", "4th floor", "Difference")
 mean_floors_point_3%>%
   kbl(align = "c")%>%
   kable_material(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = F)%>%
-  add_header_above(c("Measurements (Point 3)" = 4), background = "#548135", color = "#FFFFFF")
+  add_header_above(c("Measurements (Point 3)" = 4), background = "#548135", color = "#FFFFFF")%>%
+  scroll_box(width = "100%")
 
 #Point 4
 mean_point_4_floor_2 <- floor_2$pos_4[seq(3, 15, by = 3)]
@@ -215,7 +221,8 @@ colnames(mean_floors_point_4) = c("#", "2nd floor", "4th floor", "Difference")
 mean_floors_point_4%>%
   kbl(align = "c")%>%
   kable_material(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = F)%>%
-  add_header_above(c("Measurements (Point 4)" = 4), background = "#548135", color = "#FFFFFF")
+  add_header_above(c("Measurements (Point 4)" = 4), background = "#548135", color = "#FFFFFF")%>%
+  scroll_box(width = "100%")
 
 #Point 5
 mean_point_5_floor_2 <- floor_2$pos_5[seq(3, 15, by = 3)]
@@ -226,6 +233,7 @@ colnames(mean_floors_point_5) = c("#", "2nd floor", "4th floor", "Difference")
 mean_floors_point_5%>%
   kbl(align = "c")%>%
   kable_material(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = F)%>%
-  add_header_above(c("Measurements (Point 5)" = 4), background = "#548135", color = "#FFFFFF")
+  add_header_above(c("Measurements (Point 5)" = 4), background = "#548135", color = "#FFFFFF")%>%
+  scroll_box(width = "100%")
 ```
 

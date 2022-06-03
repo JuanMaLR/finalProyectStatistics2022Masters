@@ -159,7 +159,8 @@ tabla_quality_conditions <- data.frame(cp, qualCond)
 colnames(tabla_quality_conditions) <- c("$C_p$", "Quality condition")
 
 knitr::kable(tabla_quality_conditions, align = "c", caption = "Quality Conditions and $C_p$ values for centered process")%>%
-  kable_styling(full_width = F)
+  kable_styling(full_width = F)%>%
+  scroll_box(width = "100%", height = "100%", fixed_thead = T)
 ```
 
 The $C_p$ index only takes into account the width of the PR, but it does not consider its position within the SR. If the PR is not centered on the SR, it would be possible to have a substantial percentage of products with characteristics outside the SL although the $C_p$ value is high. In order to solve this problem, the $C_{pk}$ indices was also introduced [@de-Felipe_Benedito_2017].
@@ -202,7 +203,7 @@ colnames(tabla_peso) <- c("Number of elements", "Weight of candy (g)")
 
 kbl(tabla_peso, align = "c", caption = "Weight of 35 candies")%>%
   kable_styling(position = "center", full_width = F)%>%
-  scroll_box(width = "530px", height = "800px", fixed_thead = T, extra_css = "margin-left: auto; margin-right: auto;")
+  scroll_box(width = "100%", height = "800px", fixed_thead = T, extra_css = "margin-left: auto; margin-right: auto;")
 ```
 
 ## Graphical Summaries and Summary Statistics
@@ -225,7 +226,8 @@ summary_statistics <- data.frame(
 )
 
 knitr::kable(summary_statistics, col.names = names(summary_statistics), align = "c", caption = "Summary Statistics from the candy weights")%>%
-  kable_styling(full_width = F)
+  kable_styling(full_width = F)%>%
+  scroll_box(width = "100%", height = "100%", fixed_thead = T)
 ```
 
 Figure \@ref(fig:weight-histogram) shows the distribution of the weights of the candy, presented in a histogram. The data shows *Negative Skewness*, as it is left skewed and the Mean `r specify_decimal(sample_mean, 4)` g, is smaller than the Median `r specify_decimal(sample_median, 4)` g. However, it approximates a normal distribution. As it can be seen, even though the candy´s weight is supposed to be 8 grams, most of the candies in the sample show a considerably higher weight.
@@ -263,7 +265,8 @@ boxplot_table <- data.frame(
 )
 
 knitr::kable(boxplot_table, col.names = names(boxplot_table), align = "c", caption = "Box plot statistics")%>%
-  kable_styling(full_width = F)
+  kable_styling(full_width = F)%>%
+  scroll_box(width = "100%", height = "100%", fixed_thead = T)
 ```
 
 ```{R weight-stem, fig.cap="Stem and Leaf graph for the measurements taken", fig.align = 'center', out.width = "80%"}
@@ -356,8 +359,9 @@ nom_table <- data.frame(
   "Tolerance" = nom_tolerance_data
 )
 
-knitr::kable(nom_table, col.names = gsub(".", " ", names(nom_table)), align = "c", caption = "NOM -002-SCFI-2011 specification Limit")%>%
-  kable_styling(full_width = F)
+knitr::kable(nom_table, col.names = gsub(".", " ", names(nom_table)), align = "c", caption = "NOM-002-SCFI-2011 specification Limit")%>%
+  kable_styling(full_width = F)%>%
+  scroll_box(width = "100%", height = "100%", fixed_thead = T)
 ```
 
 For our case the upper and lower specification limits are obtained as follows:
@@ -391,7 +395,8 @@ process_capability_table <- data.frame(
 )
 
 knitr::kable(process_capability_table, col.names = names(process_capability_table), align = "c", caption = "Process capability table")%>%
-  kable_styling(full_width = F)
+  kable_styling(full_width = F)%>%
+  scroll_box(width = "100%", height = "100%", fixed_thead = T)
 ```
 
 According to the quality condition table, $C_p < 0.67$, therefore, it is determined that the process has a **poor quality**.
@@ -416,7 +421,8 @@ process_capability_table_complete <- data.frame(
 )
 
 knitr::kable(process_capability_table_complete, col.names = names(process_capability_table_complete), align = "c", caption = "Complete process capability table")%>%
-  kable_styling(full_width = F)
+  kable_styling(full_width = F)%>%
+  scroll_box(width = "100%", height = "100%", fixed_thead = T)
 ```
 
 This $C_{pk}$ value is negative, which indicates **poor capability** of the process, as it is yielding results out of the specified tolerances, therefore not meeting the process requirements. 
@@ -499,7 +505,7 @@ colnames(simulated_data_table) <- table_titles
 
 knitr::kable(simulated_data_table, align = "c", caption = "Simulated data table")%>%
   kable_styling(position = "center", full_width = F)%>%
-  scroll_box(width = "1120px", height = "800px", fixed_thead = T, extra_css = "margin-left: auto; margin-right: auto;")
+  scroll_box(width = "100%", height = "800px", fixed_thead = T, extra_css = "margin-left: auto; margin-right: auto;")
 ```
 
 ```{R}
