@@ -1,43 +1,135 @@
 ---
-title: |
-  ![](logo.png){width=4in}  
-  Projects protafolio
-subtitle: |
-  Instituto Tecnológico y de Estudios Superiores de Monterrey  
-  Campus Monterrey
-author: |
-  Ing. Karen Joselyne Avilez Cuahquentzi - A00835413  
-  Ing. Juan Manuel Ledesma Rangel - A01206568  
-  Ing. Luis Alberto Otero Herrera - A00835185  
-  Ing. Luis Antonio Pulido Victoria - A00835394  
-  Ing. Bryan Daniel Sandoval Gaytán - A00835418  
-    
-    
+title: "![team2-book](logo.png){width=4in}"
+author: "Ing. Karen Joselyne Avilez Cuahquentzi - A00835413  \nIng. Juan Manuel Ledesma
+  Rangel - A01206568  \nIng. Luis Alberto Otero Herrera - A00835185  \nIng. Luis Antonio
+  Pulido Victoria - A00835394  \nIng. Bryan Daniel Sandoval Gaytán - A00835418  \n
+  \ \n  \n"
 date: "`r Sys.Date()`"
+subtitle: "Instituto Tecnológico y de Estudios Superiores de Monterrey  \nCampus Monterrey\n"
+github-repo: JuanMaLR/finalProyectStatistics2022Masters
+url: https://github.com/JuanMaLR/finalProyectStatistics2022Masters
 site: bookdown::bookdown_site
 documentclass: book
-output:
-  bookdown::pdf_book:
-    keep_tex: yes
-  bookdown::gitbook:
-    lib_dir: "book_assets"
-    css: "style.css"
-    includes:
-        in_header: header.html
-bibliography: ["references.bib", "packages.bib"]
-biblio-style: "apalike"
-link-citations: true
+bibliography:
+- references.bib
+- packages.bib
+biblio-style: apalike
+link-citations: yes
+nocite: |
+  @*
 description: |
-  Final project for the data science class regarding february - june 2022 semester
+  Final Project Data Science FJ2022
+output:
+  bookdown::gitbook:
+    includes:
+      in_header: header.html
 ---
-
-# Abstract
-
-Statistical analysis has been a very useful method to analyze any type of quantitative or qualitative process in order to provide verdicts according to what is required to be assessed. One of the widely applied applications of statistical analysis is the validation of the quality of a company's production process through the "process capacity" and "acceptance sampling" tools. In this project, the analysis of the weight of 35 candies was carried out to validate the capacity of the production process by calculating the $C_p$ coefficient. Also, a sample of car bodies inspected for impurities was analyzed to reject or accept the process lot through the acceptance sampling tool applying three different planes as evaluation scenarios. The last two processes analyzed applied hypothesis testing to test myths known by the team members. First, the support that establishes that in Mexico women read more books per year on average than men was validated; and second, the myth that the fourth floor of the Tecnológico de Monterrey library, Monterrey campus, is quieter than the second floor was put to the test. The first analysis concludes that the production process has a poor capacity with a $C_p=0.365$. For the case of acceptance sampling, only one of the three scenarios will be considered adequate to accept the car body production lot. In the evaluation of the first myth, not enough evidence was found to ensure that women read more books than men in Mexico. Finally, with the second myth, enough evidence was found to affirm that the fourth floor of the library is quieter than the second.
 
 ```{r include=FALSE}
 # automatically create a bib database for R packages
 knitr::write_bib(c(
-  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+  .packages(), 'base', 'bookdown', 'knitr', 'rmarkdown'
 ), 'packages.bib')
 ```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# install the packages needed by this book; you fill out c(), e.g. c('ggplot2', 'dplyr')
+lapply(c('readr', 'kableExtra', 'knitr', 'SixSigma', 'latex2exp', 'ggplot2', 'boot', 'remotes', 'bookdown'), function(pkg) {
+  if (system.file(package = pkg) == '') install.packages(pkg)
+})
+```
+
+```{R echo = FALSE}
+codejs <- readr::read_lines("./js/codefolding.js")
+collapsejs <- readr::read_lines("./js/collapse.js")
+transitionjs <- readr::read_lines("./js/transition.js")
+dropdownjs <- readr::read_lines("./js/dropdown.js")
+
+htmlhead <- c(
+  paste('
+<script>',
+paste(transitionjs, collapse = "\n"),
+'</script>
+<script>',
+paste(collapsejs, collapse = "\n"),
+'</script>
+<script>',
+paste(codejs, collapse = "\n"),
+'</script>
+<script>',
+paste(dropdownjs, collapse = "\n"),
+'</script>
+<style type="text/css">
+.code-folding-btn { 
+  margin-bottom: 4px; 
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  border-radius: 0.25rem;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.row { display: flex; }
+.collapse { display: none; }
+.in { display:block }
+.pull-right > .dropdown-menu {
+    right: 0;
+    left: auto;
+}
+.open > .dropdown-menu {
+    display: block;
+}
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+.personalized-button {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    border-radius: 0.25rem;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+</style>
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("show" === "hide");
+});
+</script>
+', sep = "\n"),
+  paste0('
+<script>
+document.write(\'<div class="btn-group pull-right" style="position: absolute; top: 20%; right: 2%; z-index: 200"><button type="button" class="btn btn-default btn-xs dropdown-toggle personalized-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" data-_extension-text-contrast=""><span>Code</span> <span class="caret"></span></button><ul class="dropdown-menu" style="min-width: 50px;"><li><a id="rmd-show-all-code" href="#">Show All Code</a></li><li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li></ul></div>\')
+</script>
+')
+)
+
+readr::write_lines(htmlhead, file = "./header.html")
+```
+
+# Abstract
+
+Statistical analysis has been a very useful method to analyze any type of quantitative or qualitative process in order to provide verdicts according to what is required to be assessed. One of the widely applied applications of statistical analysis is the validation of the quality of a company's production process through the "process capacity" and "acceptance sampling" tools. In this project, the analysis of the weight of 35 candies was carried out to validate the capacity of the production process by calculating the $C_p$ coefficient. Also, a sample of car bodies inspected for impurities was analyzed to reject or accept the process lot through the acceptance sampling tool applying three different planes as evaluation scenarios. The last two processes analyzed applied hypothesis testing to test myths known by the team members. First, the support that establishes that in Mexico women read more books per year on average than men was validated; and second, the myth that the fourth floor of the Tecnológico de Monterrey library, Monterrey campus, is quieter than the second floor was put to the test. The first analysis concludes that the production process has a poor capacity with a $C_p=0.365$. For the case of acceptance sampling, only one of the three scenarios will be considered adequate to accept the car body production lot. In the evaluation of the first myth, not enough evidence was found to ensure that women read more books than men in Mexico. Finally, with the second myth, enough evidence was found to affirm that the fourth floor of the library is quieter than the second.

@@ -4,20 +4,20 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3 Acceptance sampling |  Projects protafolio</title>
-  <meta name="description" content="Final project for the data science class regarding february - june 2022 semester" />
+  <title>3 Acceptance sampling | team2-book</title>
+  <meta name="description" content="Final Project Data Science FJ2022" />
   <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3 Acceptance sampling |  Projects protafolio" />
+  <meta property="og:title" content="3 Acceptance sampling | team2-book" />
   <meta property="og:type" content="book" />
   
-  <meta property="og:description" content="Final project for the data science class regarding february - june 2022 semester" />
-  
+  <meta property="og:description" content="Final Project Data Science FJ2022" />
+  <meta name="github-repo" content="JuanMaLR/finalProyectStatistics2022Masters" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3 Acceptance sampling |  Projects protafolio" />
+  <meta name="twitter:title" content="3 Acceptance sampling | team2-book" />
   
-  <meta name="twitter:description" content="Final project for the data science class regarding february - june 2022 semester" />
+  <meta name="twitter:description" content="Final Project Data Science FJ2022" />
   
 
 
@@ -31,15 +31,15 @@
   
 <link rel="prev" href="process-capability.html"/>
 <link rel="next" href="myth-busters-1.html"/>
-<script src="book_assets/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
-<link href="book_assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
-<link href="book_assets/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
-<link href="book_assets/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="book_assets/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
-<link href="book_assets/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
-<link href="book_assets/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="book_assets/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
 
 
 
@@ -48,11 +48,11 @@
 
 
 
-<link href="book_assets/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
-<link href="book_assets/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
-<script src="book_assets/anchor-sections-1.1.0/anchor-sections.js"></script>
-<script src="book_assets/kePrint-0.0.1/kePrint.js"></script>
-<link href="book_assets/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 <script>
 /* ========================================================================
@@ -809,7 +809,7 @@ div.csl-indent {
 <li class="chapter" data-level="5.14" data-path="myth-busters-2.html"><a href="myth-busters-2.html#statistical-conclusion-1"><i class="fa fa-check"></i><b>5.14</b> Statistical conclusion</a></li>
 <li class="chapter" data-level="5.15" data-path="myth-busters-2.html"><a href="myth-busters-2.html#practical-conclusion-1"><i class="fa fa-check"></i><b>5.15</b> Practical conclusion</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="6" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>6</b> References</a></li>
 </ul>
 
       </nav>
@@ -819,8 +819,7 @@ div.csl-indent {
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"><p><img src="logo.png" style="width:4in" /><br />
-Projects protafolio</p></a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"><img src="logo.png" title="fig:" style="width:4in" alt="team2-book" /></a>
           </h1>
         </div>
 
@@ -887,17 +886,17 @@ Projects protafolio</p></a>
 <li>Counting: enumeration of the occurrences of a given characteristic by number of units counted.</li>
 <li>Variables: measurement of some characteristic using a continuous scale.</li>
 </ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="acceptance-sampling.html#cb2-1" aria-hidden="true" tabindex="-1"></a>data_type <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Attributes}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Counting}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Variables}$&quot;</span>)</span>
-<span id="cb2-2"><a href="acceptance-sampling.html#cb2-2" aria-hidden="true" tabindex="-1"></a>type_a_curve <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Hypergeometric&quot;</span>, <span class="st">&quot;$f$-Binomial&quot;</span>, <span class="st">&quot;Applicable continuous distribution&quot;</span>)</span>
-<span id="cb2-3"><a href="acceptance-sampling.html#cb2-3" aria-hidden="true" tabindex="-1"></a>type_b_curve <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Binomial&quot;</span>, <span class="st">&quot;Poisson&quot;</span>, <span class="st">&quot;Applicable continuous distribution&quot;</span>)</span>
-<span id="cb2-4"><a href="acceptance-sampling.html#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="acceptance-sampling.html#cb2-5" aria-hidden="true" tabindex="-1"></a>tabla_recommended_distributions <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(data_type, type_a_curve, type_b_curve)</span>
-<span id="cb2-6"><a href="acceptance-sampling.html#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="acceptance-sampling.html#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(tabla_recommended_distributions) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Data type}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Type A curve}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Type B curve}$&quot;</span>)</span>
-<span id="cb2-8"><a href="acceptance-sampling.html#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="acceptance-sampling.html#cb2-9" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(tabla_recommended_distributions, <span class="at">align =</span> <span class="st">&quot;c&quot;</span>, <span class="at">caption =</span> <span class="st">&quot;Recommended distribution for each type of data measured in the sample and the type of OC curve to be constructed&quot;</span>)<span class="sc">%&gt;%</span></span>
-<span id="cb2-10"><a href="acceptance-sampling.html#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">full_width =</span> F)<span class="sc">%&gt;%</span></span>
-<span id="cb2-11"><a href="acceptance-sampling.html#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scroll_box</span>(<span class="at">width =</span> <span class="st">&quot;100%&quot;</span>, <span class="at">height =</span> <span class="st">&quot;100%&quot;</span>, <span class="at">fixed_thead =</span> T)</span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="acceptance-sampling.html#cb37-1" aria-hidden="true" tabindex="-1"></a>data_type <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Attributes}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Counting}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Variables}$&quot;</span>)</span>
+<span id="cb37-2"><a href="acceptance-sampling.html#cb37-2" aria-hidden="true" tabindex="-1"></a>type_a_curve <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Hypergeometric&quot;</span>, <span class="st">&quot;$f$-Binomial&quot;</span>, <span class="st">&quot;Applicable continuous distribution&quot;</span>)</span>
+<span id="cb37-3"><a href="acceptance-sampling.html#cb37-3" aria-hidden="true" tabindex="-1"></a>type_b_curve <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Binomial&quot;</span>, <span class="st">&quot;Poisson&quot;</span>, <span class="st">&quot;Applicable continuous distribution&quot;</span>)</span>
+<span id="cb37-4"><a href="acceptance-sampling.html#cb37-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-5"><a href="acceptance-sampling.html#cb37-5" aria-hidden="true" tabindex="-1"></a>tabla_recommended_distributions <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(data_type, type_a_curve, type_b_curve)</span>
+<span id="cb37-6"><a href="acceptance-sampling.html#cb37-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-7"><a href="acceptance-sampling.html#cb37-7" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(tabla_recommended_distributions) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Data type}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Type A curve}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Type B curve}$&quot;</span>)</span>
+<span id="cb37-8"><a href="acceptance-sampling.html#cb37-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-9"><a href="acceptance-sampling.html#cb37-9" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(tabla_recommended_distributions, <span class="at">align =</span> <span class="st">&quot;c&quot;</span>, <span class="at">caption =</span> <span class="st">&quot;Recommended distribution for each type of data measured in the sample and the type of OC curve to be constructed&quot;</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb37-10"><a href="acceptance-sampling.html#cb37-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">full_width =</span> F)<span class="sc">%&gt;%</span></span>
+<span id="cb37-11"><a href="acceptance-sampling.html#cb37-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scroll_box</span>(<span class="at">width =</span> <span class="st">&quot;100%&quot;</span>, <span class="at">height =</span> <span class="st">&quot;100%&quot;</span>, <span class="at">fixed_thead =</span> T)</span></code></pre></div>
 <div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:100%; overflow-x: scroll; width:100%; ">
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
@@ -953,7 +952,7 @@ Applicable continuous distribution
 </tbody>
 </table>
 </div>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="acceptance-sampling.html#cb3-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;images/operating_cc.png&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="acceptance-sampling.html#cb38-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;images/operating_cc.png&quot;</span>)</span></code></pre></div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:operating-cc"></span>
 <img src="images/operating_cc.png" alt="Example of an Operating Characteristic Curve for a sampling plan with $n=205$ and $c=2$. AQL and LQL values (described later) and their relationship with the producer’s and consumer’s risk are shown. Taken from @gutirrez_pulido_control_2013" width="70%" />
 <p class="caption">
@@ -1007,14 +1006,14 @@ Figure 3.1: Example of an Operating Characteristic Curve for a sampling plan wit
 <li>Second phase is related to the implementation of a process that will reduce impurities in the different stages of the painting process.</li>
 </ul>
 <p>Broadly speaking, in the painting process in the automotive industry, the car body is provided with different layers, each of which corresponds to one or more unit operations, which are shown below:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="acceptance-sampling.html#cb4-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;images/layers_painted.png&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="acceptance-sampling.html#cb39-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;images/layers_painted.png&quot;</span>)</span></code></pre></div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:layers-painted"></span>
 <img src="images/layers_painted.png" alt="Layers during the painting process in a car body" width="60%" />
 <p class="caption">
 Figure 3.2: Layers during the painting process in a car body
 </p>
 </div>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="acceptance-sampling.html#cb5-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;images/painting_stages.png&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="acceptance-sampling.html#cb40-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;images/painting_stages.png&quot;</span>)</span></code></pre></div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:painting-stages"></span>
 <img src="images/painting_stages.png" alt="Stages through which the car body passes during the painting process" width="60%" />
 <p class="caption">
@@ -1032,7 +1031,7 @@ Figure 3.3: Stages through which the car body passes during the painting process
 <p>For this project we will focus on the best-selling model, “Model A” produced between 2019-2020 as well as on the impurity called “fiber”, in the detailing stage, in Figure <a href="acceptance-sampling.html#fig:impurity-fiber">3.4</a> there are some examples of the impurity “fiber” observed in the car body.</p>
 <p>The purpose of this project is therefore to determine and evaluate three acceptance sampling plans for this process, in which the quality of an item, in this case the car body, is based on the number of observed impurities.</p>
 <p>As there is a corrective process for every car body after an impurity is detected, it is stated that a <strong>defective unit is that with more than 13 impurities</strong>. Thus, those car bodies which have 13 or less impurities are considered as non-defective.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="acceptance-sampling.html#cb6-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;images/impurity_fiber.png&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="acceptance-sampling.html#cb41-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;images/impurity_fiber.png&quot;</span>)</span></code></pre></div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:impurity-fiber"></span>
 <img src="images/impurity_fiber.png" alt="Examples of the impurity “fiber” seen in the car body" width="60%" />
 <p class="caption">
@@ -1050,10 +1049,10 @@ Figure 3.4: Examples of the impurity “fiber” seen in the car body
 <p>According to <span class="citation">Navidi (<a href="#ref-navidi_2019" role="doc-biblioref">2019</a>)</span>, the proportion of defectives can be estimated using the sample proportion <span class="math inline">\(\hat{p}\)</span>:</p>
 <p><span class="math display">\[\hat{p} = \frac{X}{n}\]</span></p>
 <p>Where <span class="math inline">\(X\)</span> are the observed number of defectives and <span class="math inline">\(n\)</span> the sample size, hence:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="acceptance-sampling.html#cb7-1" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="dv">19</span></span>
-<span id="cb7-2"><a href="acceptance-sampling.html#cb7-2" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">318</span></span>
-<span id="cb7-3"><a href="acceptance-sampling.html#cb7-3" aria-hidden="true" tabindex="-1"></a>p_hat <span class="ot">&lt;-</span> X<span class="sc">/</span>n</span>
-<span id="cb7-4"><a href="acceptance-sampling.html#cb7-4" aria-hidden="true" tabindex="-1"></a>sigma_p_hat <span class="ot">&lt;-</span> <span class="fu">sqrt</span>((p_hat<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>p_hat))<span class="sc">/</span>(n))</span></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="acceptance-sampling.html#cb42-1" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="dv">19</span></span>
+<span id="cb42-2"><a href="acceptance-sampling.html#cb42-2" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">318</span></span>
+<span id="cb42-3"><a href="acceptance-sampling.html#cb42-3" aria-hidden="true" tabindex="-1"></a>p_hat <span class="ot">&lt;-</span> X<span class="sc">/</span>n</span>
+<span id="cb42-4"><a href="acceptance-sampling.html#cb42-4" aria-hidden="true" tabindex="-1"></a>sigma_p_hat <span class="ot">&lt;-</span> <span class="fu">sqrt</span>((p_hat<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>p_hat))<span class="sc">/</span>(n))</span></code></pre></div>
 <p><span class="math display">\[\hat{p} = \frac{19}{318} = 0.0597\]</span></p>
 <p>For this value to be useful we compute its uncertainty using:</p>
 <p><span class="math display">\[\sigma_{\hat{p}} = \sqrt{\frac{p(1-p)}{n}}\]</span></p>
@@ -1061,35 +1060,35 @@ Figure 3.4: Examples of the impurity “fiber” seen in the car body
 <p><span class="math display">\[\sigma_{\hat{p}} = 0.0133\]</span></p>
 <p>We will use this value as a reference for determining AQL and LQL values.</p>
 <p>Now, we can create a table with the required information for implementing Cameron’s Method for designing each sampling plan.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="acceptance-sampling.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Data for plan A</span></span>
-<span id="cb8-2"><a href="acceptance-sampling.html#cb8-2" aria-hidden="true" tabindex="-1"></a>planA_AQL <span class="ot">&lt;-</span> <span class="dv">6</span></span>
-<span id="cb8-3"><a href="acceptance-sampling.html#cb8-3" aria-hidden="true" tabindex="-1"></a>planA_LQL <span class="ot">&lt;-</span> <span class="dv">10</span></span>
-<span id="cb8-4"><a href="acceptance-sampling.html#cb8-4" aria-hidden="true" tabindex="-1"></a>planA_alpha <span class="ot">&lt;-</span> <span class="fl">0.05</span></span>
-<span id="cb8-5"><a href="acceptance-sampling.html#cb8-5" aria-hidden="true" tabindex="-1"></a>planA_beta <span class="ot">&lt;-</span> <span class="fl">0.1</span></span>
-<span id="cb8-6"><a href="acceptance-sampling.html#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-7"><a href="acceptance-sampling.html#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co">#Data for plan B</span></span>
-<span id="cb8-8"><a href="acceptance-sampling.html#cb8-8" aria-hidden="true" tabindex="-1"></a>planB_AQL <span class="ot">&lt;-</span> <span class="dv">4</span></span>
-<span id="cb8-9"><a href="acceptance-sampling.html#cb8-9" aria-hidden="true" tabindex="-1"></a>planB_LQL <span class="ot">&lt;-</span> <span class="dv">10</span></span>
-<span id="cb8-10"><a href="acceptance-sampling.html#cb8-10" aria-hidden="true" tabindex="-1"></a>planB_alpha <span class="ot">&lt;-</span> <span class="fl">0.05</span></span>
-<span id="cb8-11"><a href="acceptance-sampling.html#cb8-11" aria-hidden="true" tabindex="-1"></a>planB_beta <span class="ot">&lt;-</span> <span class="fl">0.01</span></span>
-<span id="cb8-12"><a href="acceptance-sampling.html#cb8-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-13"><a href="acceptance-sampling.html#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="co">#Data for plan C</span></span>
-<span id="cb8-14"><a href="acceptance-sampling.html#cb8-14" aria-hidden="true" tabindex="-1"></a>planC_AQL <span class="ot">&lt;-</span> <span class="fl">2.5</span></span>
-<span id="cb8-15"><a href="acceptance-sampling.html#cb8-15" aria-hidden="true" tabindex="-1"></a>planC_LQL <span class="ot">&lt;-</span> <span class="dv">10</span></span>
-<span id="cb8-16"><a href="acceptance-sampling.html#cb8-16" aria-hidden="true" tabindex="-1"></a>planC_alpha <span class="ot">&lt;-</span> <span class="fl">0.01</span></span>
-<span id="cb8-17"><a href="acceptance-sampling.html#cb8-17" aria-hidden="true" tabindex="-1"></a>planC_beta <span class="ot">&lt;-</span> <span class="fl">0.05</span></span></code></pre></div>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="acceptance-sampling.html#cb9-1" aria-hidden="true" tabindex="-1"></a>variable <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;$AQL (</span><span class="sc">\\</span><span class="st">%)$&quot;</span>, <span class="st">&quot;$LQL (</span><span class="sc">\\</span><span class="st">%)$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">alpha$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">beta$&quot;</span>)</span>
-<span id="cb9-2"><a href="acceptance-sampling.html#cb9-2" aria-hidden="true" tabindex="-1"></a>plan_a <span class="ot">&lt;-</span> <span class="fu">c</span>(planA_AQL, planA_LQL, planA_alpha, planA_beta)</span>
-<span id="cb9-3"><a href="acceptance-sampling.html#cb9-3" aria-hidden="true" tabindex="-1"></a>plan_b <span class="ot">&lt;-</span> <span class="fu">c</span>(planB_AQL, planB_LQL, planB_alpha, planB_beta)</span>
-<span id="cb9-4"><a href="acceptance-sampling.html#cb9-4" aria-hidden="true" tabindex="-1"></a>plan_c <span class="ot">&lt;-</span> <span class="fu">c</span>(planC_AQL, planC_LQL, planC_alpha, planC_beta)</span>
-<span id="cb9-5"><a href="acceptance-sampling.html#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-6"><a href="acceptance-sampling.html#cb9-6" aria-hidden="true" tabindex="-1"></a>tabla_AQL_LQL_values <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(variable, plan_a, plan_b, plan_c)</span>
-<span id="cb9-7"><a href="acceptance-sampling.html#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-8"><a href="acceptance-sampling.html#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(tabla_AQL_LQL_values) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Variable}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Plan A}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Plan B}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Plan C}$&quot;</span>)</span>
-<span id="cb9-9"><a href="acceptance-sampling.html#cb9-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-10"><a href="acceptance-sampling.html#cb9-10" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(tabla_AQL_LQL_values, <span class="at">align =</span> <span class="st">&quot;c&quot;</span>, <span class="at">caption =</span> <span class="st">&quot;AQL and LQL values&quot;</span>)<span class="sc">%&gt;%</span></span>
-<span id="cb9-11"><a href="acceptance-sampling.html#cb9-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">full_width =</span> F)<span class="sc">%&gt;%</span></span>
-<span id="cb9-12"><a href="acceptance-sampling.html#cb9-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scroll_box</span>(<span class="at">width =</span> <span class="st">&quot;100%&quot;</span>, <span class="at">height =</span> <span class="st">&quot;100%&quot;</span>, <span class="at">fixed_thead =</span> T)</span></code></pre></div>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="acceptance-sampling.html#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Data for plan A</span></span>
+<span id="cb43-2"><a href="acceptance-sampling.html#cb43-2" aria-hidden="true" tabindex="-1"></a>planA_AQL <span class="ot">&lt;-</span> <span class="dv">6</span></span>
+<span id="cb43-3"><a href="acceptance-sampling.html#cb43-3" aria-hidden="true" tabindex="-1"></a>planA_LQL <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb43-4"><a href="acceptance-sampling.html#cb43-4" aria-hidden="true" tabindex="-1"></a>planA_alpha <span class="ot">&lt;-</span> <span class="fl">0.05</span></span>
+<span id="cb43-5"><a href="acceptance-sampling.html#cb43-5" aria-hidden="true" tabindex="-1"></a>planA_beta <span class="ot">&lt;-</span> <span class="fl">0.1</span></span>
+<span id="cb43-6"><a href="acceptance-sampling.html#cb43-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-7"><a href="acceptance-sampling.html#cb43-7" aria-hidden="true" tabindex="-1"></a><span class="co">#Data for plan B</span></span>
+<span id="cb43-8"><a href="acceptance-sampling.html#cb43-8" aria-hidden="true" tabindex="-1"></a>planB_AQL <span class="ot">&lt;-</span> <span class="dv">4</span></span>
+<span id="cb43-9"><a href="acceptance-sampling.html#cb43-9" aria-hidden="true" tabindex="-1"></a>planB_LQL <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb43-10"><a href="acceptance-sampling.html#cb43-10" aria-hidden="true" tabindex="-1"></a>planB_alpha <span class="ot">&lt;-</span> <span class="fl">0.05</span></span>
+<span id="cb43-11"><a href="acceptance-sampling.html#cb43-11" aria-hidden="true" tabindex="-1"></a>planB_beta <span class="ot">&lt;-</span> <span class="fl">0.01</span></span>
+<span id="cb43-12"><a href="acceptance-sampling.html#cb43-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-13"><a href="acceptance-sampling.html#cb43-13" aria-hidden="true" tabindex="-1"></a><span class="co">#Data for plan C</span></span>
+<span id="cb43-14"><a href="acceptance-sampling.html#cb43-14" aria-hidden="true" tabindex="-1"></a>planC_AQL <span class="ot">&lt;-</span> <span class="fl">2.5</span></span>
+<span id="cb43-15"><a href="acceptance-sampling.html#cb43-15" aria-hidden="true" tabindex="-1"></a>planC_LQL <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb43-16"><a href="acceptance-sampling.html#cb43-16" aria-hidden="true" tabindex="-1"></a>planC_alpha <span class="ot">&lt;-</span> <span class="fl">0.01</span></span>
+<span id="cb43-17"><a href="acceptance-sampling.html#cb43-17" aria-hidden="true" tabindex="-1"></a>planC_beta <span class="ot">&lt;-</span> <span class="fl">0.05</span></span></code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="acceptance-sampling.html#cb44-1" aria-hidden="true" tabindex="-1"></a>variable <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;$AQL (</span><span class="sc">\\</span><span class="st">%)$&quot;</span>, <span class="st">&quot;$LQL (</span><span class="sc">\\</span><span class="st">%)$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">alpha$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">beta$&quot;</span>)</span>
+<span id="cb44-2"><a href="acceptance-sampling.html#cb44-2" aria-hidden="true" tabindex="-1"></a>plan_a <span class="ot">&lt;-</span> <span class="fu">c</span>(planA_AQL, planA_LQL, planA_alpha, planA_beta)</span>
+<span id="cb44-3"><a href="acceptance-sampling.html#cb44-3" aria-hidden="true" tabindex="-1"></a>plan_b <span class="ot">&lt;-</span> <span class="fu">c</span>(planB_AQL, planB_LQL, planB_alpha, planB_beta)</span>
+<span id="cb44-4"><a href="acceptance-sampling.html#cb44-4" aria-hidden="true" tabindex="-1"></a>plan_c <span class="ot">&lt;-</span> <span class="fu">c</span>(planC_AQL, planC_LQL, planC_alpha, planC_beta)</span>
+<span id="cb44-5"><a href="acceptance-sampling.html#cb44-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-6"><a href="acceptance-sampling.html#cb44-6" aria-hidden="true" tabindex="-1"></a>tabla_AQL_LQL_values <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(variable, plan_a, plan_b, plan_c)</span>
+<span id="cb44-7"><a href="acceptance-sampling.html#cb44-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-8"><a href="acceptance-sampling.html#cb44-8" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(tabla_AQL_LQL_values) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Variable}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Plan A}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Plan B}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Plan C}$&quot;</span>)</span>
+<span id="cb44-9"><a href="acceptance-sampling.html#cb44-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-10"><a href="acceptance-sampling.html#cb44-10" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(tabla_AQL_LQL_values, <span class="at">align =</span> <span class="st">&quot;c&quot;</span>, <span class="at">caption =</span> <span class="st">&quot;AQL and LQL values&quot;</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb44-11"><a href="acceptance-sampling.html#cb44-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">full_width =</span> F)<span class="sc">%&gt;%</span></span>
+<span id="cb44-12"><a href="acceptance-sampling.html#cb44-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scroll_box</span>(<span class="at">width =</span> <span class="st">&quot;100%&quot;</span>, <span class="at">height =</span> <span class="st">&quot;100%&quot;</span>, <span class="at">fixed_thead =</span> T)</span></code></pre></div>
 <div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:100%; overflow-x: scroll; width:100%; ">
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
@@ -1182,7 +1181,7 @@ p_2 = \frac{LQL}{100}
 Then, we compute the following ratio:</p>
 <p><span class="math display">\[R_c = \frac{p_1}{p_2}\]</span></p>
 <p>With the Cameron’s Tables, using the established values of <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span>, and the obtained value for <span class="math inline">\(R_c\)</span>, one can determine a value <span class="math inline">\(R\)</span>, which is the closest possible value of <span class="math inline">\(R_c\)</span> available in the Cameron’s Table. Then, the acceptance number <span class="math inline">\(c\)</span> and the value <span class="math inline">\(np_1\)</span> can be determined; the latter quantity can be used to find the sample size <span class="math inline">\((n=\frac{np_1}{p_1})\)</span>.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="acceptance-sampling.html#cb10-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;images/cameron_table.png&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="acceptance-sampling.html#cb45-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;images/cameron_table.png&quot;</span>)</span></code></pre></div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:cameron-table"></span>
 <img src="images/cameron_table.png" alt="Cameron's table used to obtain $R$, $c$, and $np_1$" width="60%" />
 <p class="caption">
@@ -1190,44 +1189,44 @@ Figure 3.5: Cameron’s table used to obtain <span class="math inline">\(R\)</sp
 </p>
 </div>
 <p>Using the Cameron’s Tables <a href="acceptance-sampling.html#fig:cameron-table">3.5</a> available in <span class="citation">Gutierrez Pulido and Vara Salazar (<a href="#ref-gutirrez_pulido_control_2013" role="doc-biblioref">2013</a>)</span>, the following information is obtained:</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="acceptance-sampling.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Results for plan A</span></span>
-<span id="cb11-2"><a href="acceptance-sampling.html#cb11-2" aria-hidden="true" tabindex="-1"></a>planA_p1 <span class="ot">&lt;-</span> planA_AQL<span class="sc">/</span><span class="dv">100</span></span>
-<span id="cb11-3"><a href="acceptance-sampling.html#cb11-3" aria-hidden="true" tabindex="-1"></a>planA_p2 <span class="ot">&lt;-</span> planA_LQL<span class="sc">/</span><span class="dv">100</span></span>
-<span id="cb11-4"><a href="acceptance-sampling.html#cb11-4" aria-hidden="true" tabindex="-1"></a>planA_Rc <span class="ot">&lt;-</span> planA_p2<span class="sc">/</span>planA_p1</span>
-<span id="cb11-5"><a href="acceptance-sampling.html#cb11-5" aria-hidden="true" tabindex="-1"></a>planA_R <span class="ot">&lt;-</span> <span class="fl">1.79</span></span>
-<span id="cb11-6"><a href="acceptance-sampling.html#cb11-6" aria-hidden="true" tabindex="-1"></a>planA_c <span class="ot">&lt;-</span> <span class="dv">25</span></span>
-<span id="cb11-7"><a href="acceptance-sampling.html#cb11-7" aria-hidden="true" tabindex="-1"></a>planA_np <span class="ot">&lt;-</span> <span class="fl">18.21</span></span>
-<span id="cb11-8"><a href="acceptance-sampling.html#cb11-8" aria-hidden="true" tabindex="-1"></a>planA_n <span class="ot">&lt;-</span> planA_np<span class="sc">/</span>planA_p1</span>
-<span id="cb11-9"><a href="acceptance-sampling.html#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-10"><a href="acceptance-sampling.html#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="co">#Results for plan B</span></span>
-<span id="cb11-11"><a href="acceptance-sampling.html#cb11-11" aria-hidden="true" tabindex="-1"></a>planB_p1 <span class="ot">&lt;-</span> planB_AQL<span class="sc">/</span><span class="dv">100</span></span>
-<span id="cb11-12"><a href="acceptance-sampling.html#cb11-12" aria-hidden="true" tabindex="-1"></a>planB_p2 <span class="ot">&lt;-</span> planB_LQL<span class="sc">/</span><span class="dv">100</span></span>
-<span id="cb11-13"><a href="acceptance-sampling.html#cb11-13" aria-hidden="true" tabindex="-1"></a>planB_Rc <span class="ot">&lt;-</span> planB_p2<span class="sc">/</span>planB_p1</span>
-<span id="cb11-14"><a href="acceptance-sampling.html#cb11-14" aria-hidden="true" tabindex="-1"></a>planB_R <span class="ot">&lt;-</span> <span class="fl">2.45</span></span>
-<span id="cb11-15"><a href="acceptance-sampling.html#cb11-15" aria-hidden="true" tabindex="-1"></a>planB_c <span class="ot">&lt;-</span> <span class="dv">18</span></span>
-<span id="cb11-16"><a href="acceptance-sampling.html#cb11-16" aria-hidden="true" tabindex="-1"></a>planB_np <span class="ot">&lt;-</span> <span class="fl">12.44</span></span>
-<span id="cb11-17"><a href="acceptance-sampling.html#cb11-17" aria-hidden="true" tabindex="-1"></a>planB_n <span class="ot">&lt;-</span> planB_np<span class="sc">/</span>planB_p1</span>
-<span id="cb11-18"><a href="acceptance-sampling.html#cb11-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-19"><a href="acceptance-sampling.html#cb11-19" aria-hidden="true" tabindex="-1"></a><span class="co">#Results for plan C</span></span>
-<span id="cb11-20"><a href="acceptance-sampling.html#cb11-20" aria-hidden="true" tabindex="-1"></a>planC_p1 <span class="ot">&lt;-</span> planC_AQL<span class="sc">/</span><span class="dv">100</span></span>
-<span id="cb11-21"><a href="acceptance-sampling.html#cb11-21" aria-hidden="true" tabindex="-1"></a>planC_p2 <span class="ot">&lt;-</span> planC_LQL<span class="sc">/</span><span class="dv">100</span></span>
-<span id="cb11-22"><a href="acceptance-sampling.html#cb11-22" aria-hidden="true" tabindex="-1"></a>planC_Rc <span class="ot">&lt;-</span> planC_p2<span class="sc">/</span>planC_p1</span>
-<span id="cb11-23"><a href="acceptance-sampling.html#cb11-23" aria-hidden="true" tabindex="-1"></a>planC_R <span class="ot">&lt;-</span> <span class="fl">3.8</span></span>
-<span id="cb11-24"><a href="acceptance-sampling.html#cb11-24" aria-hidden="true" tabindex="-1"></a>planC_c <span class="ot">&lt;-</span> <span class="dv">9</span></span>
-<span id="cb11-25"><a href="acceptance-sampling.html#cb11-25" aria-hidden="true" tabindex="-1"></a>planC_np <span class="ot">&lt;-</span> <span class="fl">4.13</span></span>
-<span id="cb11-26"><a href="acceptance-sampling.html#cb11-26" aria-hidden="true" tabindex="-1"></a>planC_n <span class="ot">&lt;-</span> planC_np<span class="sc">/</span>planC_p1</span></code></pre></div>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="acceptance-sampling.html#cb12-1" aria-hidden="true" tabindex="-1"></a>variable <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;$p_1$&quot;</span>, <span class="st">&quot;$p_2$&quot;</span>, <span class="st">&quot;$R_c$&quot;</span>, <span class="st">&quot;$R$&quot;</span>, <span class="st">&quot;$c$&quot;</span>, <span class="st">&quot;$np_1$&quot;</span>, <span class="st">&quot;$n$&quot;</span>)</span>
-<span id="cb12-2"><a href="acceptance-sampling.html#cb12-2" aria-hidden="true" tabindex="-1"></a>plan_a <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">specify_decimal</span>(planA_p1, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planA_p2, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planA_Rc, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planA_R, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planA_c, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planA_np, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planA_n, <span class="dv">4</span>))</span>
-<span id="cb12-3"><a href="acceptance-sampling.html#cb12-3" aria-hidden="true" tabindex="-1"></a>plan_b <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">specify_decimal</span>(planB_p1, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planB_p2, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planB_Rc, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planB_R, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planB_c, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planB_np, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planB_n, <span class="dv">4</span>))</span>
-<span id="cb12-4"><a href="acceptance-sampling.html#cb12-4" aria-hidden="true" tabindex="-1"></a>plan_c <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">specify_decimal</span>(planC_p1, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planC_p2, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planC_Rc, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planC_R, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planC_c, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planC_np, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planC_n, <span class="dv">4</span>))</span>
-<span id="cb12-5"><a href="acceptance-sampling.html#cb12-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-6"><a href="acceptance-sampling.html#cb12-6" aria-hidden="true" tabindex="-1"></a>cameron_table_plans <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(variable, plan_a, plan_b, plan_c)</span>
-<span id="cb12-7"><a href="acceptance-sampling.html#cb12-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-8"><a href="acceptance-sampling.html#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(cameron_table_plans) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Variable}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Plan A}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Plan B}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Plan C}$&quot;</span>)</span>
-<span id="cb12-9"><a href="acceptance-sampling.html#cb12-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-10"><a href="acceptance-sampling.html#cb12-10" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(cameron_table_plans, <span class="at">align =</span> <span class="st">&quot;c&quot;</span>, <span class="at">caption =</span> <span class="st">&quot;Information extracted from the Cameron&#39;s Table for each sampling plan design&quot;</span>)<span class="sc">%&gt;%</span></span>
-<span id="cb12-11"><a href="acceptance-sampling.html#cb12-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">full_width =</span> F)<span class="sc">%&gt;%</span></span>
-<span id="cb12-12"><a href="acceptance-sampling.html#cb12-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scroll_box</span>(<span class="at">width =</span> <span class="st">&quot;100%&quot;</span>, <span class="at">height =</span> <span class="st">&quot;100%&quot;</span>, <span class="at">fixed_thead =</span> T)</span></code></pre></div>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="acceptance-sampling.html#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Results for plan A</span></span>
+<span id="cb46-2"><a href="acceptance-sampling.html#cb46-2" aria-hidden="true" tabindex="-1"></a>planA_p1 <span class="ot">&lt;-</span> planA_AQL<span class="sc">/</span><span class="dv">100</span></span>
+<span id="cb46-3"><a href="acceptance-sampling.html#cb46-3" aria-hidden="true" tabindex="-1"></a>planA_p2 <span class="ot">&lt;-</span> planA_LQL<span class="sc">/</span><span class="dv">100</span></span>
+<span id="cb46-4"><a href="acceptance-sampling.html#cb46-4" aria-hidden="true" tabindex="-1"></a>planA_Rc <span class="ot">&lt;-</span> planA_p2<span class="sc">/</span>planA_p1</span>
+<span id="cb46-5"><a href="acceptance-sampling.html#cb46-5" aria-hidden="true" tabindex="-1"></a>planA_R <span class="ot">&lt;-</span> <span class="fl">1.79</span></span>
+<span id="cb46-6"><a href="acceptance-sampling.html#cb46-6" aria-hidden="true" tabindex="-1"></a>planA_c <span class="ot">&lt;-</span> <span class="dv">25</span></span>
+<span id="cb46-7"><a href="acceptance-sampling.html#cb46-7" aria-hidden="true" tabindex="-1"></a>planA_np <span class="ot">&lt;-</span> <span class="fl">18.21</span></span>
+<span id="cb46-8"><a href="acceptance-sampling.html#cb46-8" aria-hidden="true" tabindex="-1"></a>planA_n <span class="ot">&lt;-</span> planA_np<span class="sc">/</span>planA_p1</span>
+<span id="cb46-9"><a href="acceptance-sampling.html#cb46-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-10"><a href="acceptance-sampling.html#cb46-10" aria-hidden="true" tabindex="-1"></a><span class="co">#Results for plan B</span></span>
+<span id="cb46-11"><a href="acceptance-sampling.html#cb46-11" aria-hidden="true" tabindex="-1"></a>planB_p1 <span class="ot">&lt;-</span> planB_AQL<span class="sc">/</span><span class="dv">100</span></span>
+<span id="cb46-12"><a href="acceptance-sampling.html#cb46-12" aria-hidden="true" tabindex="-1"></a>planB_p2 <span class="ot">&lt;-</span> planB_LQL<span class="sc">/</span><span class="dv">100</span></span>
+<span id="cb46-13"><a href="acceptance-sampling.html#cb46-13" aria-hidden="true" tabindex="-1"></a>planB_Rc <span class="ot">&lt;-</span> planB_p2<span class="sc">/</span>planB_p1</span>
+<span id="cb46-14"><a href="acceptance-sampling.html#cb46-14" aria-hidden="true" tabindex="-1"></a>planB_R <span class="ot">&lt;-</span> <span class="fl">2.45</span></span>
+<span id="cb46-15"><a href="acceptance-sampling.html#cb46-15" aria-hidden="true" tabindex="-1"></a>planB_c <span class="ot">&lt;-</span> <span class="dv">18</span></span>
+<span id="cb46-16"><a href="acceptance-sampling.html#cb46-16" aria-hidden="true" tabindex="-1"></a>planB_np <span class="ot">&lt;-</span> <span class="fl">12.44</span></span>
+<span id="cb46-17"><a href="acceptance-sampling.html#cb46-17" aria-hidden="true" tabindex="-1"></a>planB_n <span class="ot">&lt;-</span> planB_np<span class="sc">/</span>planB_p1</span>
+<span id="cb46-18"><a href="acceptance-sampling.html#cb46-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-19"><a href="acceptance-sampling.html#cb46-19" aria-hidden="true" tabindex="-1"></a><span class="co">#Results for plan C</span></span>
+<span id="cb46-20"><a href="acceptance-sampling.html#cb46-20" aria-hidden="true" tabindex="-1"></a>planC_p1 <span class="ot">&lt;-</span> planC_AQL<span class="sc">/</span><span class="dv">100</span></span>
+<span id="cb46-21"><a href="acceptance-sampling.html#cb46-21" aria-hidden="true" tabindex="-1"></a>planC_p2 <span class="ot">&lt;-</span> planC_LQL<span class="sc">/</span><span class="dv">100</span></span>
+<span id="cb46-22"><a href="acceptance-sampling.html#cb46-22" aria-hidden="true" tabindex="-1"></a>planC_Rc <span class="ot">&lt;-</span> planC_p2<span class="sc">/</span>planC_p1</span>
+<span id="cb46-23"><a href="acceptance-sampling.html#cb46-23" aria-hidden="true" tabindex="-1"></a>planC_R <span class="ot">&lt;-</span> <span class="fl">3.8</span></span>
+<span id="cb46-24"><a href="acceptance-sampling.html#cb46-24" aria-hidden="true" tabindex="-1"></a>planC_c <span class="ot">&lt;-</span> <span class="dv">9</span></span>
+<span id="cb46-25"><a href="acceptance-sampling.html#cb46-25" aria-hidden="true" tabindex="-1"></a>planC_np <span class="ot">&lt;-</span> <span class="fl">4.13</span></span>
+<span id="cb46-26"><a href="acceptance-sampling.html#cb46-26" aria-hidden="true" tabindex="-1"></a>planC_n <span class="ot">&lt;-</span> planC_np<span class="sc">/</span>planC_p1</span></code></pre></div>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="acceptance-sampling.html#cb47-1" aria-hidden="true" tabindex="-1"></a>variable <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;$p_1$&quot;</span>, <span class="st">&quot;$p_2$&quot;</span>, <span class="st">&quot;$R_c$&quot;</span>, <span class="st">&quot;$R$&quot;</span>, <span class="st">&quot;$c$&quot;</span>, <span class="st">&quot;$np_1$&quot;</span>, <span class="st">&quot;$n$&quot;</span>)</span>
+<span id="cb47-2"><a href="acceptance-sampling.html#cb47-2" aria-hidden="true" tabindex="-1"></a>plan_a <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">specify_decimal</span>(planA_p1, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planA_p2, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planA_Rc, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planA_R, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planA_c, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planA_np, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planA_n, <span class="dv">4</span>))</span>
+<span id="cb47-3"><a href="acceptance-sampling.html#cb47-3" aria-hidden="true" tabindex="-1"></a>plan_b <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">specify_decimal</span>(planB_p1, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planB_p2, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planB_Rc, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planB_R, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planB_c, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planB_np, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planB_n, <span class="dv">4</span>))</span>
+<span id="cb47-4"><a href="acceptance-sampling.html#cb47-4" aria-hidden="true" tabindex="-1"></a>plan_c <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">specify_decimal</span>(planC_p1, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planC_p2, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planC_Rc, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planC_R, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planC_c, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planC_np, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planC_n, <span class="dv">4</span>))</span>
+<span id="cb47-5"><a href="acceptance-sampling.html#cb47-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-6"><a href="acceptance-sampling.html#cb47-6" aria-hidden="true" tabindex="-1"></a>cameron_table_plans <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(variable, plan_a, plan_b, plan_c)</span>
+<span id="cb47-7"><a href="acceptance-sampling.html#cb47-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-8"><a href="acceptance-sampling.html#cb47-8" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(cameron_table_plans) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Variable}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Plan A}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Plan B}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Plan C}$&quot;</span>)</span>
+<span id="cb47-9"><a href="acceptance-sampling.html#cb47-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-10"><a href="acceptance-sampling.html#cb47-10" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(cameron_table_plans, <span class="at">align =</span> <span class="st">&quot;c&quot;</span>, <span class="at">caption =</span> <span class="st">&quot;Information extracted from the Cameron&#39;s Table for each sampling plan design&quot;</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb47-11"><a href="acceptance-sampling.html#cb47-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">full_width =</span> F)<span class="sc">%&gt;%</span></span>
+<span id="cb47-12"><a href="acceptance-sampling.html#cb47-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scroll_box</span>(<span class="at">width =</span> <span class="st">&quot;100%&quot;</span>, <span class="at">height =</span> <span class="st">&quot;100%&quot;</span>, <span class="at">fixed_thead =</span> T)</span></code></pre></div>
 <div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:100%; overflow-x: scroll; width:100%; ">
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
@@ -1352,17 +1351,17 @@ Figure 3.5: Cameron’s table used to obtain <span class="math inline">\(R\)</sp
 </table>
 </div>
 <p>Therefore, the three sampling plans can be summarized as follows:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="acceptance-sampling.html#cb13-1" aria-hidden="true" tabindex="-1"></a>plan <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{A}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{B}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{C}$&quot;</span>)</span>
-<span id="cb13-2"><a href="acceptance-sampling.html#cb13-2" aria-hidden="true" tabindex="-1"></a>acceptance_number <span class="ot">&lt;-</span> <span class="fu">c</span>(planA_c, planB_c, planC_c)</span>
-<span id="cb13-3"><a href="acceptance-sampling.html#cb13-3" aria-hidden="true" tabindex="-1"></a>sample_size <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">ceiling</span>(planA_n), <span class="fu">ceiling</span>(planB_n), <span class="fu">ceiling</span>(planC_n))</span>
-<span id="cb13-4"><a href="acceptance-sampling.html#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-5"><a href="acceptance-sampling.html#cb13-5" aria-hidden="true" tabindex="-1"></a>tabla_sampling_plans_summary <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(plan, acceptance_number, sample_size)</span>
-<span id="cb13-6"><a href="acceptance-sampling.html#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-7"><a href="acceptance-sampling.html#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(tabla_sampling_plans_summary) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Plan}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Acceptance number (c)}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Sample size (n)}$&quot;</span>)</span>
-<span id="cb13-8"><a href="acceptance-sampling.html#cb13-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-9"><a href="acceptance-sampling.html#cb13-9" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(tabla_sampling_plans_summary, <span class="at">align =</span> <span class="st">&quot;c&quot;</span>, <span class="at">caption =</span> <span class="st">&quot;Sampling plans designed using the Cameron&#39;s Method&quot;</span>)<span class="sc">%&gt;%</span></span>
-<span id="cb13-10"><a href="acceptance-sampling.html#cb13-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">full_width =</span> F)<span class="sc">%&gt;%</span></span>
-<span id="cb13-11"><a href="acceptance-sampling.html#cb13-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scroll_box</span>(<span class="at">width =</span> <span class="st">&quot;100%&quot;</span>, <span class="at">height =</span> <span class="st">&quot;100%&quot;</span>, <span class="at">fixed_thead =</span> T)</span></code></pre></div>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="acceptance-sampling.html#cb48-1" aria-hidden="true" tabindex="-1"></a>plan <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{A}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{B}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{C}$&quot;</span>)</span>
+<span id="cb48-2"><a href="acceptance-sampling.html#cb48-2" aria-hidden="true" tabindex="-1"></a>acceptance_number <span class="ot">&lt;-</span> <span class="fu">c</span>(planA_c, planB_c, planC_c)</span>
+<span id="cb48-3"><a href="acceptance-sampling.html#cb48-3" aria-hidden="true" tabindex="-1"></a>sample_size <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">ceiling</span>(planA_n), <span class="fu">ceiling</span>(planB_n), <span class="fu">ceiling</span>(planC_n))</span>
+<span id="cb48-4"><a href="acceptance-sampling.html#cb48-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-5"><a href="acceptance-sampling.html#cb48-5" aria-hidden="true" tabindex="-1"></a>tabla_sampling_plans_summary <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(plan, acceptance_number, sample_size)</span>
+<span id="cb48-6"><a href="acceptance-sampling.html#cb48-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-7"><a href="acceptance-sampling.html#cb48-7" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(tabla_sampling_plans_summary) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Plan}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Acceptance number (c)}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Sample size (n)}$&quot;</span>)</span>
+<span id="cb48-8"><a href="acceptance-sampling.html#cb48-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-9"><a href="acceptance-sampling.html#cb48-9" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(tabla_sampling_plans_summary, <span class="at">align =</span> <span class="st">&quot;c&quot;</span>, <span class="at">caption =</span> <span class="st">&quot;Sampling plans designed using the Cameron&#39;s Method&quot;</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb48-10"><a href="acceptance-sampling.html#cb48-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">full_width =</span> F)<span class="sc">%&gt;%</span></span>
+<span id="cb48-11"><a href="acceptance-sampling.html#cb48-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scroll_box</span>(<span class="at">width =</span> <span class="st">&quot;100%&quot;</span>, <span class="at">height =</span> <span class="st">&quot;100%&quot;</span>, <span class="at">fixed_thead =</span> T)</span></code></pre></div>
 <div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:100%; overflow-x: scroll; width:100%; ">
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
@@ -1425,27 +1424,27 @@ Figure 3.5: Cameron’s table used to obtain <span class="math inline">\(R\)</sp
 <h2><span class="header-section-number">3.4</span> <em>Sampling procedure, producer and consumer risk, relation to type 1 error and power of a test</em><a href="acceptance-sampling.html#sampling-procedure-producer-and-consumer-risk-relation-to-type-1-error-and-power-of-a-test" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Before constructing the OC curve, we must determine what type of curve fits with our data and what will be the appropriate probability distribution to estimate the acceptance probability. As our sample was drawn from a large batch, we will construct a type B curve. Furthermore, as our sampling plan is by attributes, then, according to Table <a href="acceptance-sampling.html#tab:recommended-distributions">3.1</a>, the Binomial distribution should be used.</p>
 <p>The first step for plotting the OC curve is to establish arbitrary values of the proportion of defectives <span class="math inline">\(p\)</span>. Then, for each value of <span class="math inline">\(p\)</span>, the probability of acceptance is estimated using the binomial distribution. The following table is obtained:</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="acceptance-sampling.html#cb14-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="fl">0.0</span>, <span class="fl">0.150</span>, <span class="at">by =</span> <span class="fl">0.002</span>)</span>
-<span id="cb14-2"><a href="acceptance-sampling.html#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-3"><a href="acceptance-sampling.html#cb14-3" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">length</span>(p)</span>
-<span id="cb14-4"><a href="acceptance-sampling.html#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-5"><a href="acceptance-sampling.html#cb14-5" aria-hidden="true" tabindex="-1"></a>p_a <span class="ot">&lt;-</span> <span class="fu">vector</span>(<span class="st">&quot;numeric&quot;</span>, n)</span>
-<span id="cb14-6"><a href="acceptance-sampling.html#cb14-6" aria-hidden="true" tabindex="-1"></a>p_b <span class="ot">&lt;-</span> <span class="fu">vector</span>(<span class="st">&quot;numeric&quot;</span>, n)</span>
-<span id="cb14-7"><a href="acceptance-sampling.html#cb14-7" aria-hidden="true" tabindex="-1"></a>p_c <span class="ot">&lt;-</span> <span class="fu">vector</span>(<span class="st">&quot;numeric&quot;</span>, n)</span>
-<span id="cb14-8"><a href="acceptance-sampling.html#cb14-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-9"><a href="acceptance-sampling.html#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>n) {</span>
-<span id="cb14-10"><a href="acceptance-sampling.html#cb14-10" aria-hidden="true" tabindex="-1"></a>  p_a[i] <span class="ot">=</span> <span class="fu">pbinom</span>(planA_c, <span class="fu">ceiling</span>(planA_n), p[i])</span>
-<span id="cb14-11"><a href="acceptance-sampling.html#cb14-11" aria-hidden="true" tabindex="-1"></a>  p_b[i] <span class="ot">=</span> <span class="fu">pbinom</span>(planB_c, <span class="fu">ceiling</span>(planB_n), p[i])</span>
-<span id="cb14-12"><a href="acceptance-sampling.html#cb14-12" aria-hidden="true" tabindex="-1"></a>  p_c[i] <span class="ot">=</span> <span class="fu">pbinom</span>(planC_c, <span class="fu">ceiling</span>(planC_n), p[i])</span>
-<span id="cb14-13"><a href="acceptance-sampling.html#cb14-13" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb14-14"><a href="acceptance-sampling.html#cb14-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-15"><a href="acceptance-sampling.html#cb14-15" aria-hidden="true" tabindex="-1"></a>acceptance_probability_table <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(p, <span class="fu">specify_decimal</span>(p_a, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(p_b, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(p_c, <span class="dv">4</span>))</span>
-<span id="cb14-16"><a href="acceptance-sampling.html#cb14-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-17"><a href="acceptance-sampling.html#cb14-17" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(acceptance_probability_table) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;$</span><span class="sc">\\</span><span class="st">boldsymbol{p}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">boldsymbol{P_A}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">boldsymbol{P_B}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">boldsymbol{P_C}$&quot;</span>)</span>
-<span id="cb14-18"><a href="acceptance-sampling.html#cb14-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-19"><a href="acceptance-sampling.html#cb14-19" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(acceptance_probability_table, <span class="at">align =</span> <span class="st">&quot;c&quot;</span>, <span class="at">caption =</span> <span class="st">&quot;Probability of acceptance for several proportions of defective for each sampling plan&quot;</span>)<span class="sc">%&gt;%</span></span>
-<span id="cb14-20"><a href="acceptance-sampling.html#cb14-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">position =</span> <span class="st">&quot;center&quot;</span>, <span class="at">full_width =</span> F)<span class="sc">%&gt;%</span></span>
-<span id="cb14-21"><a href="acceptance-sampling.html#cb14-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scroll_box</span>(<span class="at">width =</span> <span class="st">&quot;100%&quot;</span>, <span class="at">height =</span> <span class="st">&quot;800px&quot;</span>, <span class="at">fixed_thead =</span> T, <span class="at">extra_css =</span> <span class="st">&quot;margin-left: auto; margin-right: auto; margin-bottom: 25px;&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="acceptance-sampling.html#cb49-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="fl">0.0</span>, <span class="fl">0.150</span>, <span class="at">by =</span> <span class="fl">0.002</span>)</span>
+<span id="cb49-2"><a href="acceptance-sampling.html#cb49-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-3"><a href="acceptance-sampling.html#cb49-3" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">length</span>(p)</span>
+<span id="cb49-4"><a href="acceptance-sampling.html#cb49-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-5"><a href="acceptance-sampling.html#cb49-5" aria-hidden="true" tabindex="-1"></a>p_a <span class="ot">&lt;-</span> <span class="fu">vector</span>(<span class="st">&quot;numeric&quot;</span>, n)</span>
+<span id="cb49-6"><a href="acceptance-sampling.html#cb49-6" aria-hidden="true" tabindex="-1"></a>p_b <span class="ot">&lt;-</span> <span class="fu">vector</span>(<span class="st">&quot;numeric&quot;</span>, n)</span>
+<span id="cb49-7"><a href="acceptance-sampling.html#cb49-7" aria-hidden="true" tabindex="-1"></a>p_c <span class="ot">&lt;-</span> <span class="fu">vector</span>(<span class="st">&quot;numeric&quot;</span>, n)</span>
+<span id="cb49-8"><a href="acceptance-sampling.html#cb49-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-9"><a href="acceptance-sampling.html#cb49-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>n) {</span>
+<span id="cb49-10"><a href="acceptance-sampling.html#cb49-10" aria-hidden="true" tabindex="-1"></a>  p_a[i] <span class="ot">=</span> <span class="fu">pbinom</span>(planA_c, <span class="fu">ceiling</span>(planA_n), p[i])</span>
+<span id="cb49-11"><a href="acceptance-sampling.html#cb49-11" aria-hidden="true" tabindex="-1"></a>  p_b[i] <span class="ot">=</span> <span class="fu">pbinom</span>(planB_c, <span class="fu">ceiling</span>(planB_n), p[i])</span>
+<span id="cb49-12"><a href="acceptance-sampling.html#cb49-12" aria-hidden="true" tabindex="-1"></a>  p_c[i] <span class="ot">=</span> <span class="fu">pbinom</span>(planC_c, <span class="fu">ceiling</span>(planC_n), p[i])</span>
+<span id="cb49-13"><a href="acceptance-sampling.html#cb49-13" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb49-14"><a href="acceptance-sampling.html#cb49-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-15"><a href="acceptance-sampling.html#cb49-15" aria-hidden="true" tabindex="-1"></a>acceptance_probability_table <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(p, <span class="fu">specify_decimal</span>(p_a, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(p_b, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(p_c, <span class="dv">4</span>))</span>
+<span id="cb49-16"><a href="acceptance-sampling.html#cb49-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-17"><a href="acceptance-sampling.html#cb49-17" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(acceptance_probability_table) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;$</span><span class="sc">\\</span><span class="st">boldsymbol{p}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">boldsymbol{P_A}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">boldsymbol{P_B}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">boldsymbol{P_C}$&quot;</span>)</span>
+<span id="cb49-18"><a href="acceptance-sampling.html#cb49-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-19"><a href="acceptance-sampling.html#cb49-19" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(acceptance_probability_table, <span class="at">align =</span> <span class="st">&quot;c&quot;</span>, <span class="at">caption =</span> <span class="st">&quot;Probability of acceptance for several proportions of defective for each sampling plan&quot;</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb49-20"><a href="acceptance-sampling.html#cb49-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">position =</span> <span class="st">&quot;center&quot;</span>, <span class="at">full_width =</span> F)<span class="sc">%&gt;%</span></span>
+<span id="cb49-21"><a href="acceptance-sampling.html#cb49-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scroll_box</span>(<span class="at">width =</span> <span class="st">&quot;100%&quot;</span>, <span class="at">height =</span> <span class="st">&quot;800px&quot;</span>, <span class="at">fixed_thead =</span> T, <span class="at">extra_css =</span> <span class="st">&quot;margin-left: auto; margin-right: auto; margin-bottom: 25px;&quot;</span>)</span></code></pre></div>
 <div style="border: 1px solid #ddd; padding: 0px; margin-left: auto; margin-right: auto; margin-bottom: 25px;overflow-y: scroll; height:800px; overflow-x: scroll; width:100%; ">
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
@@ -2536,14 +2535,14 @@ Figure 3.5: Cameron’s table used to obtain <span class="math inline">\(R\)</sp
 </table>
 </div>
 <p>Next, the OC curve is built using data in Table <a href="acceptance-sampling.html#tab:acceptance-probability">3.5</a>.</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="acceptance-sampling.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(p, p_a, <span class="at">type =</span> <span class="st">&quot;l&quot;</span>, <span class="at">xlab =</span> <span class="st">&quot;Proportion of defectives&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Probability of acceptance&quot;</span>, <span class="at">main =</span> <span class="st">&quot;OC Curve&quot;</span>, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>, <span class="at">lwd =</span> <span class="dv">5</span>)</span>
-<span id="cb15-2"><a href="acceptance-sampling.html#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(p, p_b, <span class="at">col =</span> <span class="st">&quot;green&quot;</span>, <span class="at">lwd =</span> <span class="dv">5</span>)</span>
-<span id="cb15-3"><a href="acceptance-sampling.html#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(p, p_c, <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>, <span class="at">lwd =</span> <span class="dv">5</span>)</span>
-<span id="cb15-4"><a href="acceptance-sampling.html#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-5"><a href="acceptance-sampling.html#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="co">#To add a legend</span></span>
-<span id="cb15-6"><a href="acceptance-sampling.html#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">&quot;topright&quot;</span>, <span class="at">legend=</span><span class="fu">c</span>(<span class="fu">paste</span>(<span class="st">&quot;Plan A: n = &quot;</span>, <span class="fu">ceiling</span>(planA_n), <span class="st">&quot;; c = &quot;</span>, planA_c, <span class="at">collapse =</span> <span class="st">&quot;&quot;</span>), <span class="fu">paste</span>(<span class="st">&quot;Plan B: n = &quot;</span>, <span class="fu">ceiling</span>(planB_n), <span class="st">&quot;; c = &quot;</span>, planB_c, <span class="at">collapse =</span> <span class="st">&quot;&quot;</span>), <span class="fu">paste</span>(<span class="st">&quot;Plan C: n = &quot;</span>, <span class="fu">ceiling</span>(planC_n), <span class="st">&quot;; c = &quot;</span>, planC_c, <span class="at">collapse =</span> <span class="st">&quot;&quot;</span>)), <span class="at">col=</span><span class="fu">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;green&quot;</span>, <span class="st">&quot;blue&quot;</span>), <span class="at">lty=</span><span class="dv">1</span>, <span class="at">lwd =</span> <span class="dv">5</span>, <span class="at">cex=</span><span class="fl">0.8</span>, <span class="at">text.font =</span> <span class="dv">4</span>, <span class="at">bg =</span> <span class="st">&#39;lightblue&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="acceptance-sampling.html#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(p, p_a, <span class="at">type =</span> <span class="st">&quot;l&quot;</span>, <span class="at">xlab =</span> <span class="st">&quot;Proportion of defectives&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Probability of acceptance&quot;</span>, <span class="at">main =</span> <span class="st">&quot;OC Curve&quot;</span>, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>, <span class="at">lwd =</span> <span class="dv">5</span>)</span>
+<span id="cb50-2"><a href="acceptance-sampling.html#cb50-2" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(p, p_b, <span class="at">col =</span> <span class="st">&quot;green&quot;</span>, <span class="at">lwd =</span> <span class="dv">5</span>)</span>
+<span id="cb50-3"><a href="acceptance-sampling.html#cb50-3" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(p, p_c, <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>, <span class="at">lwd =</span> <span class="dv">5</span>)</span>
+<span id="cb50-4"><a href="acceptance-sampling.html#cb50-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-5"><a href="acceptance-sampling.html#cb50-5" aria-hidden="true" tabindex="-1"></a><span class="co">#To add a legend</span></span>
+<span id="cb50-6"><a href="acceptance-sampling.html#cb50-6" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">&quot;topright&quot;</span>, <span class="at">legend=</span><span class="fu">c</span>(<span class="fu">paste</span>(<span class="st">&quot;Plan A: n = &quot;</span>, <span class="fu">ceiling</span>(planA_n), <span class="st">&quot;; c = &quot;</span>, planA_c, <span class="at">collapse =</span> <span class="st">&quot;&quot;</span>), <span class="fu">paste</span>(<span class="st">&quot;Plan B: n = &quot;</span>, <span class="fu">ceiling</span>(planB_n), <span class="st">&quot;; c = &quot;</span>, planB_c, <span class="at">collapse =</span> <span class="st">&quot;&quot;</span>), <span class="fu">paste</span>(<span class="st">&quot;Plan C: n = &quot;</span>, <span class="fu">ceiling</span>(planC_n), <span class="st">&quot;; c = &quot;</span>, planC_c, <span class="at">collapse =</span> <span class="st">&quot;&quot;</span>)), <span class="at">col=</span><span class="fu">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;green&quot;</span>, <span class="st">&quot;blue&quot;</span>), <span class="at">lty=</span><span class="dv">1</span>, <span class="at">lwd =</span> <span class="dv">5</span>, <span class="at">cex=</span><span class="fl">0.8</span>, <span class="at">text.font =</span> <span class="dv">4</span>, <span class="at">bg =</span> <span class="st">&#39;lightblue&#39;</span>)</span></code></pre></div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:oc-curve-complete"></span>
-<img src="_main_files/figure-html/oc-curve-complete-1.png" alt="OC curve for the three designed plans" width="70%" />
+<img src="team2-book_files/figure-html/oc-curve-complete-1.png" alt="OC curve for the three designed plans" width="70%" />
 <p class="caption">
 Figure 3.6: OC curve for the three designed plans
 </p>
@@ -2553,33 +2552,33 @@ Figure 3.6: OC curve for the three designed plans
 <span class="math display">\[X_B\sim Bin(311, p)\]</span>
 <span class="math display">\[X_C\sim Bin(166, p)\]</span>
 The probability <span class="math inline">\(p\)</span> in the previous expressions is the one corresponding to the respective value of AQL (for <span class="math inline">\(1 - \alpha\)</span>) and LQL (for <span class="math inline">\(\beta\)</span>). The results are summarized in the next table:</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="acceptance-sampling.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Plan A</span></span>
-<span id="cb16-2"><a href="acceptance-sampling.html#cb16-2" aria-hidden="true" tabindex="-1"></a>planA_1_alpha <span class="ot">&lt;-</span> <span class="fu">pbinom</span>(planA_c, <span class="fu">ceiling</span>(planA_n), planA_p1)</span>
-<span id="cb16-3"><a href="acceptance-sampling.html#cb16-3" aria-hidden="true" tabindex="-1"></a>planA_alpha <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">-</span> planA_1_alpha</span>
-<span id="cb16-4"><a href="acceptance-sampling.html#cb16-4" aria-hidden="true" tabindex="-1"></a>planA_beta <span class="ot">&lt;-</span> <span class="fu">pbinom</span>(planA_c, <span class="fu">ceiling</span>(planA_n), planA_p2)</span>
-<span id="cb16-5"><a href="acceptance-sampling.html#cb16-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-6"><a href="acceptance-sampling.html#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="co">#Plan B</span></span>
-<span id="cb16-7"><a href="acceptance-sampling.html#cb16-7" aria-hidden="true" tabindex="-1"></a>planB_1_alpha <span class="ot">&lt;-</span> <span class="fu">pbinom</span>(planB_c, <span class="fu">ceiling</span>(planB_n), planB_p1)</span>
-<span id="cb16-8"><a href="acceptance-sampling.html#cb16-8" aria-hidden="true" tabindex="-1"></a>planB_alpha <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">-</span> planB_1_alpha</span>
-<span id="cb16-9"><a href="acceptance-sampling.html#cb16-9" aria-hidden="true" tabindex="-1"></a>planB_beta <span class="ot">&lt;-</span> <span class="fu">pbinom</span>(planB_c, <span class="fu">ceiling</span>(planB_n), planB_p2)</span>
-<span id="cb16-10"><a href="acceptance-sampling.html#cb16-10" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb16-11"><a href="acceptance-sampling.html#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="co">#Plan C</span></span>
-<span id="cb16-12"><a href="acceptance-sampling.html#cb16-12" aria-hidden="true" tabindex="-1"></a>planC_1_alpha <span class="ot">&lt;-</span> <span class="fu">pbinom</span>(planC_c, <span class="fu">ceiling</span>(planC_n), planC_p1)</span>
-<span id="cb16-13"><a href="acceptance-sampling.html#cb16-13" aria-hidden="true" tabindex="-1"></a>planC_alpha <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">-</span> planC_1_alpha</span>
-<span id="cb16-14"><a href="acceptance-sampling.html#cb16-14" aria-hidden="true" tabindex="-1"></a>planC_beta <span class="ot">&lt;-</span> <span class="fu">pbinom</span>(planC_c, <span class="fu">ceiling</span>(planC_n), planC_p2)</span>
-<span id="cb16-15"><a href="acceptance-sampling.html#cb16-15" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb16-16"><a href="acceptance-sampling.html#cb16-16" aria-hidden="true" tabindex="-1"></a>risk <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;$1-</span><span class="sc">\\</span><span class="st">alpha$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">alpha$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">beta$&quot;</span>)</span>
-<span id="cb16-17"><a href="acceptance-sampling.html#cb16-17" aria-hidden="true" tabindex="-1"></a>planA <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">specify_decimal</span>(planA_1_alpha, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planA_alpha, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planA_beta, <span class="dv">4</span>))</span>
-<span id="cb16-18"><a href="acceptance-sampling.html#cb16-18" aria-hidden="true" tabindex="-1"></a>planB <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">specify_decimal</span>(planB_1_alpha, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planB_alpha, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planB_beta, <span class="dv">4</span>))</span>
-<span id="cb16-19"><a href="acceptance-sampling.html#cb16-19" aria-hidden="true" tabindex="-1"></a>planC <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">specify_decimal</span>(planC_1_alpha, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planC_alpha, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planC_beta, <span class="dv">4</span>))</span>
-<span id="cb16-20"><a href="acceptance-sampling.html#cb16-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-21"><a href="acceptance-sampling.html#cb16-21" aria-hidden="true" tabindex="-1"></a>producer_consumer_risk_table <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(risk, planA, planB, planC)</span>
-<span id="cb16-22"><a href="acceptance-sampling.html#cb16-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-23"><a href="acceptance-sampling.html#cb16-23" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(producer_consumer_risk_table) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Risk}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Plan A}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Plan B}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Plan C}$&quot;</span>)</span>
-<span id="cb16-24"><a href="acceptance-sampling.html#cb16-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-25"><a href="acceptance-sampling.html#cb16-25" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(producer_consumer_risk_table, <span class="at">align =</span> <span class="st">&quot;c&quot;</span>, <span class="at">caption =</span> <span class="st">&quot;Producer&#39;s and consumer&#39;s risk&quot;</span>)<span class="sc">%&gt;%</span></span>
-<span id="cb16-26"><a href="acceptance-sampling.html#cb16-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">full_width =</span> F)<span class="sc">%&gt;%</span></span>
-<span id="cb16-27"><a href="acceptance-sampling.html#cb16-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scroll_box</span>(<span class="at">width =</span> <span class="st">&quot;100%&quot;</span>, <span class="at">height =</span> <span class="st">&quot;100%&quot;</span>, <span class="at">fixed_thead =</span> T)</span></code></pre></div>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="acceptance-sampling.html#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Plan A</span></span>
+<span id="cb51-2"><a href="acceptance-sampling.html#cb51-2" aria-hidden="true" tabindex="-1"></a>planA_1_alpha <span class="ot">&lt;-</span> <span class="fu">pbinom</span>(planA_c, <span class="fu">ceiling</span>(planA_n), planA_p1)</span>
+<span id="cb51-3"><a href="acceptance-sampling.html#cb51-3" aria-hidden="true" tabindex="-1"></a>planA_alpha <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">-</span> planA_1_alpha</span>
+<span id="cb51-4"><a href="acceptance-sampling.html#cb51-4" aria-hidden="true" tabindex="-1"></a>planA_beta <span class="ot">&lt;-</span> <span class="fu">pbinom</span>(planA_c, <span class="fu">ceiling</span>(planA_n), planA_p2)</span>
+<span id="cb51-5"><a href="acceptance-sampling.html#cb51-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-6"><a href="acceptance-sampling.html#cb51-6" aria-hidden="true" tabindex="-1"></a><span class="co">#Plan B</span></span>
+<span id="cb51-7"><a href="acceptance-sampling.html#cb51-7" aria-hidden="true" tabindex="-1"></a>planB_1_alpha <span class="ot">&lt;-</span> <span class="fu">pbinom</span>(planB_c, <span class="fu">ceiling</span>(planB_n), planB_p1)</span>
+<span id="cb51-8"><a href="acceptance-sampling.html#cb51-8" aria-hidden="true" tabindex="-1"></a>planB_alpha <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">-</span> planB_1_alpha</span>
+<span id="cb51-9"><a href="acceptance-sampling.html#cb51-9" aria-hidden="true" tabindex="-1"></a>planB_beta <span class="ot">&lt;-</span> <span class="fu">pbinom</span>(planB_c, <span class="fu">ceiling</span>(planB_n), planB_p2)</span>
+<span id="cb51-10"><a href="acceptance-sampling.html#cb51-10" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb51-11"><a href="acceptance-sampling.html#cb51-11" aria-hidden="true" tabindex="-1"></a><span class="co">#Plan C</span></span>
+<span id="cb51-12"><a href="acceptance-sampling.html#cb51-12" aria-hidden="true" tabindex="-1"></a>planC_1_alpha <span class="ot">&lt;-</span> <span class="fu">pbinom</span>(planC_c, <span class="fu">ceiling</span>(planC_n), planC_p1)</span>
+<span id="cb51-13"><a href="acceptance-sampling.html#cb51-13" aria-hidden="true" tabindex="-1"></a>planC_alpha <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">-</span> planC_1_alpha</span>
+<span id="cb51-14"><a href="acceptance-sampling.html#cb51-14" aria-hidden="true" tabindex="-1"></a>planC_beta <span class="ot">&lt;-</span> <span class="fu">pbinom</span>(planC_c, <span class="fu">ceiling</span>(planC_n), planC_p2)</span>
+<span id="cb51-15"><a href="acceptance-sampling.html#cb51-15" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb51-16"><a href="acceptance-sampling.html#cb51-16" aria-hidden="true" tabindex="-1"></a>risk <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;$1-</span><span class="sc">\\</span><span class="st">alpha$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">alpha$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">beta$&quot;</span>)</span>
+<span id="cb51-17"><a href="acceptance-sampling.html#cb51-17" aria-hidden="true" tabindex="-1"></a>planA <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">specify_decimal</span>(planA_1_alpha, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planA_alpha, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planA_beta, <span class="dv">4</span>))</span>
+<span id="cb51-18"><a href="acceptance-sampling.html#cb51-18" aria-hidden="true" tabindex="-1"></a>planB <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">specify_decimal</span>(planB_1_alpha, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planB_alpha, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planB_beta, <span class="dv">4</span>))</span>
+<span id="cb51-19"><a href="acceptance-sampling.html#cb51-19" aria-hidden="true" tabindex="-1"></a>planC <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">specify_decimal</span>(planC_1_alpha, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planC_alpha, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planC_beta, <span class="dv">4</span>))</span>
+<span id="cb51-20"><a href="acceptance-sampling.html#cb51-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-21"><a href="acceptance-sampling.html#cb51-21" aria-hidden="true" tabindex="-1"></a>producer_consumer_risk_table <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(risk, planA, planB, planC)</span>
+<span id="cb51-22"><a href="acceptance-sampling.html#cb51-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-23"><a href="acceptance-sampling.html#cb51-23" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(producer_consumer_risk_table) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Risk}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Plan A}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Plan B}$&quot;</span>, <span class="st">&quot;$</span><span class="sc">\\</span><span class="st">textbf{Plan C}$&quot;</span>)</span>
+<span id="cb51-24"><a href="acceptance-sampling.html#cb51-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-25"><a href="acceptance-sampling.html#cb51-25" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(producer_consumer_risk_table, <span class="at">align =</span> <span class="st">&quot;c&quot;</span>, <span class="at">caption =</span> <span class="st">&quot;Producer&#39;s and consumer&#39;s risk&quot;</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb51-26"><a href="acceptance-sampling.html#cb51-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">full_width =</span> F)<span class="sc">%&gt;%</span></span>
+<span id="cb51-27"><a href="acceptance-sampling.html#cb51-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scroll_box</span>(<span class="at">width =</span> <span class="st">&quot;100%&quot;</span>, <span class="at">height =</span> <span class="st">&quot;100%&quot;</span>, <span class="at">fixed_thead =</span> T)</span></code></pre></div>
 <div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:100%; overflow-x: scroll; width:100%; ">
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
@@ -2649,67 +2648,67 @@ The probability <span class="math inline">\(p\)</span> in the previous expressio
 </div>
 <p>It is observed that for plan A the producer’s risk is below the limit; however, the consumer’s risk is greater than what was established in the plan design. For plans B and C, both the producer’s and consumer’s risk are within the defined limits.</p>
 <p>The next figures show the AQL and LQL with their respective probability of acceptance, <span class="math inline">\(1 - \alpha\)</span> and <span class="math inline">\(\beta\)</span>, respectively for each sampling plan based on the OC curve model shown in Figure <a href="acceptance-sampling.html#fig:operating-cc">3.1</a>.</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="acceptance-sampling.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(latex2exp)</span>
-<span id="cb17-2"><a href="acceptance-sampling.html#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-3"><a href="acceptance-sampling.html#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(p, p_a, <span class="at">type =</span> <span class="st">&quot;l&quot;</span>, <span class="at">xlab =</span> <span class="st">&quot;Proportion of defectives&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Probability of acceptance&quot;</span>, <span class="at">main =</span> <span class="st">&quot;Plan A&quot;</span>, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>, <span class="at">lwd =</span> <span class="dv">5</span>)</span>
-<span id="cb17-4"><a href="acceptance-sampling.html#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="co">#AQL</span></span>
-<span id="cb17-5"><a href="acceptance-sampling.html#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="co"># X0, X1                      #Y0, Y1</span></span>
-<span id="cb17-6"><a href="acceptance-sampling.html#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="co">#Vertical</span></span>
-<span id="cb17-7"><a href="acceptance-sampling.html#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="fu">c</span>(planA_p1, planA_p1), <span class="fu">c</span>(<span class="dv">0</span>, planA_1_alpha), <span class="at">col =</span> <span class="st">&quot;green&quot;</span>, <span class="at">lwd =</span> <span class="dv">5</span>)</span>
-<span id="cb17-8"><a href="acceptance-sampling.html#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="co">#Horizontal</span></span>
-<span id="cb17-9"><a href="acceptance-sampling.html#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="fu">c</span>(<span class="dv">0</span>, planA_p1), <span class="fu">c</span>(planA_1_alpha, planA_1_alpha), <span class="at">col =</span> <span class="st">&quot;green&quot;</span>, <span class="at">lwd =</span> <span class="dv">5</span>)</span>
-<span id="cb17-10"><a href="acceptance-sampling.html#cb17-10" aria-hidden="true" tabindex="-1"></a><span class="co">#LQL</span></span>
-<span id="cb17-11"><a href="acceptance-sampling.html#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="co">#Vertical</span></span>
-<span id="cb17-12"><a href="acceptance-sampling.html#cb17-12" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="fu">c</span>(planA_p2, planA_p2), <span class="fu">c</span>(<span class="dv">0</span>, planA_beta), <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>, <span class="at">lwd =</span> <span class="dv">5</span>)</span>
-<span id="cb17-13"><a href="acceptance-sampling.html#cb17-13" aria-hidden="true" tabindex="-1"></a><span class="co">#Horizontal</span></span>
-<span id="cb17-14"><a href="acceptance-sampling.html#cb17-14" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="fu">c</span>(<span class="dv">0</span>, planA_p2), <span class="fu">c</span>(planA_beta, planA_beta), <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>, <span class="at">lwd =</span> <span class="dv">5</span>)</span>
-<span id="cb17-15"><a href="acceptance-sampling.html#cb17-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-16"><a href="acceptance-sampling.html#cb17-16" aria-hidden="true" tabindex="-1"></a><span class="co">#To add a legend</span></span>
-<span id="cb17-17"><a href="acceptance-sampling.html#cb17-17" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">&quot;topright&quot;</span>, <span class="at">legend=</span><span class="fu">c</span>(<span class="fu">paste</span>(<span class="st">&quot;Plan A: n = &quot;</span>, <span class="fu">ceiling</span>(planA_n), <span class="st">&quot;; c = &quot;</span>, planA_c, <span class="at">collapse =</span> <span class="st">&quot;&quot;</span>), <span class="fu">TeX</span>(<span class="fu">sprintf</span>(r<span class="st">&#39;($AQL (p_1) = %s ; 1 - </span><span class="sc">\a</span><span class="st">lpha = %s$)&#39;</span>, <span class="fu">specify_decimal</span>(planA_p1, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planA_1_alpha, <span class="dv">4</span>))), <span class="fu">TeX</span>(<span class="fu">sprintf</span>(r<span class="st">&#39;($LQL (p_2) = %s ; </span><span class="sc">\b</span><span class="st">eta = %s$)&#39;</span>, <span class="fu">specify_decimal</span>(planA_p2, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planA_beta, <span class="dv">4</span>)))), <span class="at">col=</span><span class="fu">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;green&quot;</span>, <span class="st">&quot;blue&quot;</span>), <span class="at">lty=</span><span class="dv">1</span>, <span class="at">lwd =</span> <span class="dv">5</span>, <span class="at">cex=</span><span class="fl">0.8</span>, <span class="at">text.font =</span> <span class="dv">4</span>, <span class="at">bg =</span> <span class="st">&#39;lightblue&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="acceptance-sampling.html#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(latex2exp)</span>
+<span id="cb52-2"><a href="acceptance-sampling.html#cb52-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-3"><a href="acceptance-sampling.html#cb52-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(p, p_a, <span class="at">type =</span> <span class="st">&quot;l&quot;</span>, <span class="at">xlab =</span> <span class="st">&quot;Proportion of defectives&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Probability of acceptance&quot;</span>, <span class="at">main =</span> <span class="st">&quot;Plan A&quot;</span>, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>, <span class="at">lwd =</span> <span class="dv">5</span>)</span>
+<span id="cb52-4"><a href="acceptance-sampling.html#cb52-4" aria-hidden="true" tabindex="-1"></a><span class="co">#AQL</span></span>
+<span id="cb52-5"><a href="acceptance-sampling.html#cb52-5" aria-hidden="true" tabindex="-1"></a><span class="co"># X0, X1                      #Y0, Y1</span></span>
+<span id="cb52-6"><a href="acceptance-sampling.html#cb52-6" aria-hidden="true" tabindex="-1"></a><span class="co">#Vertical</span></span>
+<span id="cb52-7"><a href="acceptance-sampling.html#cb52-7" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="fu">c</span>(planA_p1, planA_p1), <span class="fu">c</span>(<span class="dv">0</span>, planA_1_alpha), <span class="at">col =</span> <span class="st">&quot;green&quot;</span>, <span class="at">lwd =</span> <span class="dv">5</span>)</span>
+<span id="cb52-8"><a href="acceptance-sampling.html#cb52-8" aria-hidden="true" tabindex="-1"></a><span class="co">#Horizontal</span></span>
+<span id="cb52-9"><a href="acceptance-sampling.html#cb52-9" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="fu">c</span>(<span class="dv">0</span>, planA_p1), <span class="fu">c</span>(planA_1_alpha, planA_1_alpha), <span class="at">col =</span> <span class="st">&quot;green&quot;</span>, <span class="at">lwd =</span> <span class="dv">5</span>)</span>
+<span id="cb52-10"><a href="acceptance-sampling.html#cb52-10" aria-hidden="true" tabindex="-1"></a><span class="co">#LQL</span></span>
+<span id="cb52-11"><a href="acceptance-sampling.html#cb52-11" aria-hidden="true" tabindex="-1"></a><span class="co">#Vertical</span></span>
+<span id="cb52-12"><a href="acceptance-sampling.html#cb52-12" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="fu">c</span>(planA_p2, planA_p2), <span class="fu">c</span>(<span class="dv">0</span>, planA_beta), <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>, <span class="at">lwd =</span> <span class="dv">5</span>)</span>
+<span id="cb52-13"><a href="acceptance-sampling.html#cb52-13" aria-hidden="true" tabindex="-1"></a><span class="co">#Horizontal</span></span>
+<span id="cb52-14"><a href="acceptance-sampling.html#cb52-14" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="fu">c</span>(<span class="dv">0</span>, planA_p2), <span class="fu">c</span>(planA_beta, planA_beta), <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>, <span class="at">lwd =</span> <span class="dv">5</span>)</span>
+<span id="cb52-15"><a href="acceptance-sampling.html#cb52-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-16"><a href="acceptance-sampling.html#cb52-16" aria-hidden="true" tabindex="-1"></a><span class="co">#To add a legend</span></span>
+<span id="cb52-17"><a href="acceptance-sampling.html#cb52-17" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">&quot;topright&quot;</span>, <span class="at">legend=</span><span class="fu">c</span>(<span class="fu">paste</span>(<span class="st">&quot;Plan A: n = &quot;</span>, <span class="fu">ceiling</span>(planA_n), <span class="st">&quot;; c = &quot;</span>, planA_c, <span class="at">collapse =</span> <span class="st">&quot;&quot;</span>), <span class="fu">TeX</span>(<span class="fu">sprintf</span>(r<span class="st">&#39;($AQL (p_1) = %s ; 1 - </span><span class="sc">\a</span><span class="st">lpha = %s$)&#39;</span>, <span class="fu">specify_decimal</span>(planA_p1, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planA_1_alpha, <span class="dv">4</span>))), <span class="fu">TeX</span>(<span class="fu">sprintf</span>(r<span class="st">&#39;($LQL (p_2) = %s ; </span><span class="sc">\b</span><span class="st">eta = %s$)&#39;</span>, <span class="fu">specify_decimal</span>(planA_p2, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planA_beta, <span class="dv">4</span>)))), <span class="at">col=</span><span class="fu">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;green&quot;</span>, <span class="st">&quot;blue&quot;</span>), <span class="at">lty=</span><span class="dv">1</span>, <span class="at">lwd =</span> <span class="dv">5</span>, <span class="at">cex=</span><span class="fl">0.8</span>, <span class="at">text.font =</span> <span class="dv">4</span>, <span class="at">bg =</span> <span class="st">&#39;lightblue&#39;</span>)</span></code></pre></div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:oc-curve-planA"></span>
-<img src="_main_files/figure-html/oc-curve-planA-1.png" alt="OC curve for Plan A with the values of AQL and LQL and their corresponding probability of acceptance" width="80%" />
+<img src="team2-book_files/figure-html/oc-curve-planA-1.png" alt="OC curve for Plan A with the values of AQL and LQL and their corresponding probability of acceptance" width="70%" />
 <p class="caption">
 Figure 3.7: OC curve for Plan A with the values of AQL and LQL and their corresponding probability of acceptance
 </p>
 </div>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="acceptance-sampling.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(p, p_b, <span class="at">type =</span> <span class="st">&quot;l&quot;</span>, <span class="at">xlab =</span> <span class="st">&quot;Proportion of defectives&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Probability of acceptance&quot;</span>, <span class="at">main =</span> <span class="st">&quot;Plan B&quot;</span>, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>, <span class="at">lwd =</span> <span class="dv">5</span>)</span>
-<span id="cb18-2"><a href="acceptance-sampling.html#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="co">#AQL</span></span>
-<span id="cb18-3"><a href="acceptance-sampling.html#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="co"># X0, X1                      #Y0, Y1</span></span>
-<span id="cb18-4"><a href="acceptance-sampling.html#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Vertical</span></span>
-<span id="cb18-5"><a href="acceptance-sampling.html#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="fu">c</span>(planB_p1, planB_p1), <span class="fu">c</span>(<span class="dv">0</span>, planB_1_alpha), <span class="at">col =</span> <span class="st">&quot;green&quot;</span>, <span class="at">lwd =</span> <span class="dv">5</span>)</span>
-<span id="cb18-6"><a href="acceptance-sampling.html#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="co">#Horizontal</span></span>
-<span id="cb18-7"><a href="acceptance-sampling.html#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="fu">c</span>(<span class="dv">0</span>, planB_p1), <span class="fu">c</span>(planB_1_alpha, planB_1_alpha), <span class="at">col =</span> <span class="st">&quot;green&quot;</span>, <span class="at">lwd =</span> <span class="dv">5</span>)</span>
-<span id="cb18-8"><a href="acceptance-sampling.html#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="co">#LQL</span></span>
-<span id="cb18-9"><a href="acceptance-sampling.html#cb18-9" aria-hidden="true" tabindex="-1"></a><span class="co">#Vertical</span></span>
-<span id="cb18-10"><a href="acceptance-sampling.html#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="fu">c</span>(planB_p2, planB_p2), <span class="fu">c</span>(<span class="dv">0</span>, planB_beta), <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>, <span class="at">lwd =</span> <span class="dv">5</span>)</span>
-<span id="cb18-11"><a href="acceptance-sampling.html#cb18-11" aria-hidden="true" tabindex="-1"></a><span class="co">#Horizontal</span></span>
-<span id="cb18-12"><a href="acceptance-sampling.html#cb18-12" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="fu">c</span>(<span class="dv">0</span>, planB_p2), <span class="fu">c</span>(planB_beta, planB_beta), <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>, <span class="at">lwd =</span> <span class="dv">5</span>)</span>
-<span id="cb18-13"><a href="acceptance-sampling.html#cb18-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-14"><a href="acceptance-sampling.html#cb18-14" aria-hidden="true" tabindex="-1"></a><span class="co">#To add a legend</span></span>
-<span id="cb18-15"><a href="acceptance-sampling.html#cb18-15" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">&quot;topright&quot;</span>, <span class="at">legend=</span><span class="fu">c</span>(<span class="fu">paste</span>(<span class="st">&quot;Plan B: n = &quot;</span>, <span class="fu">ceiling</span>(planB_n), <span class="st">&quot;; c = &quot;</span>, planB_c, <span class="at">collapse =</span> <span class="st">&quot;&quot;</span>), <span class="fu">TeX</span>(<span class="fu">sprintf</span>(r<span class="st">&#39;($AQL (p_1) = %s ; 1 - </span><span class="sc">\a</span><span class="st">lpha = %s$)&#39;</span>, <span class="fu">specify_decimal</span>(planB_p1, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planB_1_alpha, <span class="dv">4</span>))), <span class="fu">TeX</span>(<span class="fu">sprintf</span>(r<span class="st">&#39;($LQL (p_2) = %s ; </span><span class="sc">\b</span><span class="st">eta = %s$)&#39;</span>, <span class="fu">specify_decimal</span>(planB_p2, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planB_beta, <span class="dv">4</span>)))), <span class="at">col=</span><span class="fu">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;green&quot;</span>, <span class="st">&quot;blue&quot;</span>), <span class="at">lty=</span><span class="dv">1</span>, <span class="at">lwd =</span> <span class="dv">5</span>, <span class="at">cex=</span><span class="fl">0.8</span>, <span class="at">text.font =</span> <span class="dv">4</span>, <span class="at">bg =</span> <span class="st">&#39;lightblue&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="acceptance-sampling.html#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(p, p_b, <span class="at">type =</span> <span class="st">&quot;l&quot;</span>, <span class="at">xlab =</span> <span class="st">&quot;Proportion of defectives&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Probability of acceptance&quot;</span>, <span class="at">main =</span> <span class="st">&quot;Plan B&quot;</span>, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>, <span class="at">lwd =</span> <span class="dv">5</span>)</span>
+<span id="cb53-2"><a href="acceptance-sampling.html#cb53-2" aria-hidden="true" tabindex="-1"></a><span class="co">#AQL</span></span>
+<span id="cb53-3"><a href="acceptance-sampling.html#cb53-3" aria-hidden="true" tabindex="-1"></a><span class="co"># X0, X1                      #Y0, Y1</span></span>
+<span id="cb53-4"><a href="acceptance-sampling.html#cb53-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Vertical</span></span>
+<span id="cb53-5"><a href="acceptance-sampling.html#cb53-5" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="fu">c</span>(planB_p1, planB_p1), <span class="fu">c</span>(<span class="dv">0</span>, planB_1_alpha), <span class="at">col =</span> <span class="st">&quot;green&quot;</span>, <span class="at">lwd =</span> <span class="dv">5</span>)</span>
+<span id="cb53-6"><a href="acceptance-sampling.html#cb53-6" aria-hidden="true" tabindex="-1"></a><span class="co">#Horizontal</span></span>
+<span id="cb53-7"><a href="acceptance-sampling.html#cb53-7" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="fu">c</span>(<span class="dv">0</span>, planB_p1), <span class="fu">c</span>(planB_1_alpha, planB_1_alpha), <span class="at">col =</span> <span class="st">&quot;green&quot;</span>, <span class="at">lwd =</span> <span class="dv">5</span>)</span>
+<span id="cb53-8"><a href="acceptance-sampling.html#cb53-8" aria-hidden="true" tabindex="-1"></a><span class="co">#LQL</span></span>
+<span id="cb53-9"><a href="acceptance-sampling.html#cb53-9" aria-hidden="true" tabindex="-1"></a><span class="co">#Vertical</span></span>
+<span id="cb53-10"><a href="acceptance-sampling.html#cb53-10" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="fu">c</span>(planB_p2, planB_p2), <span class="fu">c</span>(<span class="dv">0</span>, planB_beta), <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>, <span class="at">lwd =</span> <span class="dv">5</span>)</span>
+<span id="cb53-11"><a href="acceptance-sampling.html#cb53-11" aria-hidden="true" tabindex="-1"></a><span class="co">#Horizontal</span></span>
+<span id="cb53-12"><a href="acceptance-sampling.html#cb53-12" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="fu">c</span>(<span class="dv">0</span>, planB_p2), <span class="fu">c</span>(planB_beta, planB_beta), <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>, <span class="at">lwd =</span> <span class="dv">5</span>)</span>
+<span id="cb53-13"><a href="acceptance-sampling.html#cb53-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-14"><a href="acceptance-sampling.html#cb53-14" aria-hidden="true" tabindex="-1"></a><span class="co">#To add a legend</span></span>
+<span id="cb53-15"><a href="acceptance-sampling.html#cb53-15" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">&quot;topright&quot;</span>, <span class="at">legend=</span><span class="fu">c</span>(<span class="fu">paste</span>(<span class="st">&quot;Plan B: n = &quot;</span>, <span class="fu">ceiling</span>(planB_n), <span class="st">&quot;; c = &quot;</span>, planB_c, <span class="at">collapse =</span> <span class="st">&quot;&quot;</span>), <span class="fu">TeX</span>(<span class="fu">sprintf</span>(r<span class="st">&#39;($AQL (p_1) = %s ; 1 - </span><span class="sc">\a</span><span class="st">lpha = %s$)&#39;</span>, <span class="fu">specify_decimal</span>(planB_p1, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planB_1_alpha, <span class="dv">4</span>))), <span class="fu">TeX</span>(<span class="fu">sprintf</span>(r<span class="st">&#39;($LQL (p_2) = %s ; </span><span class="sc">\b</span><span class="st">eta = %s$)&#39;</span>, <span class="fu">specify_decimal</span>(planB_p2, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planB_beta, <span class="dv">4</span>)))), <span class="at">col=</span><span class="fu">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;green&quot;</span>, <span class="st">&quot;blue&quot;</span>), <span class="at">lty=</span><span class="dv">1</span>, <span class="at">lwd =</span> <span class="dv">5</span>, <span class="at">cex=</span><span class="fl">0.8</span>, <span class="at">text.font =</span> <span class="dv">4</span>, <span class="at">bg =</span> <span class="st">&#39;lightblue&#39;</span>)</span></code></pre></div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:oc-curve-planB"></span>
-<img src="_main_files/figure-html/oc-curve-planB-1.png" alt="OC curve for Plan B with the values of AQL and LQL and their corresponding probability of acceptance" width="80%" />
+<img src="team2-book_files/figure-html/oc-curve-planB-1.png" alt="OC curve for Plan B with the values of AQL and LQL and their corresponding probability of acceptance" width="70%" />
 <p class="caption">
 Figure 3.8: OC curve for Plan B with the values of AQL and LQL and their corresponding probability of acceptance
 </p>
 </div>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="acceptance-sampling.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(p, p_c, <span class="at">type =</span> <span class="st">&quot;l&quot;</span>, <span class="at">xlab =</span> <span class="st">&quot;Proportion of defectives&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Probability of acceptance&quot;</span>, <span class="at">main =</span> <span class="st">&quot;Plan C&quot;</span>, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>, <span class="at">lwd =</span> <span class="dv">5</span>)</span>
-<span id="cb19-2"><a href="acceptance-sampling.html#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="co">#AQL</span></span>
-<span id="cb19-3"><a href="acceptance-sampling.html#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="co"># X0, X1                      #Y0, Y1</span></span>
-<span id="cb19-4"><a href="acceptance-sampling.html#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Vertical</span></span>
-<span id="cb19-5"><a href="acceptance-sampling.html#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="fu">c</span>(planC_p1, planC_p1), <span class="fu">c</span>(<span class="dv">0</span>, planC_1_alpha), <span class="at">col =</span> <span class="st">&quot;green&quot;</span>, <span class="at">lwd =</span> <span class="dv">5</span>)</span>
-<span id="cb19-6"><a href="acceptance-sampling.html#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="co">#Horizontal</span></span>
-<span id="cb19-7"><a href="acceptance-sampling.html#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="fu">c</span>(<span class="dv">0</span>, planC_p1), <span class="fu">c</span>(planC_1_alpha, planC_1_alpha), <span class="at">col =</span> <span class="st">&quot;green&quot;</span>, <span class="at">lwd =</span> <span class="dv">5</span>)</span>
-<span id="cb19-8"><a href="acceptance-sampling.html#cb19-8" aria-hidden="true" tabindex="-1"></a><span class="co">#LQL</span></span>
-<span id="cb19-9"><a href="acceptance-sampling.html#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="co">#Vertical</span></span>
-<span id="cb19-10"><a href="acceptance-sampling.html#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="fu">c</span>(planC_p2, planC_p2), <span class="fu">c</span>(<span class="dv">0</span>, planC_beta), <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>, <span class="at">lwd =</span> <span class="dv">5</span>)</span>
-<span id="cb19-11"><a href="acceptance-sampling.html#cb19-11" aria-hidden="true" tabindex="-1"></a><span class="co">#Horizontal</span></span>
-<span id="cb19-12"><a href="acceptance-sampling.html#cb19-12" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="fu">c</span>(<span class="dv">0</span>, planC_p2), <span class="fu">c</span>(planC_beta, planC_beta), <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>, <span class="at">lwd =</span> <span class="dv">5</span>)</span>
-<span id="cb19-13"><a href="acceptance-sampling.html#cb19-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-14"><a href="acceptance-sampling.html#cb19-14" aria-hidden="true" tabindex="-1"></a><span class="co">#To add a legend</span></span>
-<span id="cb19-15"><a href="acceptance-sampling.html#cb19-15" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">&quot;topright&quot;</span>, <span class="at">legend=</span><span class="fu">c</span>(<span class="fu">paste</span>(<span class="st">&quot;Plan C: n = &quot;</span>, <span class="fu">ceiling</span>(planC_n), <span class="st">&quot;; c = &quot;</span>, planC_c, <span class="at">collapse =</span> <span class="st">&quot;&quot;</span>), <span class="fu">TeX</span>(<span class="fu">sprintf</span>(r<span class="st">&#39;($AQL (p_1) = %s ; 1 - </span><span class="sc">\a</span><span class="st">lpha = %s$)&#39;</span>, <span class="fu">specify_decimal</span>(planC_p1, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planC_1_alpha, <span class="dv">4</span>))), <span class="fu">TeX</span>(<span class="fu">sprintf</span>(r<span class="st">&#39;($LQL (p_2) = %s ; </span><span class="sc">\b</span><span class="st">eta = %s$)&#39;</span>, <span class="fu">specify_decimal</span>(planC_p2, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planC_beta, <span class="dv">4</span>)))), <span class="at">col=</span><span class="fu">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;green&quot;</span>, <span class="st">&quot;blue&quot;</span>), <span class="at">lty=</span><span class="dv">1</span>, <span class="at">lwd =</span> <span class="dv">5</span>, <span class="at">cex=</span><span class="fl">0.8</span>, <span class="at">text.font =</span> <span class="dv">4</span>, <span class="at">bg =</span> <span class="st">&#39;lightblue&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="acceptance-sampling.html#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(p, p_c, <span class="at">type =</span> <span class="st">&quot;l&quot;</span>, <span class="at">xlab =</span> <span class="st">&quot;Proportion of defectives&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Probability of acceptance&quot;</span>, <span class="at">main =</span> <span class="st">&quot;Plan C&quot;</span>, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>, <span class="at">lwd =</span> <span class="dv">5</span>)</span>
+<span id="cb54-2"><a href="acceptance-sampling.html#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="co">#AQL</span></span>
+<span id="cb54-3"><a href="acceptance-sampling.html#cb54-3" aria-hidden="true" tabindex="-1"></a><span class="co"># X0, X1                      #Y0, Y1</span></span>
+<span id="cb54-4"><a href="acceptance-sampling.html#cb54-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Vertical</span></span>
+<span id="cb54-5"><a href="acceptance-sampling.html#cb54-5" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="fu">c</span>(planC_p1, planC_p1), <span class="fu">c</span>(<span class="dv">0</span>, planC_1_alpha), <span class="at">col =</span> <span class="st">&quot;green&quot;</span>, <span class="at">lwd =</span> <span class="dv">5</span>)</span>
+<span id="cb54-6"><a href="acceptance-sampling.html#cb54-6" aria-hidden="true" tabindex="-1"></a><span class="co">#Horizontal</span></span>
+<span id="cb54-7"><a href="acceptance-sampling.html#cb54-7" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="fu">c</span>(<span class="dv">0</span>, planC_p1), <span class="fu">c</span>(planC_1_alpha, planC_1_alpha), <span class="at">col =</span> <span class="st">&quot;green&quot;</span>, <span class="at">lwd =</span> <span class="dv">5</span>)</span>
+<span id="cb54-8"><a href="acceptance-sampling.html#cb54-8" aria-hidden="true" tabindex="-1"></a><span class="co">#LQL</span></span>
+<span id="cb54-9"><a href="acceptance-sampling.html#cb54-9" aria-hidden="true" tabindex="-1"></a><span class="co">#Vertical</span></span>
+<span id="cb54-10"><a href="acceptance-sampling.html#cb54-10" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="fu">c</span>(planC_p2, planC_p2), <span class="fu">c</span>(<span class="dv">0</span>, planC_beta), <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>, <span class="at">lwd =</span> <span class="dv">5</span>)</span>
+<span id="cb54-11"><a href="acceptance-sampling.html#cb54-11" aria-hidden="true" tabindex="-1"></a><span class="co">#Horizontal</span></span>
+<span id="cb54-12"><a href="acceptance-sampling.html#cb54-12" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="fu">c</span>(<span class="dv">0</span>, planC_p2), <span class="fu">c</span>(planC_beta, planC_beta), <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>, <span class="at">lwd =</span> <span class="dv">5</span>)</span>
+<span id="cb54-13"><a href="acceptance-sampling.html#cb54-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-14"><a href="acceptance-sampling.html#cb54-14" aria-hidden="true" tabindex="-1"></a><span class="co">#To add a legend</span></span>
+<span id="cb54-15"><a href="acceptance-sampling.html#cb54-15" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">&quot;topright&quot;</span>, <span class="at">legend=</span><span class="fu">c</span>(<span class="fu">paste</span>(<span class="st">&quot;Plan C: n = &quot;</span>, <span class="fu">ceiling</span>(planC_n), <span class="st">&quot;; c = &quot;</span>, planC_c, <span class="at">collapse =</span> <span class="st">&quot;&quot;</span>), <span class="fu">TeX</span>(<span class="fu">sprintf</span>(r<span class="st">&#39;($AQL (p_1) = %s ; 1 - </span><span class="sc">\a</span><span class="st">lpha = %s$)&#39;</span>, <span class="fu">specify_decimal</span>(planC_p1, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planC_1_alpha, <span class="dv">4</span>))), <span class="fu">TeX</span>(<span class="fu">sprintf</span>(r<span class="st">&#39;($LQL (p_2) = %s ; </span><span class="sc">\b</span><span class="st">eta = %s$)&#39;</span>, <span class="fu">specify_decimal</span>(planC_p2, <span class="dv">4</span>), <span class="fu">specify_decimal</span>(planC_beta, <span class="dv">4</span>)))), <span class="at">col=</span><span class="fu">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;green&quot;</span>, <span class="st">&quot;blue&quot;</span>), <span class="at">lty=</span><span class="dv">1</span>, <span class="at">lwd =</span> <span class="dv">5</span>, <span class="at">cex=</span><span class="fl">0.8</span>, <span class="at">text.font =</span> <span class="dv">4</span>, <span class="at">bg =</span> <span class="st">&#39;lightblue&#39;</span>)</span></code></pre></div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:oc-curve-planC"></span>
-<img src="_main_files/figure-html/oc-curve-planC-1.png" alt="OC curve for Plan C with the values of AQL and LQL and their corresponding probability of acceptance" width="80%" />
+<img src="team2-book_files/figure-html/oc-curve-planC-1.png" alt="OC curve for Plan C with the values of AQL and LQL and their corresponding probability of acceptance" width="70%" />
 <p class="caption">
 Figure 3.9: OC curve for Plan C with the values of AQL and LQL and their corresponding probability of acceptance
 </p>
@@ -2727,7 +2726,7 @@ Figure 3.9: OC curve for Plan C with the values of AQL and LQL and their corresp
 
 </div>
 </div>
-<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<h3> References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-united1950military" class="csl-entry">
 Agency, United States. Munitions Board. Standards. 1950. <em>Military Standard: Sampling Procedures and Tables for Inspection by Attributes</em>. US Government Printing Office.
@@ -2757,52 +2756,46 @@ Schilling, E. G., and D. V Neubauer. 2017. <em>Acceptance Sampling in Quality Co
 <a href="myth-busters-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
-<script src="book_assets/gitbook-2.6.7/js/app.min.js"></script>
-<script src="book_assets/gitbook-2.6.7/js/clipboard.min.js"></script>
-<script src="book_assets/gitbook-2.6.7/js/plugin-search.js"></script>
-<script src="book_assets/gitbook-2.6.7/js/plugin-sharing.js"></script>
-<script src="book_assets/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
-<script src="book_assets/gitbook-2.6.7/js/plugin-bookdown.js"></script>
-<script src="book_assets/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="book_assets/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-"sharing": {
-"github": false,
-"facebook": true,
-"twitter": true,
-"linkedin": false,
-"weibo": false,
-"instapaper": false,
-"vk": false,
-"whatsapp": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-},
+"sharing": false,
 "fontsettings": {
 "theme": "white",
 "family": "sans",
 "size": 2
 },
 "edit": {
-"link": null,
-"text": null
+"link": "https://github.com/JuanMaLR/finalProyectStatistics2022Masters/edit/main/02-acceptanceSampling.Rmd",
+"text": "Suggest an edit"
 },
 "history": {
 "link": null,
 "text": null
 },
 "view": {
-"link": null,
-"text": null
+"link": "https://github.com/JuanMaLR/finalProyectStatistics2022Masters/edit/main/02-acceptanceSampling.Rmd",
+"text": "View source code on Github"
 },
-"download": ["_main.pdf", "_main.epub"],
+"download": ["https://github.com/JuanMaLR/finalProyectStatistics2022Masters/raw/main/02-acceptanceSampling.Rmd"],
 "search": {
 "engine": "fuse",
 "options": null
 },
 "toc": {
-"collapse": "subsection"
+"collapse": "section",
+"scroll_highlight": true
+},
+"toolbar": {
+"position": "static"
 }
 });
 });

@@ -1,1 +1,11 @@
+book_filename: team2-book
 delete_merged_file: true
+rmd_files:
+  html:
+  - index.Rmd
+  - 01-processCapability.Rmd
+  - 02-acceptanceSampling.Rmd
+  - 03-mythBuster1.Rmd
+  - 04-mythBuster2.Rmd
+  - 05-references.Rmd
+new_session: 'yes'

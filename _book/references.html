@@ -4,49 +4,42 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>References | A Minimal Book Example</title>
-  <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
-set in the _output.yml file.
-The HTML output format for this example is bookdown::gitbook,</p>" />
+  <title>6 References | team2-book</title>
+  <meta name="description" content="Final Project Data Science FJ2022" />
   <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="References | A Minimal Book Example" />
+  <meta property="og:title" content="6 References | team2-book" />
   <meta property="og:type" content="book" />
   
-  <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
-set in the _output.yml file.
-The HTML output format for this example is bookdown::gitbook,</p>" />
-  <meta name="github-repo" content="rstudio/bookdown-demo" />
+  <meta property="og:description" content="Final Project Data Science FJ2022" />
+  <meta name="github-repo" content="JuanMaLR/finalProyectStatistics2022Masters" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="References | A Minimal Book Example" />
+  <meta name="twitter:title" content="6 References | team2-book" />
   
-  <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
-set in the _output.yml file.
-The HTML output format for this example is bookdown::gitbook,</p>" />
+  <meta name="twitter:description" content="Final Project Data Science FJ2022" />
   
 
-<meta name="author" content="John Doe" />
 
 
-<meta name="date" content="2022-05-12" />
+<meta name="date" content="2022-06-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="sharing-your-book.html"/>
+<link rel="prev" href="myth-busters-2.html"/>
 
-<script src="book_assets/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
-<link href="book_assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
-<link href="book_assets/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
-<link href="book_assets/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="book_assets/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
-<link href="book_assets/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
-<link href="book_assets/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="book_assets/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
 
 
 
@@ -55,9 +48,578 @@ The HTML output format for this example is bookdown::gitbook,</p>" />
 
 
 
-<link href="book_assets/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
-<link href="book_assets/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
-<script src="book_assets/anchor-sections-1.1.0/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+<script>
+/* ========================================================================
+ * Bootstrap: transition.js v3.3.7
+ * http://getbootstrap.com/javascript/#transitions
+ * ========================================================================
+ * Copyright 2011-2016 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * ======================================================================== */
+
+
++function ($) {
+  'use strict';
+
+  // CSS TRANSITION SUPPORT (Shoutout: http://www.modernizr.com/)
+  // ============================================================
+
+  function transitionEnd() {
+    var el = document.createElement('bootstrap')
+
+    var transEndEventNames = {
+      WebkitTransition : 'webkitTransitionEnd',
+      MozTransition    : 'transitionend',
+      OTransition      : 'oTransitionEnd otransitionend',
+      transition       : 'transitionend'
+    }
+
+    for (var name in transEndEventNames) {
+      if (el.style[name] !== undefined) {
+        return { end: transEndEventNames[name] }
+      }
+    }
+
+    return false // explicit for ie8 (  ._.)
+  }
+
+  // http://blog.alexmaccaw.com/css-transitions
+  $.fn.emulateTransitionEnd = function (duration) {
+    var called = false
+    var $el = this
+    $(this).one('bsTransitionEnd', function () { called = true })
+    var callback = function () { if (!called) $($el).trigger($.support.transition.end) }
+    setTimeout(callback, duration)
+    return this
+  }
+
+  $(function () {
+    $.support.transition = transitionEnd()
+
+    if (!$.support.transition) return
+
+    $.event.special.bsTransitionEnd = {
+      bindType: $.support.transition.end,
+      delegateType: $.support.transition.end,
+      handle: function (e) {
+        if ($(e.target).is(this)) return e.handleObj.handler.apply(this, arguments)
+      }
+    }
+  })
+
+}(jQuery);
+</script>
+<script>
+/* ========================================================================
+ * Bootstrap: collapse.js v3.3.7
+ * http://getbootstrap.com/javascript/#collapse
+ * ========================================================================
+ * Copyright 2011-2016 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * ======================================================================== */
+
+/* jshint latedef: false */
+
++function ($) {
+  'use strict';
+
+  // COLLAPSE PUBLIC CLASS DEFINITION
+  // ================================
+
+  var Collapse = function (element, options) {
+    this.$element      = $(element)
+    this.options       = $.extend({}, Collapse.DEFAULTS, options)
+    this.$trigger      = $('[data-toggle="collapse"][href="#' + element.id + '"],' +
+                           '[data-toggle="collapse"][data-target="#' + element.id + '"]')
+    this.transitioning = null
+
+    if (this.options.parent) {
+      this.$parent = this.getParent()
+    } else {
+      this.addAriaAndCollapsedClass(this.$element, this.$trigger)
+    }
+
+    if (this.options.toggle) this.toggle()
+  }
+
+  Collapse.VERSION  = '3.3.7'
+
+  Collapse.TRANSITION_DURATION = 350
+
+  Collapse.DEFAULTS = {
+    toggle: true
+  }
+
+  Collapse.prototype.dimension = function () {
+    var hasWidth = this.$element.hasClass('width')
+    return hasWidth ? 'width' : 'height'
+  }
+
+  Collapse.prototype.show = function () {
+    if (this.transitioning || this.$element.hasClass('in')) return
+
+    var activesData
+    var actives = this.$parent && this.$parent.children('.panel').children('.in, .collapsing')
+
+    if (actives && actives.length) {
+      activesData = actives.data('bs.collapse')
+      if (activesData && activesData.transitioning) return
+    }
+
+    var startEvent = $.Event('show.bs.collapse')
+    this.$element.trigger(startEvent)
+    if (startEvent.isDefaultPrevented()) return
+
+    if (actives && actives.length) {
+      Plugin.call(actives, 'hide')
+      activesData || actives.data('bs.collapse', null)
+    }
+
+    var dimension = this.dimension()
+
+    this.$element
+      .removeClass('collapse')
+      .addClass('collapsing')[dimension](0)
+      .attr('aria-expanded', true)
+
+    this.$trigger
+      .removeClass('collapsed')
+      .attr('aria-expanded', true)
+
+    this.transitioning = 1
+
+    var complete = function () {
+      this.$element
+        .removeClass('collapsing')
+        .addClass('collapse in')[dimension]('')
+      this.transitioning = 0
+      this.$element
+        .trigger('shown.bs.collapse')
+    }
+
+    if (!$.support.transition) return complete.call(this)
+
+    var scrollSize = $.camelCase(['scroll', dimension].join('-'))
+
+    this.$element
+      .one('bsTransitionEnd', $.proxy(complete, this))
+      .emulateTransitionEnd(Collapse.TRANSITION_DURATION)[dimension](this.$element[0][scrollSize])
+  }
+
+  Collapse.prototype.hide = function () {
+    if (this.transitioning || !this.$element.hasClass('in')) return
+
+    var startEvent = $.Event('hide.bs.collapse')
+    this.$element.trigger(startEvent)
+    if (startEvent.isDefaultPrevented()) return
+
+    var dimension = this.dimension()
+
+    this.$element[dimension](this.$element[dimension]())[0].offsetHeight
+
+    this.$element
+      .addClass('collapsing')
+      .removeClass('collapse in')
+      .attr('aria-expanded', false)
+
+    this.$trigger
+      .addClass('collapsed')
+      .attr('aria-expanded', false)
+
+    this.transitioning = 1
+
+    var complete = function () {
+      this.transitioning = 0
+      this.$element
+        .removeClass('collapsing')
+        .addClass('collapse')
+        .trigger('hidden.bs.collapse')
+    }
+
+    if (!$.support.transition) return complete.call(this)
+
+    this.$element
+      [dimension](0)
+      .one('bsTransitionEnd', $.proxy(complete, this))
+      .emulateTransitionEnd(Collapse.TRANSITION_DURATION)
+  }
+
+  Collapse.prototype.toggle = function () {
+    this[this.$element.hasClass('in') ? 'hide' : 'show']()
+  }
+
+  Collapse.prototype.getParent = function () {
+    return $(this.options.parent)
+      .find('[data-toggle="collapse"][data-parent="' + this.options.parent + '"]')
+      .each($.proxy(function (i, element) {
+        var $element = $(element)
+        this.addAriaAndCollapsedClass(getTargetFromTrigger($element), $element)
+      }, this))
+      .end()
+  }
+
+  Collapse.prototype.addAriaAndCollapsedClass = function ($element, $trigger) {
+    var isOpen = $element.hasClass('in')
+
+    $element.attr('aria-expanded', isOpen)
+    $trigger
+      .toggleClass('collapsed', !isOpen)
+      .attr('aria-expanded', isOpen)
+  }
+
+  function getTargetFromTrigger($trigger) {
+    var href
+    var target = $trigger.attr('data-target')
+      || (href = $trigger.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '') // strip for ie7
+
+    return $(target)
+  }
+
+
+  // COLLAPSE PLUGIN DEFINITION
+  // ==========================
+
+  function Plugin(option) {
+    return this.each(function () {
+      var $this   = $(this)
+      var data    = $this.data('bs.collapse')
+      var options = $.extend({}, Collapse.DEFAULTS, $this.data(), typeof option == 'object' && option)
+
+      if (!data && options.toggle && /show|hide/.test(option)) options.toggle = false
+      if (!data) $this.data('bs.collapse', (data = new Collapse(this, options)))
+      if (typeof option == 'string') data[option]()
+    })
+  }
+
+  var old = $.fn.collapse
+
+  $.fn.collapse             = Plugin
+  $.fn.collapse.Constructor = Collapse
+
+
+  // COLLAPSE NO CONFLICT
+  // ====================
+
+  $.fn.collapse.noConflict = function () {
+    $.fn.collapse = old
+    return this
+  }
+
+
+  // COLLAPSE DATA-API
+  // =================
+
+  $(document).on('click.bs.collapse.data-api', '[data-toggle="collapse"]', function (e) {
+    var $this   = $(this)
+
+    if (!$this.attr('data-target')) e.preventDefault()
+
+    var $target = getTargetFromTrigger($this)
+    var data    = $target.data('bs.collapse')
+    var option  = data ? 'toggle' : $this.data()
+
+    Plugin.call($target, option)
+  })
+
+}(jQuery);
+</script>
+<script>
+window.initializeCodeFolding = function(show) {
+
+  // handlers for show-all and hide all
+  $("#rmd-show-all-code").click(function() {
+    $('div.r-code-collapse').each(function() {
+      $(this).collapse('show');
+    });
+  });
+  $("#rmd-hide-all-code").click(function() {
+    $('div.r-code-collapse').each(function() {
+      $(this).collapse('hide');
+    });
+  });
+
+  // index for unique code element ids
+  var currentIndex = 1;
+
+  // select all R code blocks
+  var rCodeBlocks = $('pre.sourceCode, pre.r, pre.python, pre.bash, pre.sql, pre.cpp, pre.stan, pre.js');
+  rCodeBlocks.each(function() {
+
+    // create a collapsable div to wrap the code in
+    var div = $('<div class="collapse r-code-collapse"></div>');
+    if (show)
+      div.addClass('in');
+    var id = 'rcode-643E0F36' + currentIndex++;
+    div.attr('id', id);
+    $(this).before(div);
+    $(this).detach().appendTo(div);
+
+    // add a show code button right above
+    var showCodeText = $('<span>' + (show ? 'Hide' : 'Code') + '</span>');
+    var showCodeButton = $('<button type="button" class="btn btn-default btn-xs code-folding-btn pull-right"></button>');
+    showCodeButton.append(showCodeText);
+    showCodeButton
+        .attr('data-toggle', 'collapse')
+        .attr('data-target', '#' + id)
+        .attr('aria-expanded', show)
+        .attr('aria-controls', id);
+
+    var buttonRow = $('<div class="row"></div>');
+    var buttonCol = $('<div class="col-md-12"></div>');
+
+    buttonCol.append(showCodeButton);
+    buttonRow.append(buttonCol);
+
+    div.before(buttonRow);
+
+    // update state of button on show/hide
+    div.on('hidden.bs.collapse', function () {
+      showCodeText.text('Code');
+    });
+    div.on('show.bs.collapse', function () {
+      showCodeText.text('Hide');
+    });
+  });
+
+}
+</script>
+<script>
+/* ========================================================================
+ * Bootstrap: dropdown.js v3.3.7
+ * http://getbootstrap.com/javascript/#dropdowns
+ * ========================================================================
+ * Copyright 2011-2016 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * ======================================================================== */
+
+
++function ($) {
+  'use strict';
+
+  // DROPDOWN CLASS DEFINITION
+  // =========================
+
+  var backdrop = '.dropdown-backdrop'
+  var toggle   = '[data-toggle="dropdown"]'
+  var Dropdown = function (element) {
+    $(element).on('click.bs.dropdown', this.toggle)
+  }
+
+  Dropdown.VERSION = '3.3.7'
+
+  function getParent($this) {
+    var selector = $this.attr('data-target')
+
+    if (!selector) {
+      selector = $this.attr('href')
+      selector = selector && /#[A-Za-z]/.test(selector) && selector.replace(/.*(?=#[^\s]*$)/, '') // strip for ie7
+    }
+
+    var $parent = selector && $(selector)
+
+    return $parent && $parent.length ? $parent : $this.parent()
+  }
+
+  function clearMenus(e) {
+    if (e && e.which === 3) return
+    $(backdrop).remove()
+    $(toggle).each(function () {
+      var $this         = $(this)
+      var $parent       = getParent($this)
+      var relatedTarget = { relatedTarget: this }
+
+      if (!$parent.hasClass('open')) return
+
+      if (e && e.type == 'click' && /input|textarea/i.test(e.target.tagName) && $.contains($parent[0], e.target)) return
+
+      $parent.trigger(e = $.Event('hide.bs.dropdown', relatedTarget))
+
+      if (e.isDefaultPrevented()) return
+
+      $this.attr('aria-expanded', 'false')
+      $parent.removeClass('open').trigger($.Event('hidden.bs.dropdown', relatedTarget))
+    })
+  }
+
+  Dropdown.prototype.toggle = function (e) {
+    var $this = $(this)
+
+    if ($this.is('.disabled, :disabled')) return
+
+    var $parent  = getParent($this)
+    var isActive = $parent.hasClass('open')
+
+    clearMenus()
+
+    if (!isActive) {
+      if ('ontouchstart' in document.documentElement && !$parent.closest('.navbar-nav').length) {
+        // if mobile we use a backdrop because click events don't delegate
+        $(document.createElement('div'))
+          .addClass('dropdown-backdrop')
+          .insertAfter($(this))
+          .on('click', clearMenus)
+      }
+
+      var relatedTarget = { relatedTarget: this }
+      $parent.trigger(e = $.Event('show.bs.dropdown', relatedTarget))
+
+      if (e.isDefaultPrevented()) return
+
+      $this
+        .trigger('focus')
+        .attr('aria-expanded', 'true')
+
+      $parent
+        .toggleClass('open')
+        .trigger($.Event('shown.bs.dropdown', relatedTarget))
+    }
+
+    return false
+  }
+
+  Dropdown.prototype.keydown = function (e) {
+    if (!/(38|40|27|32)/.test(e.which) || /input|textarea/i.test(e.target.tagName)) return
+
+    var $this = $(this)
+
+    e.preventDefault()
+    e.stopPropagation()
+
+    if ($this.is('.disabled, :disabled')) return
+
+    var $parent  = getParent($this)
+    var isActive = $parent.hasClass('open')
+
+    if (!isActive && e.which != 27 || isActive && e.which == 27) {
+      if (e.which == 27) $parent.find(toggle).trigger('focus')
+      return $this.trigger('click')
+    }
+
+    var desc = ' li:not(.disabled):visible a'
+    var $items = $parent.find('.dropdown-menu' + desc)
+
+    if (!$items.length) return
+
+    var index = $items.index(e.target)
+
+    if (e.which == 38 && index > 0)                 index--         // up
+    if (e.which == 40 && index < $items.length - 1) index++         // down
+    if (!~index)                                    index = 0
+
+    $items.eq(index).trigger('focus')
+  }
+
+
+  // DROPDOWN PLUGIN DEFINITION
+  // ==========================
+
+  function Plugin(option) {
+    return this.each(function () {
+      var $this = $(this)
+      var data  = $this.data('bs.dropdown')
+
+      if (!data) $this.data('bs.dropdown', (data = new Dropdown(this)))
+      if (typeof option == 'string') data[option].call($this)
+    })
+  }
+
+  var old = $.fn.dropdown
+
+  $.fn.dropdown             = Plugin
+  $.fn.dropdown.Constructor = Dropdown
+
+
+  // DROPDOWN NO CONFLICT
+  // ====================
+
+  $.fn.dropdown.noConflict = function () {
+    $.fn.dropdown = old
+    return this
+  }
+
+
+  // APPLY TO STANDARD DROPDOWN ELEMENTS
+  // ===================================
+
+  $(document)
+    .on('click.bs.dropdown.data-api', clearMenus)
+    .on('click.bs.dropdown.data-api', '.dropdown form', function (e) { e.stopPropagation() })
+    .on('click.bs.dropdown.data-api', toggle, Dropdown.prototype.toggle)
+    .on('keydown.bs.dropdown.data-api', toggle, Dropdown.prototype.keydown)
+    .on('keydown.bs.dropdown.data-api', '.dropdown-menu', Dropdown.prototype.keydown)
+
+}(jQuery);
+</script>
+<style type="text/css">
+.code-folding-btn { 
+  margin-bottom: 4px; 
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  border-radius: 0.25rem;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.row { display: flex; }
+.collapse { display: none; }
+.in { display:block }
+.pull-right > .dropdown-menu {
+    right: 0;
+    left: auto;
+}
+.open > .dropdown-menu {
+    display: block;
+}
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+.personalized-button {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    border-radius: 0.25rem;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+</style>
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("show" === "hide");
+});
+</script>
+
+
+<script>
+document.write('<div class="btn-group pull-right" style="position: absolute; top: 20%; right: 2%; z-index: 200"><button type="button" class="btn btn-default btn-xs dropdown-toggle personalized-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" data-_extension-text-contrast=""><span>Code</span> <span class="caret"></span></button><ul class="dropdown-menu" style="min-width: 50px;"><li><a id="rmd-show-all-code" href="#">Show All Code</a></li><li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li></ul></div>')
+</script>
+
 
 
 <style type="text/css">
@@ -161,49 +723,93 @@ div.csl-indent {
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">A Minimal Book Example</a></li>
-
-<li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About</a>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Abstract</a></li>
+<li class="chapter" data-level="2" data-path="process-capability.html"><a href="process-capability.html"><i class="fa fa-check"></i><b>2</b> Process Capability</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#usage"><i class="fa fa-check"></i><b>1.1</b> Usage</a></li>
-<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#render-book"><i class="fa fa-check"></i><b>1.2</b> Render book</a></li>
-<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#preview-book"><i class="fa fa-check"></i><b>1.3</b> Preview book</a></li>
-</ul></li>
-<li class="chapter" data-level="2" data-path="hello-bookdown.html"><a href="hello-bookdown.html"><i class="fa fa-check"></i><b>2</b> Hello bookdown</a>
+<li class="chapter" data-level="2.1" data-path="process-capability.html"><a href="process-capability.html#concept-definition"><i class="fa fa-check"></i><b>2.1</b> Concept definition</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="hello-bookdown.html"><a href="hello-bookdown.html#a-section"><i class="fa fa-check"></i><b>2.1</b> A section</a>
+<li class="chapter" data-level="2.1.1" data-path="process-capability.html"><a href="process-capability.html#univariate-process-capability-indices"><i class="fa fa-check"></i><b>2.1.1</b> <em>Univariate process capability indices</em></a></li>
+<li class="chapter" data-level="2.1.2" data-path="process-capability.html"><a href="process-capability.html#the-c_p-index"><i class="fa fa-check"></i><b>2.1.2</b> <em>The</em> <span class="math inline">\(C_p\)</span> <em>index</em></a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="process-capability.html"><a href="process-capability.html#data-collected"><i class="fa fa-check"></i><b>2.2</b> Data collected</a></li>
+<li class="chapter" data-level="2.3" data-path="process-capability.html"><a href="process-capability.html#graphical-summaries-and-summary-statistics"><i class="fa fa-check"></i><b>2.3</b> Graphical Summaries and Summary Statistics</a></li>
+<li class="chapter" data-level="2.4" data-path="process-capability.html"><a href="process-capability.html#probability-plots"><i class="fa fa-check"></i><b>2.4</b> Probability plots</a></li>
+<li class="chapter" data-level="2.5" data-path="process-capability.html"><a href="process-capability.html#capability-measurement"><i class="fa fa-check"></i><b>2.5</b> Capability measurement</a></li>
+<li class="chapter" data-level="2.6" data-path="process-capability.html"><a href="process-capability.html#error-measurement-estimation"><i class="fa fa-check"></i><b>2.6</b> Error measurement estimation</a>
 <ul>
-<li class="chapter" data-level="" data-path="hello-bookdown.html"><a href="hello-bookdown.html#an-unnumbered-section"><i class="fa fa-check"></i>An unnumbered section</a></li>
+<li class="chapter" data-level="2.6.1" data-path="process-capability.html"><a href="process-capability.html#percentiles-method"><i class="fa fa-check"></i><b>2.6.1</b> <em>Percentiles method</em></a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="cross.html"><a href="cross.html"><i class="fa fa-check"></i><b>3</b> Cross-references</a>
+<li class="chapter" data-level="3" data-path="acceptance-sampling.html"><a href="acceptance-sampling.html"><i class="fa fa-check"></i><b>3</b> Acceptance sampling</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="cross.html"><a href="cross.html#chapters-and-sub-chapters"><i class="fa fa-check"></i><b>3.1</b> Chapters and sub-chapters</a></li>
-<li class="chapter" data-level="3.2" data-path="cross.html"><a href="cross.html#captioned-figures-and-tables"><i class="fa fa-check"></i><b>3.2</b> Captioned figures and tables</a></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="parts.html"><a href="parts.html"><i class="fa fa-check"></i><b>4</b> Parts</a></li>
-<li class="chapter" data-level="5" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html"><i class="fa fa-check"></i><b>5</b> Footnotes and citations</a>
+<li class="chapter" data-level="3.1" data-path="acceptance-sampling.html"><a href="acceptance-sampling.html#concept-definition-1"><i class="fa fa-check"></i><b>3.1</b> Concept definition</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html#footnotes"><i class="fa fa-check"></i><b>5.1</b> Footnotes</a></li>
-<li class="chapter" data-level="5.2" data-path="footnotes-and-citations.html"><a href="footnotes-and-citations.html#citations"><i class="fa fa-check"></i><b>5.2</b> Citations</a></li>
+<li class="chapter" data-level="3.1.1" data-path="acceptance-sampling.html"><a href="acceptance-sampling.html#types-of-sampling-plans"><i class="fa fa-check"></i><b>3.1.1</b> <em>Types of sampling plans</em></a></li>
+<li class="chapter" data-level="3.1.2" data-path="acceptance-sampling.html"><a href="acceptance-sampling.html#acceptance-sampling-by-attributes"><i class="fa fa-check"></i><b>3.1.2</b> <em>Acceptance sampling by attributes</em></a></li>
+<li class="chapter" data-level="3.1.3" data-path="acceptance-sampling.html"><a href="acceptance-sampling.html#batch-characteristics-and-sample-selection"><i class="fa fa-check"></i><b>3.1.3</b> <em>Batch characteristics and sample selection</em></a></li>
+<li class="chapter" data-level="3.1.4" data-path="acceptance-sampling.html"><a href="acceptance-sampling.html#statistical-aspects-of-acceptance-sampling"><i class="fa fa-check"></i><b>3.1.4</b> <em>Statistical aspects of acceptance sampling</em></a></li>
+<li class="chapter" data-level="3.1.5" data-path="acceptance-sampling.html"><a href="acceptance-sampling.html#operating-characteristic-curve"><i class="fa fa-check"></i><b>3.1.5</b> <em>Operating characteristic curve</em></a></li>
+<li class="chapter" data-level="3.1.6" data-path="acceptance-sampling.html"><a href="acceptance-sampling.html#important-concepts-in-acceptance-sampling"><i class="fa fa-check"></i><b>3.1.6</b> <em>Important concepts in acceptance sampling</em></a></li>
+<li class="chapter" data-level="3.1.7" data-path="acceptance-sampling.html"><a href="acceptance-sampling.html#methods-for-designing-sampling-plans"><i class="fa fa-check"></i><b>3.1.7</b> <em>Methods for designing sampling plans</em></a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="blocks.html"><a href="blocks.html"><i class="fa fa-check"></i><b>6</b> Blocks</a>
+<li class="chapter" data-level="3.2" data-path="acceptance-sampling.html"><a href="acceptance-sampling.html#process-where-acceptance-sampling-can-be-implemented"><i class="fa fa-check"></i><b>3.2</b> <em>Process where acceptance sampling can be implemented</em></a></li>
+<li class="chapter" data-level="3.3" data-path="acceptance-sampling.html"><a href="acceptance-sampling.html#three-scenarios-design-evaluation"><i class="fa fa-check"></i><b>3.3</b> <em>Three scenarios (design) evaluation</em></a></li>
+<li class="chapter" data-level="3.4" data-path="acceptance-sampling.html"><a href="acceptance-sampling.html#sampling-procedure-producer-and-consumer-risk-relation-to-type-1-error-and-power-of-a-test"><i class="fa fa-check"></i><b>3.4</b> <em>Sampling procedure, producer and consumer risk, relation to type 1 error and power of a test</em></a></li>
+<li class="chapter" data-level="3.5" data-path="acceptance-sampling.html"><a href="acceptance-sampling.html#present-a-numerical-example"><i class="fa fa-check"></i><b>3.5</b> <em>Present a numerical example</em></a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="myth-busters-1.html"><a href="myth-busters-1.html"><i class="fa fa-check"></i><b>4</b> Myth busters 1</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="blocks.html"><a href="blocks.html#equations"><i class="fa fa-check"></i><b>6.1</b> Equations</a></li>
-<li class="chapter" data-level="6.2" data-path="blocks.html"><a href="blocks.html#theorems-and-proofs"><i class="fa fa-check"></i><b>6.2</b> Theorems and proofs</a></li>
-<li class="chapter" data-level="6.3" data-path="blocks.html"><a href="blocks.html#callout-blocks"><i class="fa fa-check"></i><b>6.3</b> Callout blocks</a></li>
-</ul></li>
-<li class="chapter" data-level="7" data-path="sharing-your-book.html"><a href="sharing-your-book.html"><i class="fa fa-check"></i><b>7</b> Sharing your book</a>
+<li class="chapter" data-level="4.1" data-path="myth-busters-1.html"><a href="myth-busters-1.html#problem-description-and-variables-to-measure"><i class="fa fa-check"></i><b>4.1</b> Problem description and variables to measure</a></li>
+<li class="chapter" data-level="4.2" data-path="myth-busters-1.html"><a href="myth-busters-1.html#objective"><i class="fa fa-check"></i><b>4.2</b> Objective</a></li>
+<li class="chapter" data-level="4.3" data-path="myth-busters-1.html"><a href="myth-busters-1.html#data-collection-procedure-that-involves-a-randomization-process"><i class="fa fa-check"></i><b>4.3</b> Data collection procedure that involves a randomization process</a></li>
+<li class="chapter" data-level="4.4" data-path="myth-busters-1.html"><a href="myth-busters-1.html#measurement-system-implemented"><i class="fa fa-check"></i><b>4.4</b> Measurement system implemented</a></li>
+<li class="chapter" data-level="4.5" data-path="myth-busters-1.html"><a href="myth-busters-1.html#noise-factors"><i class="fa fa-check"></i><b>4.5</b> Noise factors</a></li>
+<li class="chapter" data-level="4.6" data-path="myth-busters-1.html"><a href="myth-busters-1.html#statistical-methods-used"><i class="fa fa-check"></i><b>4.6</b> Statistical methods used</a></li>
+<li class="chapter" data-level="4.7" data-path="myth-busters-1.html"><a href="myth-busters-1.html#assumptions"><i class="fa fa-check"></i><b>4.7</b> Assumptions</a></li>
+<li class="chapter" data-level="4.8" data-path="myth-busters-1.html"><a href="myth-busters-1.html#experimental-restrictions"><i class="fa fa-check"></i><b>4.8</b> Experimental restrictions</a></li>
+<li class="chapter" data-level="4.9" data-path="myth-busters-1.html"><a href="myth-busters-1.html#data-collection"><i class="fa fa-check"></i><b>4.9</b> Data collection</a></li>
+<li class="chapter" data-level="4.10" data-path="myth-busters-1.html"><a href="myth-busters-1.html#descriptive-analysis"><i class="fa fa-check"></i><b>4.10</b> Descriptive analysis</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="sharing-your-book.html"><a href="sharing-your-book.html#publishing"><i class="fa fa-check"></i><b>7.1</b> Publishing</a></li>
-<li class="chapter" data-level="7.2" data-path="sharing-your-book.html"><a href="sharing-your-book.html#pages"><i class="fa fa-check"></i><b>7.2</b> 404 pages</a></li>
-<li class="chapter" data-level="7.3" data-path="sharing-your-book.html"><a href="sharing-your-book.html#metadata-for-sharing"><i class="fa fa-check"></i><b>7.3</b> Metadata for sharing</a></li>
+<li class="chapter" data-level="4.10.1" data-path="myth-busters-1.html"><a href="myth-busters-1.html#graphical-summaries"><i class="fa fa-check"></i><b>4.10.1</b> Graphical summaries</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
-<li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-
+<li class="chapter" data-level="4.11" data-path="myth-busters-1.html"><a href="myth-busters-1.html#individual-sample-estimation-of-parameters-and-confidence-intervals"><i class="fa fa-check"></i><b>4.11</b> Individual sample estimation of parameters and confidence intervals</a></li>
+<li class="chapter" data-level="4.12" data-path="myth-busters-1.html"><a href="myth-busters-1.html#assumptions-validation"><i class="fa fa-check"></i><b>4.12</b> Assumptions validation</a></li>
+<li class="chapter" data-level="4.13" data-path="myth-busters-1.html"><a href="myth-busters-1.html#analysis-of-the-experiment"><i class="fa fa-check"></i><b>4.13</b> Analysis of the experiment</a>
+<ul>
+<li class="chapter" data-level="4.13.1" data-path="myth-busters-1.html"><a href="myth-busters-1.html#hypothesis-used"><i class="fa fa-check"></i><b>4.13.1</b> Hypothesis used</a></li>
+<li class="chapter" data-level="4.13.2" data-path="myth-busters-1.html"><a href="myth-busters-1.html#significance-level"><i class="fa fa-check"></i><b>4.13.2</b> Significance level</a></li>
+<li class="chapter" data-level="4.13.3" data-path="myth-busters-1.html"><a href="myth-busters-1.html#calculations"><i class="fa fa-check"></i><b>4.13.3</b> Calculations</a></li>
+</ul></li>
+<li class="chapter" data-level="4.14" data-path="myth-busters-1.html"><a href="myth-busters-1.html#statistical-conclusion"><i class="fa fa-check"></i><b>4.14</b> Statistical conclusion</a></li>
+<li class="chapter" data-level="4.15" data-path="myth-busters-1.html"><a href="myth-busters-1.html#practical-conclusion"><i class="fa fa-check"></i><b>4.15</b> Practical conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="myth-busters-2.html"><a href="myth-busters-2.html"><i class="fa fa-check"></i><b>5</b> Myth busters 2</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="myth-busters-2.html"><a href="myth-busters-2.html#problem-description-and-variables-to-measure-1"><i class="fa fa-check"></i><b>5.1</b> Problem description and variables to measure</a></li>
+<li class="chapter" data-level="5.2" data-path="myth-busters-2.html"><a href="myth-busters-2.html#objective-1"><i class="fa fa-check"></i><b>5.2</b> Objective</a></li>
+<li class="chapter" data-level="5.3" data-path="myth-busters-2.html"><a href="myth-busters-2.html#data-collection-procedure-that-involves-a-randomization-process-1"><i class="fa fa-check"></i><b>5.3</b> Data collection procedure that involves a randomization process</a></li>
+<li class="chapter" data-level="5.4" data-path="myth-busters-2.html"><a href="myth-busters-2.html#measurement-system-implemented-1"><i class="fa fa-check"></i><b>5.4</b> Measurement system implemented</a></li>
+<li class="chapter" data-level="5.5" data-path="myth-busters-2.html"><a href="myth-busters-2.html#noise-factors-1"><i class="fa fa-check"></i><b>5.5</b> Noise factors</a></li>
+<li class="chapter" data-level="5.6" data-path="myth-busters-2.html"><a href="myth-busters-2.html#statistical-methods-used-1"><i class="fa fa-check"></i><b>5.6</b> Statistical methods used</a></li>
+<li class="chapter" data-level="5.7" data-path="myth-busters-2.html"><a href="myth-busters-2.html#assumptions-1"><i class="fa fa-check"></i><b>5.7</b> Assumptions</a></li>
+<li class="chapter" data-level="5.8" data-path="myth-busters-2.html"><a href="myth-busters-2.html#experimental-restrictions-1"><i class="fa fa-check"></i><b>5.8</b> Experimental restrictions</a></li>
+<li class="chapter" data-level="5.9" data-path="myth-busters-2.html"><a href="myth-busters-2.html#data-collection-1"><i class="fa fa-check"></i><b>5.9</b> Data collection</a></li>
+<li class="chapter" data-level="5.10" data-path="myth-busters-2.html"><a href="myth-busters-2.html#descriptive-analysis-1"><i class="fa fa-check"></i><b>5.10</b> Descriptive analysis</a></li>
+<li class="chapter" data-level="5.11" data-path="myth-busters-2.html"><a href="myth-busters-2.html#individual-sample-estimation-of-parameters-and-confidence-intervals-1"><i class="fa fa-check"></i><b>5.11</b> Individual sample estimation of parameters and confidence intervals</a>
+<ul>
+<li class="chapter" data-level="5.11.1" data-path="myth-busters-2.html"><a href="myth-busters-2.html#confidence-interval-95"><i class="fa fa-check"></i><b>5.11.1</b> Confidence Interval (<span class="math inline">\(95\%\)</span>)</a></li>
+</ul></li>
+<li class="chapter" data-level="5.12" data-path="myth-busters-2.html"><a href="myth-busters-2.html#assumptions-validation-1"><i class="fa fa-check"></i><b>5.12</b> Assumptions validation</a></li>
+<li class="chapter" data-level="5.13" data-path="myth-busters-2.html"><a href="myth-busters-2.html#analysis-of-the-experiment-two-sample-comparisons"><i class="fa fa-check"></i><b>5.13</b> Analysis of the experiment (two sample comparisons)</a>
+<ul>
+<li class="chapter" data-level="5.13.1" data-path="myth-busters-2.html"><a href="myth-busters-2.html#hypothesis-used-1"><i class="fa fa-check"></i><b>5.13.1</b> Hypothesis used</a></li>
+<li class="chapter" data-level="5.13.2" data-path="myth-busters-2.html"><a href="myth-busters-2.html#significance-level-1"><i class="fa fa-check"></i><b>5.13.2</b> Significance level</a></li>
+<li class="chapter" data-level="5.13.3" data-path="myth-busters-2.html"><a href="myth-busters-2.html#calculations-1"><i class="fa fa-check"></i><b>5.13.3</b> Calculations</a></li>
+</ul></li>
+<li class="chapter" data-level="5.14" data-path="myth-busters-2.html"><a href="myth-busters-2.html#statistical-conclusion-1"><i class="fa fa-check"></i><b>5.14</b> Statistical conclusion</a></li>
+<li class="chapter" data-level="5.15" data-path="myth-busters-2.html"><a href="myth-busters-2.html#practical-conclusion-1"><i class="fa fa-check"></i><b>5.15</b> Practical conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>6</b> References</a></li>
 </ul>
 
       </nav>
@@ -213,7 +819,7 @@ div.csl-indent {
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">A Minimal Book Example</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"><img src="logo.png" title="fig:" style="width:4in" alt="team2-book" /></a>
           </h1>
         </div>
 
@@ -221,79 +827,157 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="references" class="section level1 unnumbered hasAnchor">
-<h1>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="references" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">6</span> References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div class="csl-entry">
-Xie, Yihui. 2015. <em>Dynamic Documents with <span>R</span> and Knitr</em>. 2nd ed. Boca Raton, Florida: Chapman; Hall/CRC. <a href="http://yihui.org/knitr/">http://yihui.org/knitr/</a>.
+Agency, United States. Munitions Board. Standards. 1950. <em>Military Standard: Sampling Procedures and Tables for Inspection by Attributes</em>. US Government Printing Office.
 </div>
 <div class="csl-entry">
-———. 2022. <em>Bookdown: Authoring Books and Technical Documents with r Markdown</em>. <a href="https://CRAN.R-project.org/package=bookdown">https://CRAN.R-project.org/package=bookdown</a>.
+Agudelo, Susana, and Myladis Cogollo. 2016. <span>“Analysis of Processes Capability Using the Skewed Normal Distribution.”</span> In. <a href="https://www.eafit.edu.co/programas-academicos/pregrados/ingenieria-matematica/practicas-investigativas/Documents/analysis-of-process-capability.pdf">https://www.eafit.edu.co/programas-academicos/pregrados/ingenieria-matematica/practicas-investigativas/Documents/analysis-of-process-capability.pdf</a>.
+</div>
+<div class="csl-entry">
+Allaire, JJ, Yihui Xie, Jonathan McPherson, Javier Luraschi, Kevin Ushey, Aron Atkins, Hadley Wickham, Joe Cheng, Winston Chang, and Richard Iannone. 2022. <em>Rmarkdown: Dynamic Documents for r</em>. <a href="https://CRAN.R-project.org/package=rmarkdown">https://CRAN.R-project.org/package=rmarkdown</a>.
+</div>
+<div class="csl-entry">
+Arcidiacono, Gabriele, and Stefano Nuzzi. 2017. <span>“A Review of the Fundamentals on Process Capability , Process Performance , and Process Sigma , and an Introduction to Process Sigma Split.”</span> In.
+</div>
+<div class="csl-entry">
+Cameron, Joseph M. 1952. <span>“Tables for Constructing and for Computing the Operating Characteristics of Single Sampling Plans.”</span> <em>Industrial Quality Control</em> 9 (1): 37–39.
+</div>
+<div class="csl-entry">
+Cano, Emilio L., Javier M. Moguerza, and Mariano Prieto Corcoba. 2015. <em>Quality Control with r</em>. Use r! New York: Springer.
+</div>
+<div class="csl-entry">
+Cano, Emilio L., Javier M. Moguerza, Mariano Prieto, and Andrés Redchuk. 2021. <em>SixSigma: Six Sigma Tools for Quality Control and Improvement</em>. <a href="https://www.sixsigmawithr.com">https://www.sixsigmawithr.com</a>.
+</div>
+<div class="csl-entry">
+Cano, Emilio L., Javier M. Moguerza, and Andres Redchuk. 2012. <em>Six Sigma with r</em>. Vol. 36. Use r! New York: Springer.
+</div>
+<div class="csl-entry">
+Canty, Angelo, and Brian Ripley. 2021. <em>Boot: Bootstrap Functions (Originally by Angelo Canty for s)</em>. <a href="https://CRAN.R-project.org/package=boot">https://CRAN.R-project.org/package=boot</a>.
+</div>
+<div class="csl-entry">
+Davison, A. C., and D. V. Hinkley. 1997. <em>Bootstrap Methods and Their Applications</em>. Cambridge: Cambridge University Press. <a href="http://statwww.epfl.ch/davison/BMA/">http://statwww.epfl.ch/davison/BMA/</a>.
+</div>
+<div class="csl-entry">
+de-Felipe, D., and E. Benedito. 2017. <span>“A Review of Univariate and Multivariate Process Capability Indices.”</span> <em>International Journal of Advanced Manufacturing Technology</em> 92 (5–8): 1687–1705. <a href="https://doi.org/10.1007/s00170-017-0273-6">https://doi.org/10.1007/s00170-017-0273-6</a>.
+</div>
+<div class="csl-entry">
+García, Ana Karen. 2018. <span>“¿<span>Cuántos</span> Libros Se Leen En <span>México</span> Al Año?”</span> <em>El Economista</em>. <a href="https://www.eleconomista.com.mx/arteseideas/Cuantos-libros-se-leen-en-Mexico-al-ano-20181026-0075.html">https://www.eleconomista.com.mx/arteseideas/Cuantos-libros-se-leen-en-Mexico-al-ano-20181026-0075.html</a>.
+</div>
+<div class="csl-entry">
+Gutierrez Pulido, Huberto, and Román de la Vara Salazar. 2013. <em>Control Estadístico de La Calidad y Seis Sigma</em>. McGraw-Hill Interamericana.
+</div>
+<div class="csl-entry">
+INEGI. 2020. <span>“Escolaridad. <span>Cuéntame</span> de <span>México</span>.”</span> <a href="https://cuentame.inegi.org.mx/poblacion/escolaridad.aspx?tema=P">https://cuentame.inegi.org.mx/poblacion/escolaridad.aspx?tema=P</a>.
+</div>
+<div class="csl-entry">
+ISO. 2006. <span>“Statistics–Vocabulary and Symbols–Part 2: Applied Statistics.”</span> <em>Geneva: ISO</em>, no. Second.
+</div>
+<div class="csl-entry">
+Meschiari, Stefano. 2022. <em>Latex2exp: Use LaTeX Expressions in Plots</em>. <a href="https://CRAN.R-project.org/package=latex2exp">https://CRAN.R-project.org/package=latex2exp</a>.
+</div>
+<div class="csl-entry">
+Navidi, William. 2019. <em>Statistics for Engineers and Scientists</em>. McGRAW-Hill Education.
+</div>
+<div class="csl-entry">
+R Core Team. 2022. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>.
+</div>
+<div class="csl-entry">
+Schilling, E. G., and D. V Neubauer. 2017. <em>Acceptance Sampling in Quality Control</em>. CRC Press.
+</div>
+<div class="csl-entry">
+Sullivan, Ernest W. 1981. <span>“The Problem of Text in Familiar Letters.”</span> <em>The Papers of the Bibliographical Society of America</em> 75 (2): 115–26.
+</div>
+<div class="csl-entry">
+Tsai, Chang-Chun, and Cheng-Che Chen. 2006. <span>“Making Decision to Evaluate Process Capability Index c p with Fuzzy Numbers.”</span> <em>International Journal of Advanced Manufacturing Technology</em> 30 (September): 334–39. <a href="https://doi.org/10.1007/s00170-005-0052-7">https://doi.org/10.1007/s00170-005-0052-7</a>.
+</div>
+<div class="csl-entry">
+Wickham, Hadley. 2016. <em>Ggplot2: Elegant Graphics for Data Analysis</em>. Springer-Verlag New York. <a href="https://ggplot2.tidyverse.org">https://ggplot2.tidyverse.org</a>.
+</div>
+<div class="csl-entry">
+Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takahashi, Claus Wilke, Kara Woo, Hiroaki Yutani, and Dewey Dunnington. 2022. <em>Ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics</em>. <a href="https://CRAN.R-project.org/package=ggplot2">https://CRAN.R-project.org/package=ggplot2</a>.
+</div>
+<div class="csl-entry">
+Xie, Yihui. 2014. <span>“Knitr: A Comprehensive Tool for Reproducible Research in <span>R</span>.”</span> In <em>Implementing Reproducible Computational Research</em>, edited by Victoria Stodden, Friedrich Leisch, and Roger D. Peng. Chapman; Hall/CRC. <a href="http://www.crcpress.com/product/isbn/9781466561595">http://www.crcpress.com/product/isbn/9781466561595</a>.
+</div>
+<div class="csl-entry">
+———. 2015. <em>Dynamic Documents with <span>R</span> and Knitr</em>. 2nd ed. Boca Raton, Florida: Chapman; Hall/CRC. <a href="https://yihui.org/knitr/">https://yihui.org/knitr/</a>.
+</div>
+<div class="csl-entry">
+———. 2016. <em>Bookdown: Authoring Books and Technical Documents with <span>R</span> Markdown</em>. Boca Raton, Florida: Chapman; Hall/CRC. <a href="https://bookdown.org/yihui/bookdown">https://bookdown.org/yihui/bookdown</a>.
+</div>
+<div class="csl-entry">
+———. 2022a. <em>Bookdown: Authoring Books and Technical Documents with r Markdown</em>. <a href="https://CRAN.R-project.org/package=bookdown">https://CRAN.R-project.org/package=bookdown</a>.
+</div>
+<div class="csl-entry">
+———. 2022b. <em>Knitr: A General-Purpose Package for Dynamic Report Generation in r</em>. <a href="https://yihui.org/knitr/">https://yihui.org/knitr/</a>.
+</div>
+<div class="csl-entry">
+Xie, Yihui, J. J. Allaire, and Garrett Grolemund. 2018. <em>R Markdown: The Definitive Guide</em>. Boca Raton, Florida: Chapman; Hall/CRC. <a href="https://bookdown.org/yihui/rmarkdown">https://bookdown.org/yihui/rmarkdown</a>.
+</div>
+<div class="csl-entry">
+Xie, Yihui, Christophe Dervieux, and Emily Riederer. 2020. <em>R Markdown Cookbook</em>. Boca Raton, Florida: Chapman; Hall/CRC. <a href="https://bookdown.org/yihui/rmarkdown-cookbook">https://bookdown.org/yihui/rmarkdown-cookbook</a>.
+</div>
+<div class="csl-entry">
+Yum, Bong-Jin, and Kwan-Woo Kim. 2011. <span>“A Bibliography of the Literature on Process Capability Indices: 2000–2009.”</span> <em>Quality and Reliability Engineering International</em> 27 (3): 251–68. https://doi.org/<a href="https://doi.org/10.1002/qre.1115">https://doi.org/10.1002/qre.1115</a>.
+</div>
+<div class="csl-entry">
+Zhu, Hao. 2022. <em>kableExtra: Construct Complex Table with Kable and Pipe Syntax</em>.
 </div>
 </div>
 </div>
-
-
-
-
-
-
             </section>
 
           </div>
         </div>
       </div>
-<a href="sharing-your-book.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="myth-busters-2.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>
-<script src="book_assets/gitbook-2.6.7/js/app.min.js"></script>
-<script src="book_assets/gitbook-2.6.7/js/clipboard.min.js"></script>
-<script src="book_assets/gitbook-2.6.7/js/plugin-search.js"></script>
-<script src="book_assets/gitbook-2.6.7/js/plugin-sharing.js"></script>
-<script src="book_assets/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
-<script src="book_assets/gitbook-2.6.7/js/plugin-bookdown.js"></script>
-<script src="book_assets/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="book_assets/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-"sharing": {
-"github": false,
-"facebook": true,
-"twitter": true,
-"linkedin": false,
-"weibo": false,
-"instapaper": false,
-"vk": false,
-"whatsapp": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-},
+"sharing": false,
 "fontsettings": {
 "theme": "white",
 "family": "sans",
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/07-references.Rmd",
-"text": "Edit"
+"link": "https://github.com/JuanMaLR/finalProyectStatistics2022Masters/edit/main/05-references.Rmd",
+"text": "Suggest an edit"
 },
 "history": {
 "link": null,
 "text": null
 },
 "view": {
-"link": null,
-"text": null
+"link": "https://github.com/JuanMaLR/finalProyectStatistics2022Masters/edit/main/05-references.Rmd",
+"text": "View source code on Github"
 },
-"download": ["_main.pdf", "_main.epub"],
+"download": ["https://github.com/JuanMaLR/finalProyectStatistics2022Masters/raw/main/05-references.Rmd"],
 "search": {
 "engine": "fuse",
 "options": null
 },
 "toc": {
-"collapse": "subsection"
+"collapse": "section",
+"scroll_highlight": true
+},
+"toolbar": {
+"position": "static"
 }
 });
 });

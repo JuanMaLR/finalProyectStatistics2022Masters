@@ -1,11 +1,20 @@
 bookdown::gitbook:
   css: style.css
   config:
-    download: ["pdf", "epub"]
-bookdown::pdf_book:
-  includes:
-    in_header: preamble.tex
-  latex_engine: xelatex
-  citation_package: natbib
-  keep_tex: yes
-bookdown::epub_book: default
+    toc:
+        collapse: section
+        scroll_highlight: true
+    toolbar:
+        position: static
+    fontsettings:
+        theme: white
+        family: sans
+        size: 2
+    edit : 
+      link: https://github.com/JuanMaLR/finalProyectStatistics2022Masters/edit/main/%s
+      text: "Suggest an edit"
+    view:
+      link: https://github.com/JuanMaLR/finalProyectStatistics2022Masters/edit/main/%s
+      text: "View source code on Github"
+    download: ["rmd"]
+    sharing: no
