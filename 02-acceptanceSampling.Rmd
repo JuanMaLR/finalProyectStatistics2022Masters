@@ -175,7 +175,7 @@ knitr::kable(tabla_recommended_distributions, align = "c", caption = "Recommende
   scroll_box(width = "100%", height = "100%", fixed_thead = T)
 ```
 
-```{R operating-cc, fig.cap="Example of an Operating Characteristic Curve for a sampling plan with $n=205$ and $c=2$. AQL and LQL values (described later) and their relationship with the producer’s and consumer’s risk are shown. Taken from @gutirrez_pulido_control_2013", fig.align = 'center'}
+```{R operating-cc, fig.cap="Example of an Operating Characteristic Curve for a sampling plan with $n=205$ and $c=2$. AQL and LQL values (described later) and their relationship with the producer’s and consumer’s risk are shown. Taken from @gutirrez_pulido_control_2013", fig.align = 'center', out.width = "70%"}
 knitr::include_graphics("images/operating_cc.png")
 ```
 
@@ -238,11 +238,11 @@ The selected process is the measurement of impurities of car bodies after a pain
 
 Broadly speaking, in the painting process in the automotive industry, the car body is provided with different layers, each of which corresponds to one or more unit operations, which are shown below:
 
-```{R layers-painted, fig.cap="Layers during the painting process in a car body", fig.align = 'center'}
+```{R layers-painted, fig.cap="Layers during the painting process in a car body", fig.align = 'center', out.width = "60%"}
 knitr::include_graphics("images/layers_painted.png")
 ```
 
-```{R painting-stages, fig.cap="Stages through which the car body passes during the painting process", fig.align = 'center'}
+```{R painting-stages, fig.cap="Stages through which the car body passes during the painting process", fig.align = 'center', out.width = "60%"}
 knitr::include_graphics("images/painting_stages.png")
 ```
 
@@ -261,7 +261,7 @@ The purpose of this project is therefore to determine and evaluate three accepta
 
 As there is a corrective process for every car body after an impurity is detected, it is stated that a **defective unit is that with more than 13 impurities**. Thus, those car bodies which have 13 or less impurities are considered as non-defective.
 
-```{R impurity-fiber, fig.cap="Examples of the impurity “fiber” seen in the car body", fig.align = 'center'}
+```{R impurity-fiber, fig.cap="Examples of the impurity “fiber” seen in the car body", fig.align = 'center', out.width = "60%"}
 knitr::include_graphics("images/impurity_fiber.png")
 ```
 
@@ -354,7 +354,7 @@ $$R_c = \frac{p_1}{p_2}$$
 
 With the Cameron’s Tables, using the established values of $\alpha$ and $\beta$, and the obtained value for $R_c$, one can determine a value $R$, which is the closest possible value of $R_c$ available in the Cameron’s Table. Then, the acceptance number $c$ and the value $np_1$ can be determined; the latter quantity can be used to find the sample size $(n=\frac{np_1}{p_1})$.
 
-```{R cameron-table, fig.cap="Cameron's table used to obtain $R$, $c$, and $np_1$", fig.align = 'center'}
+```{R cameron-table, fig.cap="Cameron's table used to obtain $R$, $c$, and $np_1$", fig.align = 'center', out.width = "60%"}
 knitr::include_graphics("images/cameron_table.png")
 ```
 
@@ -456,7 +456,7 @@ knitr::kable(acceptance_probability_table, align = "c", caption = "Probability o
 
 Next, the OC curve is built using data in Table \@ref(tab:acceptance-probability).
 
-```{R oc-curve-complete, fig.cap = "OC curve for the three designed plans", fig.align = 'center', out.width = "80%"}
+```{R oc-curve-complete, fig.cap = "OC curve for the three designed plans", fig.align = 'center', out.width = "70%"}
 
 plot(p, p_a, type = "l", xlab = "Proportion of defectives", ylab = "Probability of acceptance", main = "OC Curve", col = "red", lwd = 5)
 lines(p, p_b, col = "green", lwd = 5)
@@ -507,7 +507,7 @@ It is observed that for plan A the producer’s risk is below the limit; however
 
 The next figures show the AQL and LQL with their respective probability of acceptance, $1 - \alpha$ and $\beta$, respectively for each sampling plan based on the OC curve model shown in Figure \@ref(fig:operating-cc).
 
-```{R oc-curve-planA, fig.cap = "OC curve for Plan A with the values of AQL and LQL and their corresponding probability of acceptance", fig.align = 'center', out.width = "80%"}
+```{R oc-curve-planA, fig.cap = "OC curve for Plan A with the values of AQL and LQL and their corresponding probability of acceptance", fig.align = 'center', out.width = "70%"}
 library(latex2exp)
 
 plot(p, p_a, type = "l", xlab = "Proportion of defectives", ylab = "Probability of acceptance", main = "Plan A", col = "red", lwd = 5)
@@ -527,7 +527,7 @@ lines(c(0, planA_p2), c(planA_beta, planA_beta), col = "blue", lwd = 5)
 legend("topright", legend=c(paste("Plan A: n = ", ceiling(planA_n), "; c = ", planA_c, collapse = ""), TeX(sprintf(r'($AQL (p_1) = %s ; 1 - \alpha = %s$)', specify_decimal(planA_p1, 4), specify_decimal(planA_1_alpha, 4))), TeX(sprintf(r'($LQL (p_2) = %s ; \beta = %s$)', specify_decimal(planA_p2, 4), specify_decimal(planA_beta, 4)))), col=c("red", "green", "blue"), lty=1, lwd = 5, cex=0.8, text.font = 4, bg = 'lightblue')
 ```
 
-```{R oc-curve-planB, fig.cap = "OC curve for Plan B with the values of AQL and LQL and their corresponding probability of acceptance", fig.align = 'center', out.width = "80%"}
+```{R oc-curve-planB, fig.cap = "OC curve for Plan B with the values of AQL and LQL and their corresponding probability of acceptance", fig.align = 'center', out.width = "70%"}
 plot(p, p_b, type = "l", xlab = "Proportion of defectives", ylab = "Probability of acceptance", main = "Plan B", col = "red", lwd = 5)
 #AQL
 # X0, X1                      #Y0, Y1
@@ -545,7 +545,7 @@ lines(c(0, planB_p2), c(planB_beta, planB_beta), col = "blue", lwd = 5)
 legend("topright", legend=c(paste("Plan B: n = ", ceiling(planB_n), "; c = ", planB_c, collapse = ""), TeX(sprintf(r'($AQL (p_1) = %s ; 1 - \alpha = %s$)', specify_decimal(planB_p1, 4), specify_decimal(planB_1_alpha, 4))), TeX(sprintf(r'($LQL (p_2) = %s ; \beta = %s$)', specify_decimal(planB_p2, 4), specify_decimal(planB_beta, 4)))), col=c("red", "green", "blue"), lty=1, lwd = 5, cex=0.8, text.font = 4, bg = 'lightblue')
 ```
 
-```{R oc-curve-planC, fig.cap = "OC curve for Plan C with the values of AQL and LQL and their corresponding probability of acceptance", fig.align = 'center', out.width = "80%"}
+```{R oc-curve-planC, fig.cap = "OC curve for Plan C with the values of AQL and LQL and their corresponding probability of acceptance", fig.align = 'center', out.width = "70%"}
 plot(p, p_c, type = "l", xlab = "Proportion of defectives", ylab = "Probability of acceptance", main = "Plan C", col = "red", lwd = 5)
 #AQL
 # X0, X1                      #Y0, Y1

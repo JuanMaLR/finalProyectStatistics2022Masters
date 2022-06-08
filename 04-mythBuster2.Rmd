@@ -147,7 +147,7 @@ knitr::include_graphics("images/library_4th_floor_picture.png")
 
 To measure the noise level, an app called “Sound Meter” was used. It was chosen because it is one of the best rated apps from this type within the app store. The app takes continuous measurements in decibels, showing the maximum, average, and minimum values given an amount of time defined by the user, in this case, one minute. This can be seen in Figure \@ref(fig:sound-meter).
 
-```{R sound-meter, fig.cap="Example of measurements taken by the “Sound Meter” app", fig.align = 'center', out.width = '60%'}
+```{R sound-meter, fig.cap="Example of measurements taken by the “Sound Meter” app", fig.align = 'center', out.width = '35%'}
 knitr::include_graphics("images/sound_meter.png")
 ```
 

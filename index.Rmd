@@ -33,7 +33,7 @@ description: |
 
 # Abstract
 
-The following document presents...
+Statistical analysis has been a very useful method to analyze any type of quantitative or qualitative process in order to provide verdicts according to what is required to be assessed. One of the widely applied applications of statistical analysis is the validation of the quality of a company's production process through the "process capacity" and "acceptance sampling" tools. In this project, the analysis of the weight of 35 candies was carried out to validate the capacity of the production process by calculating the $C_p$ coefficient. Also, a sample of car bodies inspected for impurities was analyzed to reject or accept the process lot through the acceptance sampling tool applying three different planes as evaluation scenarios. The last two processes analyzed applied hypothesis testing to test myths known by the team members. First, the support that establishes that in Mexico women read more books per year on average than men was validated; and second, the myth that the fourth floor of the Tecnológico de Monterrey library, Monterrey campus, is quieter than the second floor was put to the test. The first analysis concludes that the production process has a poor capacity with a $C_p=0.365$. For the case of acceptance sampling, only one of the three scenarios will be considered adequate to accept the car body production lot. In the evaluation of the first myth, not enough evidence was found to ensure that women read more books than men in Mexico. Finally, with the second myth, enough evidence was found to affirm that the fourth floor of the library is quieter than the second.
 
 ```{r include=FALSE}
 # automatically create a bib database for R packages

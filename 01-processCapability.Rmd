@@ -138,7 +138,7 @@ The process capability index is an approach for establishing the relationships b
 
 $$ C_p = \frac{USL - LSL}{6\sigma} $$
 
-```{R process-specification, fig.cap="Process and specification regions. Source: @de-Felipe_Benedito_2017", fig.align = 'center'}
+```{R process-specification, fig.cap="Process and specification regions. Source: @de-Felipe_Benedito_2017", fig.align = 'center', out.width = "60%"}
 knitr::include_graphics("images/process_specification.png")
 ```
 
@@ -183,11 +183,11 @@ knitr::include_graphics("images/mango_enchilado.jpeg")
 
 The measurements of the sample were taken using a weighing machine "Ohaus Explorer Analytical EX224", which has a resolution of 1 milligram, see Figure \@ref(fig:ohaus-explorer). The measurements were taken by placing the candy inside the cabin of the weighing machine, closing the dare, and recording the values from the machine, as seen in Figure \@ref(fig:weight-measurements).
 
-```{R ohaus-explorer, fig.cap="Example of a measurement using Ohaus Weighing Machine", fig.align = 'center', out.width = '30%'}
+```{R ohaus-explorer, fig.cap="Example of a measurement using Ohaus Weighing Machine", fig.align = 'center', out.width = '25%'}
 knitr::include_graphics("images/ohaus_explorer.jpeg")
 ```
 
-```{R weight-measurements, fig.cap="Weight measurements taken and recorded", fig.show = "hold", out.width = '50%', fig.align = 'center'}
+```{R weight-measurements, fig.cap="Weight measurements taken and recorded", fig.show = "hold", out.width = '35%', fig.align = 'center'}
 knitr::include_graphics("images/weight_measurements_1.png")
 knitr::include_graphics("images/weight_measurements_2.png")
 ```
@@ -232,7 +232,7 @@ knitr::kable(summary_statistics, col.names = names(summary_statistics), align = 
 
 Figure \@ref(fig:weight-histogram) shows the distribution of the weights of the candy, presented in a histogram. The data shows *Negative Skewness*, as it is left skewed and the Mean `r specify_decimal(sample_mean, 4)` g, is smaller than the Median `r specify_decimal(sample_median, 4)` g. However, it approximates a normal distribution. As it can be seen, even though the candy´s weight is supposed to be 8 grams, most of the candies in the sample show a considerably higher weight.
 
-```{R weight-histogram, fig.cap="Distribution of measurements for \"Go mango Enchilado Candy\"", fig.align = 'center', out.width = "80%"}
+```{R weight-histogram, fig.cap="Distribution of measurements for \"Go mango Enchilado Candy\"", fig.align = 'center', out.width = "70%"}
 h <- hist(x = peso, main = "Weight histogram", xlab = "Weight (g)", ylab = "Frequency", col = "green")
 
 xfit <- seq(min(peso), max(peso), length = 40) 
@@ -242,7 +242,7 @@ yfit <- yfit * diff(h$mids[1:2]) * sample_size
 lines(xfit, yfit, col = "red", lwd = 2)
 ```
 
-```{R weight-box, fig.cap="Box plot and whiskers graph of the measurements for \"Go mango Enchilado Candy\"", fig.align = 'center', out.width = "80%"}
+```{R weight-box, fig.cap="Box plot and whiskers graph of the measurements for \"Go mango Enchilado Candy\"", fig.align = 'center', out.width = "70%"}
 boxplot_data <- boxplot(x = peso, main = "Weight boxplot", col = 'green', ylab = "Weight (g)", outpch = 8)
 
 lower_whisker <- min(boxplot_data$stats)
@@ -275,11 +275,11 @@ stem(peso)
 
 ## Probability plots
 
-The steps for the elaboration of probability plots are as follows: 
+The steps for the elaboration of probability plots are as follows:
 
-1. Order the sample date from the minor to the major value as shown in the third column of the table \@ref(tab:weight-probability-plot-table). 
-2. Create equidistant gaps with the equation $P = \frac{i-0.5}{n}$, where "i" goes from 1 to 35 according to the sample order established in the previous step. The P value is shown in the second column in the table \@ref(tab:weight-probability-plot-table). 
-3. Calculate the expected values from a normal distribution $Q_i$ using the standard deviation and mean from the sample. The $Q_i$ values are shown in the fourth column of the table \@ref(tab:weight-probability-plot-table).
+1.  Order the sample date from the minor to the major value as shown in the third column of the table \@ref(tab:weight-probability-plot-table).
+2.  Create equidistant gaps with the equation $P = \frac{i-0.5}{n}$, where "i" goes from 1 to 35 according to the sample order established in the previous step. The P value is shown in the second column in the table \@ref(tab:weight-probability-plot-table).
+3.  Calculate the expected values from a normal distribution $Q_i$ using the standard deviation and mean from the sample. The $Q_i$ values are shown in the fourth column of the table \@ref(tab:weight-probability-plot-table).
 
 ```{R weight-probability-plot-table}
 #To get the P=(i-0.5)/n values
@@ -300,12 +300,12 @@ colnames(prob_plot_table) <- c("i", "$P = \\frac{i - 0.5}{n}$", "$X_i$", "$Q_i$"
 
 kbl(prob_plot_table, align = "c", caption = "Weight probability plots", escape = FALSE)%>%
   kable_styling(position = "center", full_width = F)%>%
-  scroll_box(width = "460px", height = "800px", fixed_thead = T, extra_css = "margin-left: auto; margin-right: auto; margin-bottom: 25px;")
+  scroll_box(width = "100%", height = "800px", fixed_thead = T, extra_css = "margin-left: auto; margin-right: auto; margin-bottom: 25px;")
 ```
 
 4.  Since the goal is to determine whether the sample might have come from a normal population and it is known that the most plausible normal distribution is the one whose mean and standard deviation are the same as the sample mean and standar deviation, thus we will construct a cumulative distribution function (cdf) $F(x)$ of the $N(35, 0.658^2)$ distribution. To achieve this curve, a $X_i$ vs $P$ graphics is elaborated.
 
-```{R weight-probability-plot-table-cdf, fig.cap = "Weight CDF", fig.align = 'center', out.width = "80%"}
+```{R weight-probability-plot-table-cdf, fig.cap = "Weight CDF", fig.align = 'center', out.width = "70%"}
 #We don't know if our sample follows a normal distribution. To check out, we first check the CDF. To check the CDF we generate values that come from a normal distribution with the mean and std dev from out sample. This is Qi. From Qi we generate the CDF and we plot the point from out sample on top of the curve
 
 #To get a function of the CDF
@@ -328,7 +328,7 @@ legend("topleft", legend=c(paste("CDF with N(", specify_decimal(sample_mean, 4),
 
 With figure \@ref(fig:weight-probability-plot-table-cdf), we can have evidence each $Q_i$ is close to its corresponding $X_i$, therefore, a probability plot will be created. If our sample would come from a normally distributed population, the points should lie close to straight line in a $(X_i, Q_i)$ plot.
 
-```{R weight-probability-plot, fig.cap = "Weight probability plot", fig.align = 'center', out.width = "80%"}
+```{R weight-probability-plot, fig.cap = "Weight probability plot", fig.align = 'center', out.width = "70%"}
 #To create quantile-quantile (probability plot)
 qqnorm(peso, main = "Probability plot for weight data", col = "green", pch = 19)
 #The data from our measurements is plotted against theoretical normally distributed quantiles
@@ -337,7 +337,9 @@ qqnorm(peso, main = "Probability plot for weight data", col = "green", pch = 19)
 qqline(peso, col = "red", lwd = 3, qtype = 6, distribution = qnorm)
 ```
 
-Since in the figure \@ref(fig:weight-probability-plot) the sample points are close to the line, it is quite plausible that the sample came from a normal distribution.
+Since in the figure \@ref(fig:weight-probability-plot) the sample points are close to the line, but there are some outliers in the bottom left section we can't conclude that the sample came from a normal distribution.
+
+Since data is not normal non-parametric approaches should be implemented in order to calculate $C_p$ and $C_{pk}$. But since those methods were not reviewed in this course a normal approach will be implemented for the corresponding calculations and then, in section \@ref(percentiles-method) the differences between normal and non-normal approaches will be clarified.
 
 ## Capability measurement
 
@@ -425,11 +427,11 @@ knitr::kable(process_capability_table_complete, col.names = names(process_capabi
   scroll_box(width = "100%", height = "100%", fixed_thead = T)
 ```
 
-This $C_{pk}$ value is negative, which indicates **poor capability** of the process, as it is yielding results out of the specified tolerances, therefore not meeting the process requirements. 
+This $C_{pk}$ value is negative, which indicates **poor capability** of the process, as it is yielding results out of the specified tolerances, therefore not meeting the process requirements.
 
 A more thorough analysis is conducted beneath using SixSigma library.
 
-```{R fig.align = 'center', out.width = "100%"}
+```{R fig.align = 'center', out.width = "70%"}
 # Import SixSigma package
 library(SixSigma)
 
@@ -449,21 +451,24 @@ ss.ca.cpk(peso, LSL, USL)
 ss.ca.cpk(peso, LSL, USL, ci = TRUE)
 
 # Perform process capability analysis
-# Plot text overflows (it looks ugly)
-# ss.study.ca(peso,
-#            LSL = LSL, 
-#            USL = USL, 
-#            Target = population_mean, 
-#            alpha = 0.05, 
-#            f.su = "Candy Weight Analysis")
+ss.study.ca(peso,
+            LSL = LSL, 
+            USL = USL, 
+            Target = population_mean, 
+            alpha = 0.05, 
+            f.main = "Candy Weight Analysis",
+            f.colours = c("green","red","red","black","blue"))
 ```
+
+Unfortunately, the packages does not allow to edit the plot output, so some data is superimposed. The value that can't be seen is DPMO and has a value of $DPMO = 994414.4$. 
+
+As it can be seen the normality test failed. Most likely because of the outliers on the lower left corner of the QQ plot. This confirms our initial claim in section [Probability plots] that data don't follow a normal distribution.
 
 ## Error measurement estimation
 
 The goal is finding a tolerance value $(\pm S_{cp})$ for our $C_p$ value:
 
-$$C_p \pm S_{cp}$$
-For achieving that target, a boopstraping is developed between the sample values, simulating 1000 standard deviation values. Thereupon, 1000 $C_p$ values were calculated by applying the equation:
+$$C_p \pm S_{cp}$$ For achieving that target, a boopstraping is developed between the sample values, simulating 1000 standard deviation values. Thereupon, 1000 $C_p$ values were calculated by applying the equation:
 
 $$C_p = \frac{USL - LSL}{6s}$$
 
@@ -527,28 +532,25 @@ $$`r specify_decimal(CpK, 4)` \pm `r specify_decimal(cpkMin_std_dev, 4)`$$
 
 When the population doesn't follow a normal distribution, the calculation of $C_p$ and $C_{pk}$ can't be performed using the method described above.
 
-This will require non-parametric methods like Clement's, or Burr's percentile method, or Box-Cox transformation. 
-Each method is described briefly beneath:
+This will require non-parametric methods like Clement's, or Burr's percentile method, or Box-Cox transformation. Each method is described briefly beneath:
 
-- Clement's percentile method: It uses a family of Pearson Curves to calculate the indices. It proposes two changes to the parametric method. 
-  - Instead of using the mean as measure of central tendency it uses the median. 
-  - Instead of using the values of the percentile points from normal distributions it takes them from non-normal ones. 
+-   Clement's percentile method: It uses a family of Pearson Curves to calculate the indices. It proposes two changes to the parametric method.
+    -   Instead of using the mean as measure of central tendency it uses the median.
+    -   Instead of using the values of the percentile points from normal distributions it takes them from non-normal ones.
 
-In this case, the PCIs are defined as:
-$$C_p = \frac{USL - LSL}{P_{0.99865} - P_{0.00135}}$$
+In this case, the PCIs are defined as: $$C_p = \frac{USL - LSL}{P_{0.99865} - P_{0.00135}}$$
 
 $$C_{pl} = \frac{P_{0.5} - LSL}{P_{0.5} - P_{0.00135}}$$
 
 $$C_{pu} = \frac{USL - P_{0.5}}{P_{0.99865} - P_{0.5}}$$
 
-where $P_q$ is the $q-th$ percentile value of non-normal
-distribution.
+where $P_q$ is the $q-th$ percentile value of non-normal distribution.
 
-- Burr's percentile method: Same as Clement's but with the slight modification that instead of a family of Pearson distribution curves an appropriated Burr XII distribution is used. 
-- Box-Cox Transformation method: Original data is transformed and then modified using conventional methods so that the output data can be considered as normal. 
+-   Burr's percentile method: Same as Clement's but with the slight modification that instead of a family of Pearson distribution curves an appropriated Burr XII distribution is used.
+-   Box-Cox Transformation method: Original data is transformed and then modified using conventional methods so that the output data can be considered as normal.
 
 @Agudelo_Cogollo_2016 proposes an adaptation of Clement's method that can be summarized in figure \@ref(fig:non-parametric-cp).
 
-```{R non-parametric-cp, fig.cap="Flowchart for process capability indices calculation", fig.align = 'center', out.width = '80%'}
+```{R non-parametric-cp, fig.cap="Flowchart for process capability indices calculation", fig.align = 'center', out.width = '60%'}
 knitr::include_graphics("images/non_parametric_cp.jpeg")
 ```
