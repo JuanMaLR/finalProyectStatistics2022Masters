@@ -110,130 +110,457 @@ Myth busters 1, where measurements are qualitative (e.g., pass/fail). Select a m
     -   Statistical conclusion.
     -   Practical conclusion.
 
-```{R}
-suppressWarnings(library(kableExtra)) #Use development version remotes::install_github("haozhu233/kableExtra") - CRAN version has a bug for collapse_rows function
-
-floor_2_days <- c(rep("Day 1 (23/05/2022)", 3), rep("Day 2 (24/05/2022)", 3), rep("Day 3 (25/05/2022)", 3), rep("Day 4 (26/05/2022)", 3), rep("Day 5 (27/05/2022)", 3))
-floor_2_indices <- rep(c("Min", "Max", "$\\textbf{Average}$"), 5)
-floor_2_pos_1 <- c(50, 64, 56, 45, 74, 55, 44, 62, 51, 53, 70, 53, 47, 71, 55)
-floor_2_pos_2 <- c(52, 63, 56, 55, 66, 59, 53, 64, 57, 53, 64, 56, 52, 61, 55)
-floor_2_pos_3 <- c(50, 71, 59, 50, 67, 58, 45, 67, 53, 49, 70, 59, 50, 64, 56)
-floor_2_pos_4 <- c(54, 68, 62, 49, 73, 60, 49, 76, 57, 50, 78, 58, 50, 69, 60)
-floor_2_pos_5 <- c(53, 68, 59, 49, 66, 55, 51, 68, 59, 48, 64, 55, 49, 61, 54)
-floor_2 <- data.frame(floor_2_days, floor_2_indices, floor_2_pos_1, floor_2_pos_2, floor_2_pos_3, floor_2_pos_4, floor_2_pos_5)
-colnames(floor_2) = c("", "", "pos_1", "pos_2", "pos_3", "pos_4", "pos_5")
-floor_2_means <- rowMeans(floor_2[3:7])
-floor_2$Mean <- floor_2_means
-floor_2%>%
-  kbl(align = "c")%>%
-  kable_material(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = F)%>%
-  add_header_above(c("Days", "Measurements" = 7), background = "#2E75B5", color = "#FFFFFF")%>%
-  add_header_above(c("2nd floor" = 8), background = "#1E4379", color = "#FFFFFF")%>%
-  row_spec(0, background = "#9CC2E5")%>%
-  row_spec(seq(3, 15, by = 3), bold = T, background = "#DEEAF6")%>%
-  column_spec(1, bold = T, background = "#9CC2E5")%>%
-  column_spec(2, background = "#DEEAF6")%>%
-  column_spec(8, background = "#DEEAF6")%>%
-  collapse_rows()%>%
-  scroll_box(width = "100%", height = "800px", fixed_thead = T)
-
-floor_4_days <- c(rep("Day 1 (23/05/2022)", 3), rep("Day 2 (24/05/2022)", 3), rep("Day 3 (25/05/2022)", 3), rep("Day 4 (26/05/2022)", 3), rep("Day 5 (27/05/2022)", 3))
-floor_4_indices <- rep(c("Min", "Max", "$\\textbf{Average}$"), 5)
-floor_4_pos_1 <- c(51, 73, 59, 57, 72, 64, 51, 64, 57, 51, 74, 59, 55, 80, 60)
-floor_4_pos_2 <- c(57, 71, 63, 56, 73, 62, 53, 70, 61, 52, 72, 61, 55, 73, 62)
-floor_4_pos_3 <- c(49, 65, 55, 47, 66, 53, 49, 64, 55, 53, 79, 59, 48, 64, 55)
-floor_4_pos_4 <- c(41, 62, 49, 41, 64, 51, 40, 76, 48, 38, 62, 46, 42, 66, 50)
-floor_4_pos_5 <- c(50, 66, 55, 45, 67, 50, 48, 63, 51, 46, 64, 50, 48, 63, 53)
-floor_4 <- data.frame(floor_4_days, floor_4_indices, floor_4_pos_1, floor_4_pos_2, floor_4_pos_3, floor_4_pos_4, floor_4_pos_5)
-colnames(floor_4) = c("", "", "pos_1", "pos_2", "pos_3", "pos_4", "pos_5")
-floor_4_means <- rowMeans(floor_4[3:7])
-floor_4$Mean <- floor_4_means
-floor_4%>%
-  kbl(align = "c")%>%
-  kable_material(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = F)%>%
-  add_header_above(c("Days", "Measurements" = 7), background = "#C55A11", color = "#FFFFFF")%>%
-  add_header_above(c("4th floor" = 8), background = "#833C0B", color = "#FFFFFF")%>%
-  row_spec(0, background = "#F4B083")%>%
-  row_spec(seq(3, 15, by = 3), bold = T, background = "#FBE4D5")%>%
-  column_spec(1, bold = T, background = "#F4B083")%>%
-  column_spec(2, background = "#FBE4D5")%>%
-  column_spec(8, background = "#FBE4D5")%>%
-  collapse_rows()%>%
-  scroll_box(width = "100%", height = "800px", fixed_thead = T)
-
+```{R echo = FALSE}
+specify_decimal <- function(x, k) trimws(format(round(x, k), nsmall=k))
+suppressWarnings(library(kableExtra))
+library(ggplot2)
 ```
 
-```{R}
-#Mean
-mean_floor_2 <- floor_2$Mean[seq(3, 15, by = 3)]
-mean_floor_4 <- floor_4$Mean[seq(3, 15, by = 3)]
-mean_floors <- data.frame(1:5, mean_floor_2, mean_floor_4, mean_floor_2 - mean_floor_4)
-colnames(mean_floors) = c("#", "2nd floor", "4th floor", "Difference")
+## Problem description and variables to measure
+The article “¿Cuántos libros se leen en México al año?” of the digital newspaper “El Economista” is stated that:
 
-mean_floors%>%
-  kbl(align = "c")%>%
-  kable_material(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = F)%>%
-  add_header_above(c("Measurements" = 4), background = "#548135", color = "#FFFFFF")%>%
-  scroll_box(width = "100%")
+>“Every Mexican reads an average of one book every three months. In Mexico, 3.8 books are read annually per person. Women are the ones who read the most books in Mexico, 5 out of 10 women read at least one book annually, while 4 out of 10 men read at least one book a year.” [@garcia_2018]
 
-#Point 1
-mean_point_1_floor_2 <- floor_2$pos_1[seq(3, 15, by = 3)]
-mean_point_1_floor_4 <- floor_4$pos_1[seq(3, 15, by = 3)]
-mean_floors_point_1 <- data.frame(1:5, mean_point_1_floor_2, mean_point_1_floor_4, mean_point_1_floor_2 - mean_point_1_floor_4)
-colnames(mean_floors_point_1) = c("#", "2nd floor", "4th floor", "Difference")
+Based on the previous information, the following question arises: in Mexico, do women read more than men annually? The results published by “El Economista”, indicate that, indeed, Mexican women have the tendency to read more than Mexican men. Notwithstanding, a hypothesis test might be useful for determining, with greater certainty, if this statement is true.
 
-mean_floors_point_1%>%
-  kbl(align = "c")%>%
-  kable_material(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = F)%>%
-  add_header_above(c("Measurements (Point 1)" = 4), background = "#548135", color = "#FFFFFF")%>%
-  scroll_box(width = "100%")
+For performing the hypothesis test, we will measure the number of books read by an individual during a year, considering the gender; then we will determine a specific criterion to designate under what conditions someone is considered as a reader; finally, by carrying out a test of the difference between two proportions a conclusion might be reached.
 
-#Point 2
-mean_point_2_floor_2 <- floor_2$pos_2[seq(3, 15, by = 3)]
-mean_point_2_floor_4 <- floor_4$pos_2[seq(3, 15, by = 3)]
-mean_floors_point_2 <- data.frame(1:5, mean_point_2_floor_2, mean_point_2_floor_4, mean_point_2_floor_2 - mean_point_2_floor_4)
-colnames(mean_floors_point_2) = c("#", "2nd floor", "4th floor", "Difference")
+## Objective
 
-mean_floors_point_2%>%
-  kbl(align = "c")%>%
-  kable_material(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = F)%>%
-  add_header_above(c("Measurements (Point 2)" = 4), background = "#548135", color = "#FFFFFF")%>%
-  scroll_box(width = "100%")
+The objective of this “experiment” is to perform a hypothesis test for determining if Mexican Women read more than Mexican men considering that a reader in Mexico reads an average of 4 books a year.
 
-#Point 3
-mean_point_3_floor_2 <- floor_2$pos_3[seq(3, 15, by = 3)]
-mean_point_3_floor_4 <- floor_4$pos_3[seq(3, 15, by = 3)]
-mean_floors_point_3 <- data.frame(1:5, mean_point_3_floor_2, mean_point_3_floor_4, mean_point_3_floor_2 - mean_point_3_floor_4)
-colnames(mean_floors_point_3) = c("#", "2nd floor", "4th floor", "Difference")
+## Data collection procedure that involves a randomization process
 
-mean_floors_point_3%>%
-  kbl(align = "c")%>%
-  kable_material(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = F)%>%
-  add_header_above(c("Measurements (Point 3)" = 4), background = "#548135", color = "#FFFFFF")%>%
-  scroll_box(width = "100%")
+Data will be collected by performing surveys. As a concrete sampling frame is not available, to randomize the data collection procedure, the survey was applied throughout different means: social media, e-mail and approaching people face-to-face. The diversity of recruiting methods was devised for reaching different types of people.
 
-#Point 4
-mean_point_4_floor_2 <- floor_2$pos_4[seq(3, 15, by = 3)]
-mean_point_4_floor_4 <- floor_4$pos_4[seq(3, 15, by = 3)]
-mean_floors_point_4 <- data.frame(1:5, mean_point_4_floor_2, mean_point_4_floor_4, mean_point_4_floor_2 - mean_point_4_floor_4)
-colnames(mean_floors_point_4) = c("#", "2nd floor", "4th floor", "Difference")
+Furthermore, as there were many people involved in the data collection process a greater variety of people was reached since the population to which each member of the team has access varies considerably.
 
-mean_floors_point_4%>%
-  kbl(align = "c")%>%
-  kable_material(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = F)%>%
-  add_header_above(c("Measurements (Point 4)" = 4), background = "#548135", color = "#FFFFFF")%>%
-  scroll_box(width = "100%")
+## Measurement system implemented
 
-#Point 5
-mean_point_5_floor_2 <- floor_2$pos_5[seq(3, 15, by = 3)]
-mean_point_5_floor_4 <- floor_4$pos_5[seq(3, 15, by = 3)]
-mean_floors_point_5 <- data.frame(1:5, mean_point_5_floor_2, mean_point_5_floor_4, mean_point_5_floor_2 - mean_point_5_floor_4)
-colnames(mean_floors_point_5) = c("#", "2nd floor", "4th floor", "Difference")
+The tool to collect data was surveys, these surveys were applied randomly to people of different: age, academical status and gender.
 
-mean_floors_point_5%>%
-  kbl(align = "c")%>%
-  kable_material(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = F)%>%
-  add_header_above(c("Measurements (Point 5)" = 4), background = "#548135", color = "#FFFFFF")%>%
-  scroll_box(width = "100%")
+The questions of the survey are shown below:
+
+1. Gender
+    a. Male
+    b. Female
+2. Maximum educational level
+    a. Basic level
+    b. Medium level
+    c. Medium superior level
+    d. Superior level
+3. How many books do you read per year?
+    a. None
+    b. 1
+    c. 2
+    d. 3
+    e. 4
+    f. 5 or more
+4. How many books have you read in this year 2022?
+    a. None
+    b. 1
+    c. 2
+    d. 3
+    e. 4
+    f. 5 or more
+5. What is the literary genre you read most often?
+    a. Poetry
+    b. Theater
+    c. Narrative
+    d. Assay
+    e. Paper 
+    
+This survey was used as the measurement system. Of course, the most important questions are 1 and 3, which are the information we are looking for. However, questions like number 2 help to evaluate the variety of people surveyed. Besides, questions 4 and 5 help to confirm if people’s answers in questions 1 and 3 are true.
+
+A “reader” was determined by applying the following criterion: people that read 4 or more books in one year is considered as a reader. In terms of the binomial distribution, people who read 4 or more books has the attribute of “1” (a reader), and others have the attribute of “0” (not a reader). In this sense, the proportion of “reading people” can be obtained for each genre.
+
+## Noise factors
+
+The most plausible noise factor is people lying when answering the questions. Although some questions in the survey were introduced for helping to detect people lying (by identifying inconsistencies in the answers) the veracity of the answers depends entirely on the respondents.
+
+Another possible noise factor is that the surveyed people does not represents the Mexican population entirely. This noise factor was detected because the respondents were also classified according to their level of studies. Table \@ref(tab:max-educational-levels) and Figure \@ref(fig:max-educational-levels-histogram) shows what was obtained:
+
+```{R max-educational-levels}
+total_responses <- 75
+edlev_res <- c(58, 15, 2, 0)
+
+educational_level <- c("Superior level", "Mid superior level", "Medium level", "Basic level")
+edlev_responses <- edlev_res
+edlev_percentages <- specify_decimal((edlev_res/total_responses)*100, 2)
+
+tabla_max_educational_levels <- data.frame(educational_level, edlev_responses, edlev_percentages)
+
+colnames(tabla_max_educational_levels) <- c("Educational level", "Number of respondents", "Percentage (%)")
+
+knitr::kable(tabla_max_educational_levels, align = "c", caption = "Maximum educational level of the respondents")%>%
+  kable_styling(full_width = F)%>%
+  column_spec(1, bold = T)%>%
+  scroll_box(width = "100%", height = "100%", fixed_thead = T)
 ```
 
+```{R max-educational-levels-histogram, fig.cap="Maximum educational level of the respondents", fig.align = 'center', out.width = "80%"}
+barplot_eduLevels <- barplot(tabla_max_educational_levels[,2], names.arg = tabla_max_educational_levels[,1], main = "Highest educational level of the respondents", xlab = "Educational level", ylab = "Number of people", col = "green", ylim = c(min(tabla_max_educational_levels[,2]) - 2, max(tabla_max_educational_levels[,2]) + 2))
+grid(nx = NA, ny = NULL, lwd = 1, lty = 1, col = "gray")
+barplot(tabla_max_educational_levels[,2], names.arg = tabla_max_educational_levels[,1], main = "Highest educational level of the respondents", xlab = "Educational level", ylab = "Number of people", col = "green", ylim = c(min(tabla_max_educational_levels[,2]) - 2, max(tabla_max_educational_levels[,2]) + 2), add = T)
+text(barplot_eduLevels, c(tabla_max_educational_levels[1,2] - 1.5, tabla_max_educational_levels[2,2] - 1.5, tabla_max_educational_levels[3,2] + 1.5, tabla_max_educational_levels[4,2] + 1.5), labels = tabla_max_educational_levels[,2])
+```
+
+The above information shows that most people surveyed has superior education. This allows to infer that this sample does not represent entirely the Mexican population because INEGI reports that currently the average educational level of Mexico is between medium and medium superior level [@INEGI_2020], which is not reflected in the sample.
+
+## Statistical methods used
+
+It was pointed out that the number of people considered as a reader has a binomial distribution for both men and women, where the $n$ parameter denotes the number of surveyed people for each group and the parameter $p$ represents the probability of finding someone (in each group) that is considered as a reader.
+
+For the estimation of the parameter $p$ for each group and its respective confidence interval, rather than the traditional method, the Agresti-Coull interval was computed thanks to the recommendations that W. Navidi suggested in his book [@navidi_2019].
+
+On the other hand, for performing the hypothesis test for the difference between two proportions, a $z-test$ was carried out as it was expected to find at least 10 successes and 10 failures in each of the samples. Therefore, for finding the $P-value$ of the test, the area under the normal curve was utilized.
+
+## Assumptions
+
+First, we will assume that the surveyed people represent a simple random sample of the Mexican population. Plus, we will consider that the obtained answers are true.
+
+Since we will perform a hypothesis test for the difference between two proportions, we will assume that the random variables measured for both samples (men and women) are independent. Besides, we will assume that there are at least 10 successes and 10 failures in each sample to perform the test.
+
+## Experimental restrictions
+
+The population that was analyzed is the population that the team members had access to. As shown above, this sample of the Mexican population is restricted to, for the most part, people with superior educational level; therefore, the experiment is restricted to this portion of the population.
+
+Another experimental restriction is related to the program that was used to apply the survey. It only allowed us to survey up to 100 people and the answers were obtained directly from the software.
+
+## Data collection
+
+The results of the surveys were collected and were summarized in Table \@ref(tab:survey-results), show below.
+
+```{R survey-results}
+annual_books_read <- c(0, 1, 2, 3, 4, ">=5", "TOTAL")
+male <- c(5, 6, 8, 6, 5, 6)
+male_w_total <- append(male, sum(male))
+female <- c(2, 7, 10, 9, 5, 6)
+female_w_total <- append(female, sum(female))
+total <- male_w_total + female_w_total
+
+tabla_survey_results <- data.frame(annual_books_read, male_w_total, female_w_total, total)
+
+colnames(tabla_survey_results) <- c("Annual books read", "Male", "Female", "TOTAL")
+
+knitr::kable(tabla_survey_results, align = "c", caption = "Sample containing 75 surveyed people")%>%
+  kable_styling(full_width = F)%>%
+  column_spec(1, bold = T)%>%
+  scroll_box(width = "100%", height = "100%", fixed_thead = T)
+```
+
+As we can see 75 surveys were collected for this project. Data was divided into two categories: Male and Female. Also, another two categories were made: Readers and Non-readers. Considering the purpose of this work, only the category Readers was used to make the descriptive analysis. 
+
+## Descriptive analysis
+
+For performing the descriptive analysis, let the gender male be denoted by $X$, and the gender female by the variable $Y$. If we consider a success to find a person that is a “Reader”, both $X$ and $Y$ follow the Binomial distribution:
+
+$$
+\begin{align*}
+X \sim Bin(n_X, p_X) \\ 
+Y \sim Bin(n_Y, p_Y)
+\end{align*}
+$$
+
+The success probability $p$ is estimated by the sample proportion, computed by dividing the number of successful events (in this case is the number of “Readers”) by the total number of events $n$ (which for each gender is the total number of men and women). 
+
+```{R}
+px <- sum(tail(male, 2))
+py <- sum(tail(female, 2))
+
+nx <- tail(male_w_total, 1)
+ny <- tail(female_w_total, 1)
+
+px_hat <- px/nx
+py_hat <- py/ny
+```
+
+$$
+\begin{align*}
+\hat{p}_X =  \frac{`r px`}{`r nx`} = `r specify_decimal(px_hat, 4)`\\ 
+\hat{p}_Y =  \frac{`r py`}{`r ny`} = `r specify_decimal(py_hat, 4)` 
+\end{align*}
+$$
+
+To ensure that the proportion of readers people on each gender is correct we compute de proportion of non-readers and if we add the proportion of readers and non-readers, we must obtain the value of **1**.
+
+```{R}
+px_not <- sum(head(male, 4))
+py_not <- sum(head(female, 4))
+
+px_hat_not <- px_not/nx
+py_hat_not <- py_not/ny
+```
+
+$$
+\begin{align*}
+1 - \hat{p}_X =  \frac{`r px_not`}{`r nx`} = `r specify_decimal(px_hat_not, 4)`\\ 
+1 - \hat{p}_Y =  \frac{`r py_not`}{`r ny`} = `r specify_decimal(py_hat_not, 4)` 
+\end{align*}
+$$
+
+```{R}
+px_total <- px_hat + px_hat_not
+py_total <- py_hat + py_hat_not
+```
+
+For $X$:
+
+$$`r specify_decimal(px_hat, 4)` + `r specify_decimal(px_hat_not, 4)` = `r px_total`$$
+
+For $Y$:
+
+$$`r specify_decimal(py_hat, 4)` + `r specify_decimal(py_hat_not, 4)` = `r py_total`$$
+
+We now compute some important quantities for each binomial random variable, all of them estimated using the sample proportion.
+
+1. Sample mean 
+
+$$
+\begin{gather*}
+\mu_X = n_X \hat{p}_X = (`r nx`)(`r specify_decimal(px_hat, 4)`) = `r px`\\
+\mu_Y = n_Y \hat{p}_Y = (`r ny`)(`r specify_decimal(py_hat, 4)`) = `r py`\\
+\mu_X = 11\mu_Y = \mu_Y
+\end{gather*}
+$$
+
+2. Sample variance
+
+```{R}
+sample_variance_x <- nx*px_hat*(1 - px_hat)
+sample_variance_y <- ny*py_hat*(1 - py_hat)
+```
+
+$$
+\begin{gather*}
+\sigma_X^2 = n_X \hat{p}_X(1-\hat{p}_X) = (`r nx`)(`r specify_decimal(px_hat, 4)`)(1 - `r specify_decimal(px_hat, 4)`) \\
+\sigma_Y^2 = n_Y \hat{p}_Y(1-\hat{p}_Y) = (`r ny`)(`r specify_decimal(py_hat, 4)`)(1 - `r specify_decimal(py_hat, 4)`) \\
+\sigma_X^2 = `r specify_decimal(sample_variance_x, 4)` \\
+\sigma_Y^2 = `r specify_decimal(sample_variance_y, 4)`
+\end{gather*}
+$$
+
+3. Sample standard deviation. Which is the square root of the sample variance.
+
+```{R}
+sample_stdDev_x <- sqrt(sample_variance_x)
+sample_stdDev_y <- sqrt(sample_variance_y)
+```
+
+$$
+\begin{gather*}
+\sigma_X =  \sqrt{`r specify_decimal(sample_variance_x, 4)`} \\
+\sigma_Y =  \sqrt{`r specify_decimal(sample_variance_y, 4)`} \\
+\sigma_X = `r specify_decimal(sample_stdDev_x, 4)` \\
+\sigma_Y = `r specify_decimal(sample_stdDev_y, 4)`
+\end{gather*}
+$$
+
+### Graphical summaries
+
+We obtained a frequency graphic to know the number of men and women who read 4 or more books in one year, denominated as “Readers”, and the number of men and women who read three or less books in a year, denominated as “Non-Readers”. 
+
+```{R reader-frequencies}
+categories <- c("Non-readers", "Readers")
+male_frquencies <- c(px_not, px)
+female_frequencies <- c(py_not, py)
+
+tabla_reader_frequencies <- data.frame(categories, male_frquencies, female_frequencies)
+
+colnames(tabla_reader_frequencies) <- c("", "Male", "Female")
+
+knitr::kable(tabla_reader_frequencies, align = "c", caption = "Frequencies of readers and non-readers for each gender category")%>%
+  kable_styling(full_width = F)%>%
+  scroll_box(width = "100%", height = "100%", fixed_thead = T)
+```
+
+The information in Table \@ref(tab:reader-frequencies) is represented in a bar graph in Figure \@ref(fig:reader-frequency-barGraph).
+
+```{R reader-frequency-barGraph, fig.cap="Frequency of Readers and Non-readers for each gender", fig.align = 'center', out.width = "80%"}
+#Using ggplot2 library constructed grouped barplot
+
+#Create data set
+#Have 3 columns, one for x, one for y, and one for the legend (fill)
+read_clasifications_x <- c("Non-readers", "Non-readers", "Readers", "Readers")
+genders_l <- c("Male", "Female", "Male", "Female")
+num_readers_y <- c(px_not, py_not, px, py)
+
+data_readers <- data.frame(read_clasifications_x, genders_l, num_readers_y)
+
+#Plot the graph
+ggplot(data_readers, aes(fill=genders_l, y=num_readers_y, x=read_clasifications_x)) + geom_bar(position="dodge", stat="identity") + ggtitle("Frequencies of books read per group") +
+  xlab("Clasifications") + ylab("Number of books read") + scale_fill_manual("", values = c("Male" = "green", "Female" = "purple")) + theme(plot.title = element_text(hjust = 0.5))
+```
+
+## Individual sample estimation of parameters and confidence intervals
+
+As it was previously stated, the data follows a Binomial distribution.
+
+$$
+\begin{align*}
+X \sim Bin(n_X, p_X) \\ 
+Y \sim Bin(n_Y, p_Y)
+\end{align*}
+$$
+
+Since we already known the values of $n_X$ and $n_Y$, the parameters that must be estimated are the success probabilities $p_X$ and $p_Y$. For the estimation of these parameters, we will use the method suggested by W. Navidi [@navidi_2019] for finding confidence intervals for proportions: the Agresti-Coull interval.
+
+This method for constructing the confidence interval is appropriate for the Binomial distribution and it has no special requirements; furthermore, it applies for any sample size.
+
+We begin by defining the next quantities:
+
+$$
+\begin{gather*}
+\tilde{n} = n + 4 \\
+\tilde{p} = \frac{X+2}{\tilde{n}}
+\end{gather*}
+$$
+
+Therefore, for X and Y:
+
+```{R}
+nx_tilde <- nx + 4
+px_tilde <- (px + 2)/nx_tilde
+
+ny_tilde <- ny + 4
+py_tilde <- (py + 2)/ny_tilde
+```
+
+$$
+\begin{gather*}
+\tilde{n} = `r nx` + 4 = `r nx_tilde`\\
+\tilde{p} = \frac{`r px`+2}{`r nx_tilde`} = `r specify_decimal(px_tilde, 4)` \\
+\tilde{n} = `r ny` + 4 = `r ny_tilde`\\
+\tilde{p} = \frac{`r py`+2}{`r ny_tilde`} = `r specify_decimal(py_tilde, 4)`
+\end{gather*}
+$$
+
+We will compute a confidence interval of the form:
+
+$$\tilde{p} + z_{\alpha/2}\sqrt{\frac{\tilde{p}(1-\tilde{p})}{\tilde{n}}}$$
+
+```{R}
+alpha_ci <- 0.05
+alpha_2 <- alpha_ci/2
+
+z_alpha_2 <- abs(qnorm(alpha_2))
+```
+
+Since we want a $95\%$ confidence interval, then $\alpha=`r alpha_ci`$ and $\alpha/2=`r alpha_2`$. It can be found that the z-values that cut off the lower and upper tail of the normal distribution are $\pm`r specify_decimal(z_alpha_2, 2)`$.
+
+```{R}
+std_dev_x <- sqrt((px_tilde*(1 - px_tilde))/(nx_tilde))
+std_dev_y <- sqrt((py_tilde*(1 - py_tilde))/(ny_tilde))
+
+lower_CI_x <- px_tilde - z_alpha_2*std_dev_x
+upper_CI_x <- px_tilde + z_alpha_2*std_dev_x
+
+lower_CI_y <- py_tilde - z_alpha_2*std_dev_y
+upper_CI_y <- py_tilde + z_alpha_2*std_dev_y
+```
+
+For $\tilde{p}_X$:
+
+$$(`r specify_decimal(lower_CI_x, 4)`,`r specify_decimal(upper_CI_x, 4)`)$$
+
+For $\tilde{p}_Y$:
+
+$$(`r specify_decimal(lower_CI_y, 4)`,`r specify_decimal(upper_CI_y, 4)`)$$
+
+## Assumptions validation
+
+After carrying out the surveys it was found that there are 11 “readers” for each genre (refer to Tables \@ref(tab:survey-results) and \@ref(tab:reader-frequencies)). Additionally, the number of readers is `r px_not` for male and `r py_not` for female. Hence, it is stated that the number of successes and failures is greater than 10 in each sample. In symbols:
+
+```{R}
+nxpx <- nx*px_hat
+nx_1_px <- nx*(1 - px_hat)
+
+nypy <- ny*py_hat
+ny_1_py <- ny*(1 - py_hat)
+```
+
+$$
+\begin{gather*}
+n_X p_X = (`r nx`)(`r specify_decimal(px_hat, 4)`) = `r nxpx` \\
+n_X (1 - p_X) = (`r nx`)(1 - `r specify_decimal(px_hat, 4)`) = `r nx_1_px` \\ 
+\\
+n_Y p_Y = (`r ny`)(`r specify_decimal(py_hat, 4)`) = `r nypy` \\
+n_Y (1 - p_Y) = (`r ny`)(1 - `r specify_decimal(py_hat, 4)`) = `r ny_1_py` 
+\end{gather*}
+$$
+
+## Analysis of the experiment
+
+We will perform a test for the difference between two proportions. We want to demonstrate that the proportion of readers for women is greater than the proportion of readers for men.
+
+### Hypothesis used
+
+$$
+\begin{gather*}
+H_0: p_X - p_Y \ge 0 \\
+H1: p_X - p_Y < 0
+\end{gather*}
+$$
+
+We establish the alternate hypothesis based on the statement we want to demonstrate.
+
+### Significance level
+
+We determine to use the most common value of Alpha.
+
+$$\alpha = `r alpha_ci`$$
+
+### Calculations
+
+To perform the hypothesis test we must estimate $p_X$ and $p_Y$, we have already computed these values previously, so we have: 
+
+$$
+\begin{gather*}
+\hat{p}_X = `r specify_decimal(px_hat, 4)` \\
+\hat{p}_Y = `r specify_decimal(py_hat, 4)`
+\end{gather*}
+$$
+
+Then we need to compute $\hat{p}$:
+
+```{R}
+p_hat = (px + py)/(nx + ny)
+```
+
+$$
+\begin{gather*}
+\hat{p} = \frac{X + Y}{n_X + n_Y} \\
+\hat{p} = \frac{`r px` + `r py`}{`r nx` + `r ny`} = `r specify_decimal(p_hat, 4)`\\
+\end{gather*}
+$$
+
+Now we are ready to compute the test static, it is obtained by:
+
+```{R}
+up_frac <- px_hat - py_hat
+p_1_p <- p_hat*(1 - p_hat)
+rec_nx <- 1/nx
+rec_ny <- 1/ny
+low_frac <- sqrt(p_1_p*(rec_nx + rec_ny))
+z_score <- up_frac/low_frac
+```
+
+$$z = \frac{\hat{p}_X - \hat{p}_Y}{\sqrt{\hat{p} (1 - \hat{p})(\frac{1}{n_X}+\frac{1}{n_Y})}}$$
+
+It turns outs that $z = `r specify_decimal(z_score, 4)`$.
+
+With the value of $z$ we obtain the $P-value$, knowing that the alternate hypothesis is of the form $H_1: p_X - p_Y < 0$, the $P-value$ will be the area under the normal curve to the left of $z$. 
+
+```{R}
+p_value <- pnorm(z_score)
+```
+
+$$P = `r specify_decimal(p_value, 4)`$$
+
+## Statistical conclusion
+
+If $p \le 0.05$ we reject the null hypothesis $H_0$, so there is not enough evidence to reject $H_0$.
+
+## Practical conclusion
+
+Since $H_0$ is not rejected; it cannot be concluded that the proportion of female readers is greater than the proportion of male readers. Instead, it can be concluded that it is **plausible** that the proportion of male readers is greater than the proportion of female readers.

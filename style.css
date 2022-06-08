@@ -23,25 +23,25 @@ pre code {
 }
 @media (min-width: 768px) {
   body{
-    font-size: 14px;
+    font-size: 14px!important;
   }
   .book.font-size-2 .book-body .page-inner section{
-    font-size: 1.75rem;
+    font-size: 1.75rem!important;
   }
 }
 @media (min-width: 992px) {
   body{
-    font-size: 18px;
+    font-size: 18px!important;
   }
   .book.font-size-2 .book-body .page-inner section{
-    font-size: 1.75rem;
+    font-size: 1.75rem!important;
   }
 }
 @media (min-width: 1200px) {
   body{
-    font-size: 22px;
+    font-size: 22px!important;
   }
   .book.font-size-2 .book-body .page-inner section{
-    font-size: 1.75rem;
+    font-size: 2.75rem!important;
   }
 }
